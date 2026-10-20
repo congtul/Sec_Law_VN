@@ -9,49 +9,67 @@
 <meta name="description" content="Áp dụng pháp luật bảo vệ dữ liệu cá nhân và an ninh mạng Việt Nam vào vụ việc sàn giao dịch taphoammo.net">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;600;700&display=swap">
 <style>
-/* Layout: one slide per screen like a case file — a docket strip (chapter · section code) over a serif heading,
-   legal citations set in mono "chips", solid borders = charged acts, dashed borders = the team's own analysis. */
+/* Layout: one slide per screen, following the team's earlier deck: warm paper ground, white cards with soft shadow,
+   one accent colour per chapter (--ch), mono section badges. Solid borders = charged acts, dashed = our analysis. */
 :root {
-  --paper: #f5f8f7;
+  --paper: #f6f5f0;
   --surface: #ffffff;
-  --ink: #12201e;
-  --muted: #566764;
-  --line: #d3dedb;
+  --surface-2: #efede6;
+  --ink: #15171c;
+  --ink-2: #414753;
+  --muted: #6f7582;
+  --line: #dcd9cf;
+  --line-2: #c4c0b2;
   --teal: #0f766e;
-  --teal-ink: #0b5a54;
-  --teal-soft: #e0efec;
-  --stamp: #a3342b;
-  --stamp-soft: #f6e4e1;
-  --warn: #9a5b00;
-  --warn-soft: #fbefd9;
-  --ok: #2b6f37;
-  --ok-soft: #e2f1e4;
-  --font-display: "Source Serif 4", "Noto Serif", Georgia, serif;
-  --font-body: "Be Vietnam Pro", "Segoe UI", system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
-  --step--1: clamp(0.8rem, 0.76rem + 0.2vw, 0.9rem);
-  --step-0: clamp(0.95rem, 0.9rem + 0.3vw, 1.1rem);
-  --step-1: clamp(1.1rem, 1rem + 0.5vw, 1.35rem);
-  --step-2: clamp(1.45rem, 1.2rem + 1.2vw, 2.1rem);
-  --step-3: clamp(1.9rem, 1.4rem + 2.4vw, 3.2rem);
-  --step-4: clamp(2.4rem, 1.6rem + 4vw, 4.6rem);
+  --teal-ink: #0f766e;
+  --teal-soft: #d6ede9;
+  --c1: #c2410c; --c2: #1d4ed8; --c3: #0f766e; --c4: #7e22ce; --c5: #b45309; --c6: #be123c;
+  --stamp: #b91c1c;
+  --stamp-soft: #fbe2e2;
+  --warn: #a16207;
+  --warn-soft: #fbf0d4;
+  --ok: #15803d;
+  --ok-soft: #dcf2e2;
+  --on-accent: #ffffff;
+  --shadow: 0 1px 2px rgba(20, 20, 30, .05), 0 10px 28px -14px rgba(20, 20, 30, .22);
+  --radius: 14px;
+  --font-display: "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-body: "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --step--1: clamp(0.82rem, 0.78rem + 0.2vw, 0.95rem);
+  --step-0: clamp(0.98rem, 0.92rem + 0.3vw, 1.15rem);
+  --step-1: clamp(1.1rem, 1rem + 0.45vw, 1.3rem);
+  --step-2: clamp(1.45rem, 1.2rem + 1.1vw, 2rem);
+  --step-3: clamp(1.7rem, 1.3rem + 1.8vw, 2.4rem);
+  --step-4: clamp(2.3rem, 1.5rem + 3.6vw, 4.4rem);
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --paper: #0c1413; --surface: #121d1b; --ink: #e2ebe8; --muted: #93a6a2;
-    --line: #263533; --teal: #3db5a6; --teal-ink: #7fd3c7; --teal-soft: #13302c;
-    --stamp: #e47f74; --stamp-soft: #3a1d1a; --warn: #e3a64a; --warn-soft: #362810;
-    --ok: #74c381; --ok-soft: #16301b; color-scheme: dark;
+    --paper: #0c1016; --surface: #141a22; --surface-2: #1b222c; --ink: #e8eaef; --ink-2: #b6bcc8; --muted: #828a98;
+    --line: #29313d; --line-2: #3a4452; --teal: #2dd4bf; --teal-ink: #2dd4bf; --teal-soft: rgba(45, 212, 191, .13);
+    --c1: #fb923c; --c2: #60a5fa; --c3: #2dd4bf; --c4: #c084fc; --c5: #fbbf24; --c6: #fb7185;
+    --stamp: #f87171; --stamp-soft: rgba(248, 113, 113, .14); --warn: #fbbf24; --warn-soft: rgba(251, 191, 36, .13);
+    --ok: #4ade80; --ok-soft: rgba(74, 222, 128, .13); --on-accent: #0c1016;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 12px 30px -14px rgba(0, 0, 0, .7); color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --paper: #0c1413; --surface: #121d1b; --ink: #e2ebe8; --muted: #93a6a2;
-  --line: #263533; --teal: #3db5a6; --teal-ink: #7fd3c7; --teal-soft: #13302c;
-  --stamp: #e47f74; --stamp-soft: #3a1d1a; --warn: #e3a64a; --warn-soft: #362810;
-  --ok: #74c381; --ok-soft: #16301b; color-scheme: dark;
+  --paper: #0c1016; --surface: #141a22; --surface-2: #1b222c; --ink: #e8eaef; --ink-2: #b6bcc8; --muted: #828a98;
+  --line: #29313d; --line-2: #3a4452; --teal: #2dd4bf; --teal-ink: #2dd4bf; --teal-soft: rgba(45, 212, 191, .13);
+  --c1: #fb923c; --c2: #60a5fa; --c3: #2dd4bf; --c4: #c084fc; --c5: #fbbf24; --c6: #fb7185;
+  --stamp: #f87171; --stamp-soft: rgba(248, 113, 113, .14); --warn: #fbbf24; --warn-soft: rgba(251, 191, 36, .13);
+  --ok: #4ade80; --ok-soft: rgba(74, 222, 128, .13); --on-accent: #0c1016;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 12px 30px -14px rgba(0, 0, 0, .7); color-scheme: dark;
 }
+.slide { --ch: var(--teal); }
+.slide[data-chap="1"] { --ch: var(--c1); }
+.slide[data-chap="2"] { --ch: var(--c2); }
+.slide[data-chap="3"] { --ch: var(--c3); }
+.slide[data-chap="4"] { --ch: var(--c4); }
+.slide[data-chap="5"] { --ch: var(--c5); }
+.slide[data-chap="6"] { --ch: var(--c6); }
 
 /* language switch: Vietnamese by default */
 :root:not([data-lang="en"]) .en, :root[data-lang="en"] .vi { display: none !important; }
@@ -61,6 +79,7 @@ body {
   background: var(--paper); color: var(--ink);
   font-family: var(--font-body); font-size: var(--step-0); line-height: 1.55;
   overflow: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 * { box-sizing: border-box; }
 a { color: var(--teal-ink); }
@@ -84,25 +103,27 @@ button { font: inherit; color: inherit; }
 
 /* docket strip + headings */
 .docket {
-  display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: baseline;
-  font-family: var(--font-mono); font-size: var(--step--1); color: var(--muted);
-  letter-spacing: .04em; text-transform: uppercase;
+  display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center;
+  font-size: .82rem; font-weight: 600; color: var(--ch);
+  letter-spacing: .08em; text-transform: uppercase;
 }
-.docket b { color: var(--teal-ink); font-weight: 600; }
-h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.15; margin: 0; text-wrap: balance; }
-h1 { font-size: var(--step-4); letter-spacing: -.01em; }
-h2 { font-size: var(--step-3); letter-spacing: -.005em; }
-h3 { font-size: var(--step-1); font-family: var(--font-body); font-weight: 600; line-height: 1.3; }
+.docket b { font-family: var(--font-mono); letter-spacing: 0; font-weight: 600;
+  background: color-mix(in srgb, var(--ch) 14%, transparent); padding: 3px 8px; border-radius: 6px; }
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.16; margin: 0; text-wrap: balance; }
+h1 { font-size: var(--step-4); letter-spacing: -.035em; font-weight: 800; line-height: 1.04; }
+h1 em { font-style: normal; color: var(--teal); }
+h2 { font-size: var(--step-3); letter-spacing: -.02em; font-weight: 750; }
+h3 { font-size: var(--step-1); font-weight: 700; line-height: 1.3; }
 p { margin: 0; max-width: 68ch; }
-.lede { font-size: var(--step-1); color: var(--muted); max-width: 60ch; }
+.lede { font-size: var(--step-1); color: var(--ink-2); max-width: 60ch; line-height: 1.5; }
 .small { font-size: var(--step--1); color: var(--muted); }
 ul.clean { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
 ul.clean li { padding-left: 18px; position: relative; max-width: 72ch; }
-ul.clean li::before { content: ""; position: absolute; left: 2px; top: .65em; width: 7px; height: 7px; border-radius: 2px; background: var(--teal); }
+ul.clean li::before { content: ""; position: absolute; left: 2px; top: .6em; width: 8px; height: 8px; border-radius: 2px; background: var(--ch, var(--teal)); }
 
 .cite {
   display: inline-block; font-family: var(--font-mono); font-size: .82em; font-weight: 600;
-  color: var(--teal-ink); background: var(--teal-soft); border-radius: 4px; padding: 1px 6px; white-space: nowrap;
+  color: var(--ch, var(--teal)); background: color-mix(in srgb, var(--ch, var(--teal)) 13%, transparent); border-radius: 6px; padding: 1px 7px; white-space: nowrap;
 }
 .code { font-family: var(--font-mono); font-weight: 600; }
 
@@ -113,45 +134,58 @@ ul.clean li::before { content: ""; position: absolute; left: 2px; top: .65em; wi
 .g4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 @media (max-width: 860px) { .g3, .g4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 560px) { .g2, .g3, .g4 { grid-template-columns: minmax(0, 1fr); } }
-.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: clamp(14px, 2vw, 20px); min-width: 0; display: flex; flex-direction: column; gap: 8px; }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: clamp(14px, 2vw, 20px); min-width: 0; display: flex; flex-direction: column; gap: 8px; }
 .panel.solid { border: 2px solid var(--ink); }
-.panel.dashed { border: 2px dashed var(--teal); }
-.panel.note { background: var(--teal-soft); border-color: transparent; }
-.panel.warn { background: var(--warn-soft); border-color: transparent; }
+.panel.dashed { border: 2px dashed var(--ch); background: color-mix(in srgb, var(--ch) 5%, var(--surface)); }
+.panel.note { background: color-mix(in srgb, var(--ch) 8%, var(--surface)); border-color: color-mix(in srgb, var(--ch) 28%, var(--line)); box-shadow: none; }
+.panel.warn { background: var(--warn-soft); border-color: transparent; box-shadow: none; }
+.panel.top { border-top: 4px solid var(--ch); }
 .tag { align-self: flex-start; font-family: var(--font-mono); font-size: var(--step--1); font-weight: 600; letter-spacing: .05em; text-transform: uppercase; padding: 2px 8px; border-radius: 4px; }
 .tag.charged { color: var(--stamp); background: var(--stamp-soft); }
-.tag.ours { color: var(--teal-ink); background: var(--teal-soft); }
-.vcode { font-family: var(--font-mono); font-weight: 600; font-size: var(--step-2); color: var(--teal-ink); line-height: 1; }
+.tag.ours { color: var(--ch); background: color-mix(in srgb, var(--ch) 14%, transparent); }
+.vcode { font-family: var(--font-mono); font-weight: 700; font-size: var(--step-2); color: var(--ch); line-height: 1; }
 .panel.solid .vcode { color: var(--ink); }
 
 /* numbers */
 .stat { display: flex; flex-direction: column; gap: 2px; }
-.stat .num { font-family: var(--font-display); font-weight: 700; font-size: var(--step-3); line-height: 1.05; font-variant-numeric: tabular-nums; }
+.stat .num { font-family: var(--font-display); font-weight: 800; letter-spacing: -.03em; color: var(--ch, var(--ink)); font-size: var(--step-3); line-height: 1.05; font-variant-numeric: tabular-nums; }
 .stat .lbl { color: var(--muted); font-size: var(--step--1); }
 
 /* tables */
-.tablewrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+.tablewrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); }
 table { border-collapse: collapse; width: 100%; font-size: var(--step--1); min-width: 640px; }
 th, td { text-align: left; vertical-align: top; padding: 9px 12px; border-bottom: 1px solid var(--line); }
-th { font-family: var(--font-mono); font-size: .78rem; letter-spacing: .05em; text-transform: uppercase; color: var(--muted); font-weight: 600; background: var(--paper); }
+th { font-size: .74rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 700; background: var(--surface-2); }
 tr:last-child td { border-bottom: 0; }
 td.num { font-variant-numeric: tabular-nums; text-align: right; white-space: nowrap; }
 th.num { text-align: right; }
-tr.hl td { background: var(--teal-soft); font-weight: 600; }
+tr.hl td { background: color-mix(in srgb, var(--ch) 10%, transparent); font-weight: 600; }
 
 /* chapter covers */
-.cover .frame { gap: 18px; }
-.chapno { font-family: var(--font-display); font-weight: 700; font-size: clamp(4rem, 3rem + 7vw, 9rem); line-height: .9; color: var(--teal); }
-.presenter { font-family: var(--font-mono); font-size: var(--step--1); color: var(--muted); letter-spacing: .05em; text-transform: uppercase; }
-.cover .qs { border-left: 3px solid var(--teal); padding-left: 14px; }
+.cover .frame { gap: 14px; }
+.chapno { font-family: var(--font-mono); font-weight: 700; font-size: clamp(4rem, 2.6rem + 7vw, 8.5rem); line-height: .9; letter-spacing: -.04em; color: color-mix(in srgb, var(--ch) 22%, transparent); }
+.d-kicker { font-size: .9rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--ch); }
+.cover h2 { font-size: var(--step-4); letter-spacing: -.03em; }
+.d-list { list-style: none; margin: 6px 0 0; padding: 0; display: grid; gap: 8px; }
+.d-list li { display: flex; gap: 12px; align-items: baseline; font-size: var(--step-1); }
+.d-list li b { font-family: var(--font-mono); color: var(--ch); font-size: .85em; min-width: 3.2em; }
+.presenter { font-size: var(--step--1); color: var(--muted); font-weight: 500; }
+.presenter::before { content: ""; display: inline-block; vertical-align: middle; margin-right: 8px; width: 8px; height: 8px; border-radius: 50%; background: var(--ch); }
+.cover .qs { border-left: 3px solid var(--ch); padding-left: 14px; }
+.kick { display: inline-flex; gap: 10px; align-items: center; font-size: .9rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--teal); }
+.kick::before { content: ""; width: 28px; height: 2px; background: var(--teal); }
+.team { display: flex; gap: 10px; flex-wrap: wrap; }
+.member { display: flex; align-items: center; gap: 10px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 6px 14px 6px 6px; }
+.member .av { width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; font-weight: 800; font-size: .8rem; color: var(--on-accent); }
+.member b { font-size: .95rem; }
 
 /* flow chain */
 .chain { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; align-items: stretch; }
 .chain .node { position: relative; }
-.chain .node.center { background: var(--teal-soft); border-color: var(--teal); }
+.chain .node.center { background: color-mix(in srgb, var(--ch) 9%, var(--surface)); border: 2px solid var(--ch); }
 .chain .node:not(:last-child)::after {
   content: "→"; position: absolute; right: -12px; top: 50%; transform: translateY(-50%);
-  font-family: var(--font-mono); color: var(--teal); font-weight: 600; z-index: 1;
+  font-family: var(--font-mono); color: var(--ch); font-weight: 700; z-index: 1;
 }
 @media (max-width: 860px) {
   .chain { grid-template-columns: minmax(0, 1fr); }
@@ -159,7 +193,7 @@ tr.hl td { background: var(--teal-soft); font-weight: 600; }
 }
 
 /* timeline */
-.tl-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+.tl-scroll { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow); }
 .tl { position: relative; min-width: 760px; padding: 14px 16px 10px; }
 .tl-row { display: grid; grid-template-columns: 190px minmax(0, 1fr); align-items: center; min-height: 34px; }
 .tl-row + .tl-row { border-top: 1px dashed var(--line); }
@@ -167,9 +201,9 @@ tr.hl td { background: var(--teal-soft); font-weight: 600; }
 .tl-label small { display: block; font-weight: 400; color: var(--muted); }
 .tl-track { position: relative; height: 34px; }
 .tl-bar { position: absolute; top: 9px; height: 16px; border-radius: 4px; border: 0; padding: 0; cursor: pointer; }
-.tl-bar.case { background: var(--teal); }
+.tl-bar.case { background: var(--ch); }
 .tl-bar.law { background: var(--muted); opacity: .55; }
-.tl-bar.newlaw { background: transparent; border: 2px solid var(--teal); }
+.tl-bar.newlaw { background: transparent; border: 2px solid var(--ch); }
 .tl-bar.gap { background: repeating-linear-gradient(135deg, var(--stamp) 0 6px, transparent 6px 11px); opacity: .7; cursor: default; }
 .tl-dot { position: absolute; top: 7px; width: 20px; height: 20px; margin-left: -10px; border-radius: 50%; background: var(--surface); border: 3px solid var(--stamp); cursor: pointer; padding: 0; }
 .tl-bar.sel, .tl-dot.sel { outline: 3px solid var(--ink); outline-offset: 2px; }
@@ -177,7 +211,7 @@ tr.hl td { background: var(--teal-soft); font-weight: 600; }
 .tl-axis span { position: absolute; top: 3px; transform: translateX(-50%); font-family: var(--font-mono); font-size: .75rem; color: var(--muted); }
 .tl-axis span::before { content: ""; position: absolute; left: 50%; top: -7px; height: 6px; border-left: 1px solid var(--muted); }
 .tl-detail { min-height: 4.6em; }
-.tl-detail .when { font-family: var(--font-mono); font-size: var(--step--1); color: var(--teal-ink); font-weight: 600; }
+.tl-detail .when { font-family: var(--font-mono); font-size: var(--step--1); color: var(--ch); font-weight: 600; }
 
 /* risk meter and verdicts (demo) */
 .demo { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 18px; align-items: start; }
@@ -188,7 +222,7 @@ textarea {
 }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .chip { border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 4px 12px; font-size: var(--step--1); cursor: pointer; }
-.chip:hover { border-color: var(--teal); }
+.chip:hover { border-color: var(--ch); color: var(--ch); }
 .verdict { align-self: flex-start; font-family: var(--font-mono); font-weight: 600; font-size: var(--step-1); padding: 4px 12px; border-radius: 6px; letter-spacing: .03em; }
 .verdict.block { color: var(--stamp); background: var(--stamp-soft); }
 .verdict.review { color: var(--warn); background: var(--warn-soft); }
@@ -204,20 +238,20 @@ textarea {
 /* process steps */
 .steps { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; counter-reset: s; }
 @media (max-width: 860px) { .steps { grid-template-columns: minmax(0, 1fr); } }
-.steps li { list-style: none; counter-increment: s; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; font-size: var(--step--1); }
-.steps li::before { content: counter(s); display: block; font-family: var(--font-mono); font-weight: 600; color: var(--teal-ink); }
+.steps li { list-style: none; counter-increment: s; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; box-shadow: var(--shadow); padding: 10px 12px; font-size: var(--step--1); }
+.steps li::before { content: counter(s); display: inline-grid; place-items: center; width: 26px; height: 26px; margin-bottom: 6px; border-radius: 8px; font-family: var(--font-mono); font-weight: 700; color: var(--ch); background: color-mix(in srgb, var(--ch) 15%, transparent); }
 .steps { padding: 0; margin: 0; }
 
 /* quiz */
 .quiz { display: flex; flex-direction: column; gap: 14px; }
 .quiz .qhead { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; font-family: var(--font-mono); font-size: var(--step--1); color: var(--muted); }
 .quiz .opts { display: grid; gap: 10px; }
-.opt { text-align: left; padding: 12px 14px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); cursor: pointer; }
-.opt:hover:not([disabled]) { border-color: var(--teal); }
+.opt { text-align: left; padding: 12px 14px; border-radius: 12px; border: 1px solid var(--line); background: var(--surface); cursor: pointer; }
+.opt:hover:not([disabled]) { border-color: var(--ch); }
 .opt[disabled] { cursor: default; }
 .opt.right { border: 2px solid var(--ok); background: var(--ok-soft); }
 .opt.wrong { border: 2px solid var(--stamp); background: var(--stamp-soft); }
-.btn { border: 0; background: var(--teal); color: var(--surface); padding: 9px 18px; border-radius: 8px; font-weight: 600; cursor: pointer; }
+.btn { border: 0; background: var(--ch, var(--teal)); color: var(--on-accent); padding: 9px 18px; border-radius: 8px; font-weight: 600; cursor: pointer; }
 .btn.ghost { background: transparent; color: var(--teal-ink); border: 1px solid var(--teal); }
 
 /* footer controls */
@@ -230,9 +264,9 @@ textarea {
   font-size: var(--step--1);
 }
 .bar .progress { flex: 1 1 120px; height: 4px; background: var(--line); border-radius: 2px; overflow: hidden; min-width: 80px; }
-.bar .progress i { display: block; height: 100%; background: var(--teal); width: 0; transition: width .25s ease; }
-.ctl { border: 1px solid var(--line); background: var(--paper); border-radius: 6px; padding: 4px 10px; cursor: pointer; font-family: var(--font-mono); font-size: .78rem; }
-.ctl:hover { border-color: var(--teal); }
+.bar .progress i { display: block; height: 100%; background: var(--bar-ch, var(--teal)); width: 0; transition: width .25s ease; }
+.ctl { border: 1px solid var(--line); background: var(--surface-2); border-radius: 8px; padding: 4px 10px; cursor: pointer; font-family: var(--font-mono); font-size: .78rem; }
+.ctl:hover { border-color: var(--teal); color: var(--teal); }
 .counter { font-family: var(--font-mono); font-variant-numeric: tabular-nums; color: var(--muted); }
 .keys { font-family: var(--font-mono); color: var(--muted); font-size: .72rem; }
 @media (max-width: 640px) { .keys { display: none; } }
@@ -246,7 +280,7 @@ textarea {
 .toc button.item { display: grid; grid-template-columns: 3em minmax(0, 1fr); gap: 8px; width: 100%; text-align: left; border: 0; background: none; padding: 6px 8px; border-radius: 6px; cursor: pointer; }
 .toc button.item:hover, .toc button.item.cur { background: var(--teal-soft); }
 .toc .n { font-family: var(--font-mono); color: var(--muted); font-variant-numeric: tabular-nums; }
-.toc .chap { font-family: var(--font-mono); font-size: var(--step--1); letter-spacing: .05em; text-transform: uppercase; color: var(--teal-ink); margin-top: 8px; }
+.toc .chap { font-size: var(--step--1); font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--teal); margin-top: 8px; }
 </style>
 
 </head>
@@ -257,15 +291,15 @@ textarea {
 <!-- ============================ 1. TITLE ============================ -->
 <section class="slide" data-chap="0">
   <div class="frame">
-    <div class="docket"><span class="vi">Bài tập lớn</span><span class="en">Course assignment</span><span>·</span><span class="vi">Luật pháp, chính sách và chuẩn trong an ninh mạng</span><span class="en">Law, policy and standards in cybersecurity</span></div>
-    <h1><span class="vi">Vụ việc sàn taphoammo.net</span><span class="en">The taphoammo.net case</span></h1>
+    <div class="kick"><span class="vi">Luật pháp, chính sách và chuẩn trong an ninh mạng</span><span class="en">Law, policy and standards in cybersecurity</span></div>
+    <h1><span class="vi">Vụ việc sàn <em>taphoammo.net</em></span><span class="en">The <em>taphoammo.net</em> case</span></h1>
     <p class="lede"><span class="vi">Áp dụng pháp luật bảo vệ dữ liệu cá nhân và an ninh mạng Việt Nam vào một “chợ dữ liệu” hoạt động công khai suốt bốn năm.</span><span class="en">Applying Vietnam’s personal data protection and cybersecurity law to a “data marketplace” that ran in plain sight for four years.</span></p>
     <div class="grid g3">
       <div class="stat"><span class="num">1,35 <span class="vi">triệu</span><span class="en">million</span></span><span class="lbl"><span class="vi">tài khoản đăng ký</span><span class="en">registered accounts</span></span></div>
       <div class="stat"><span class="num">46.000+</span><span class="lbl"><span class="vi">gian hàng</span><span class="en">storefronts</span></span></div>
       <div class="stat"><span class="num">53 <span class="vi">triệu</span><span class="en">million</span></span><span class="lbl"><span class="vi">giao dịch</span><span class="en">transactions</span></span></div>
     </div>
-    <p class="small" id="team-line"><span class="vi">Nhóm thực hiện</span><span class="en">Team</span>: <span id="team-names"></span></p>
+    <div class="team" id="team"></div>
     <p class="small"><span class="vi">Vụ án đang trong giai đoạn điều tra, chưa có bản án. Người liên quan được gọi là bị can.</span><span class="en">The case is still under investigation with no verdict; the people involved are referred to as suspects.</span></p>
   </div>
 </section>
@@ -290,8 +324,10 @@ textarea {
 <section class="slide cover" data-chap="1">
   <div class="frame">
     <div class="chapno">01</div>
+    <div class="d-kicker"><span class="vi">Chương 1</span><span class="en">Part 1</span></div>
     <h2><span class="vi">Phạm vi và bối cảnh</span><span class="en">Scope and context</span></h2>
     <p class="qs lede"><span class="vi">Sàn này là gì, vận hành ra sao, và vì sao nhóm chọn nó để áp dụng luật?</span><span class="en">What was this platform, how did it work, and why use it as our case?</span></p>
+    <ol class="d-list"><li><b>1.1</b><span class="vi">Bối cảnh và giới thiệu tình huống</span><span class="en">Context and case introduction</span></li><li><b>1.2</b><span class="vi">Phạm vi và cách tiếp cận</span><span class="en">Scope and approach</span></li></ol>
     <div class="presenter"><span class="vi">Trình bày</span><span class="en">Presenter</span>: <span data-member="1"></span></div>
   </div>
 </section>
@@ -381,8 +417,10 @@ textarea {
 <section class="slide cover" data-chap="2">
   <div class="frame">
     <div class="chapno">02</div>
+    <div class="d-kicker"><span class="vi">Chương 2</span><span class="en">Part 2</span></div>
     <h2><span class="vi">Vấn đề nghiên cứu</span><span class="en">Problem statement</span></h2>
     <p class="qs lede"><span class="vi">Luật đã cấm. Vì sao hành vi vẫn diễn ra công khai suốt bốn năm?</span><span class="en">The law already banned it. Why did it run openly for four years?</span></p>
+    <ol class="d-list"><li><b>2.1</b><span class="vi">Đặt vấn đề</span><span class="en">Problem</span></li><li><b>2.2</b><span class="vi">Cơ sở pháp lý</span><span class="en">Legal basis</span></li></ol>
     <div class="presenter"><span class="vi">Trình bày</span><span class="en">Presenter</span>: <span data-member="1"></span></div>
   </div>
 </section>
@@ -431,8 +469,10 @@ textarea {
 <section class="slide cover" data-chap="3">
   <div class="frame">
     <div class="chapno">03</div>
+    <div class="d-kicker"><span class="vi">Chương 3</span><span class="en">Part 3</span></div>
     <h2><span class="vi">Phân tích vi phạm</span><span class="en">Violations</span></h2>
     <p class="qs lede"><span class="vi">RQ1: hoạt động của sàn vi phạm những quy định nào?</span><span class="en">RQ1: which provisions did the platform violate?</span></p>
+    <ol class="d-list"><li><b>3.1</b><span class="vi">Các hành vi thuộc nội dung khởi tố</span><span class="en">Acts within the charge</span></li><li><b>3.2</b><span class="vi">Các hành vi có dấu hiệu vi phạm khác (nhóm phân tích)</span><span class="en">Other likely violations (our analysis)</span></li><li><b>3.3</b><span class="vi">Tổng hợp</span><span class="en">Summary</span></li></ol>
     <div class="presenter"><span class="vi">Trình bày</span><span class="en">Presenter</span>: <span data-member="2"></span></div>
   </div>
 </section>
@@ -557,8 +597,10 @@ textarea {
 <section class="slide cover" data-chap="4">
   <div class="frame">
     <div class="chapno">04</div>
+    <div class="d-kicker"><span class="vi">Chương 4</span><span class="en">Part 4</span></div>
     <h2><span class="vi">Thách thức khi áp dụng pháp luật</span><span class="en">Challenges in applying the law</span></h2>
     <p class="qs lede"><span class="vi">RQ2: vì sao các hành vi ở chương 3 khó bị phát hiện và xử lý?</span><span class="en">RQ2: why were the acts in part 3 hard to detect and act on?</span></p>
+    <ol class="d-list"><li><b>4.1</b><span class="vi">Thách thức kỹ thuật và bảo mật</span><span class="en">Technical and security</span></li><li><b>4.2</b><span class="vi">Thách thức pháp lý</span><span class="en">Legal</span></li><li><b>4.3</b><span class="vi">Thách thức quản trị</span><span class="en">Governance</span></li></ol>
     <div class="presenter"><span class="vi">Trình bày</span><span class="en">Presenter</span>: <span data-member="3"></span></div>
   </div>
 </section>
@@ -597,8 +639,10 @@ textarea {
 <section class="slide cover" data-chap="5">
   <div class="frame">
     <div class="chapno">05</div>
+    <div class="d-kicker"><span class="vi">Chương 5</span><span class="en">Part 5</span></div>
     <h2><span class="vi">Giải pháp và hiện thực</span><span class="en">Solutions and implementation</span></h2>
     <p class="qs lede"><span class="vi">RQ3: cần biện pháp gì để phát hiện và ngăn chặn mô hình này?</span><span class="en">RQ3: what measures can detect and stop this model?</span></p>
+    <ol class="d-list"><li><b>5.1</b><span class="vi">Đề xuất giải pháp</span><span class="en">Proposed solutions</span></li><li><b>5.2</b><span class="vi">Hiện thực: demo GP1 và PoC tài liệu</span><span class="en">Implementation: GP1 demo and document PoC</span></li></ol>
     <div class="presenter"><span class="vi">Trình bày</span><span class="en">Presenters</span>: <span data-member="3"></span> · <span data-member="4"></span> · <span data-member="5"></span></div>
   </div>
 </section>
@@ -697,8 +741,10 @@ textarea {
 <section class="slide cover" data-chap="6">
   <div class="frame">
     <div class="chapno">06</div>
+    <div class="d-kicker"><span class="vi">Chương 6</span><span class="en">Part 6</span></div>
     <h2><span class="vi">Đánh giá và kết luận</span><span class="en">Evaluation and conclusion</span></h2>
     <p class="qs lede"><span class="vi">Áp giải pháp vào chính vụ này thì hiệu quả đến đâu?</span><span class="en">Applied to this very case, how far would the solutions have gone?</span></p>
+    <ol class="d-list"><li><b>6.1</b><span class="vi">Đánh giá</span><span class="en">Evaluation</span></li><li><b>6.2</b><span class="vi">Kết luận</span><span class="en">Conclusion</span></li><li><b>Quiz</b><span class="vi">Kiểm tra nhanh</span><span class="en">Quick check</span></li></ol>
     <div class="presenter"><span class="vi">Trình bày</span><span class="en">Presenters</span>: <span data-member="4"></span> · <span data-member="5"></span></div>
   </div>
 </section>
@@ -943,7 +989,10 @@ const Detector = (() => {
   const escHtml = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
   /* ---------- team names ---------- */
-  document.getElementById("team-names").textContent = TEAM.join(", ");
+  const AV = ["--c1", "--c2", "--c3", "--c4", "--c5"];
+  const initials = name => name.trim().split(/\s+/).slice(-2).map(w => w[0]).join("").toUpperCase();
+  document.getElementById("team").innerHTML = TEAM.map((n, i) =>
+    `<div class="member"><span class="av" style="background:var(${AV[i % AV.length]})">${escHtml(initials(n))}</span><b>${escHtml(n)}</b></div>`).join("");
   document.querySelectorAll("[data-member]").forEach(el => { el.textContent = TEAM[+el.dataset.member - 1] || ""; });
 
   /* ---------- language and theme ---------- */
@@ -976,6 +1025,7 @@ const Detector = (() => {
     slides[cur].scrollTop = 0;
     document.getElementById("counter").textContent = `${cur + 1} / ${slides.length}`;
     document.getElementById("progress").style.width = `${((cur + 1) / slides.length) * 100}%`;
+    document.querySelector(".bar").style.setProperty("--bar-ch", getComputedStyle(slides[cur]).getPropertyValue("--ch"));
     if (!fromHash) { try { history.replaceState(null, "", "#s" + (cur + 1)); } catch (e) {} }
   }
   function fromHash() {
