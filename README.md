@@ -18,15 +18,17 @@ Khung trình chiếu (giao diện, điều hướng, mục lục, chế độ cu
 | F | Toàn màn hình |
 | A–D, R | Chọn đáp án và hiện đáp án trong quiz |
 
+Chân mỗi slide ghi nguồn dạng [n], cùng số với danh mục tài liệu tham khảo trong báo cáo (`report/tai_lieu_tham_khao.tex`).
+
 Mở thẳng một slide: `#/25`, hoặc theo tên: `#/demo`, `#/quiz`. Thêm `?check` vào URL để kiểm tra slide nào bị tràn chữ.
 
 ## Chỉnh sửa nhanh
 
 - **Tên thành viên:** `assets/js/app.js`, mảng `TEAM`. Tên tự hiện ở trang bìa, slide chia chương và góc trên mỗi slide (người trình bày).
-- **Kết quả demo chính thức (Bước 6B của notebook):** `assets/js/app.js`, `RESULTS.official`, ví dụ `{ detect: 87.5, falseAlarm: 5.0, n: 40 }`.
+- **Kết quả demo trên bộ kiểm tra 120 tin:** `assets/js/app.js`, `RESULTS.rows` (khớp bảng kết quả ở mục 5.2.1 của báo cáo).
 - **Câu hỏi quiz:** `assets/js/quiz.js`, mảng `QUIZ`.
 - **Nội dung slide:** `index.html`. Mỗi slide là một `<section class="slide">`; chữ tiếng Việt trong `<span class="vi">`, tiếng Anh trong `<span class="en">`.
 
-Demo trên slide chạy lớp luật của công cụ GP1 ngay trong trình duyệt (`assets/js/detector.js`), cho điểm trùng với notebook `Demo_GP1_phat_hien_tin_dang.ipynb`.
+Demo trên slide chạy module quét từ khóa + Regex của công cụ phát hiện tin đăng ngay trong trình duyệt (`assets/js/detector.js`), cho điểm trùng với notebook `Demo_phat_hien_tin_dang.ipynb`.
 
-Vụ án đang trong giai đoạn điều tra, chưa có bản án. Phần V4–V7 là phân tích của nhóm.
+Vụ án đang trong giai đoạn điều tra, chưa có bản án. Bốn hành vi ở mục 3.2 là phân tích của nhóm.

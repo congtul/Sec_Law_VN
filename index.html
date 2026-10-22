@@ -25,6 +25,16 @@
     } catch (e) {}
   })();
 </script>
+<style>
+.vcode.sm { font-size: 22px; }
+.ref-grid { display: grid; grid-template-columns: 1.25fr 1fr; gap: 6px 28px; align-content: start; }
+.ref-grid ol.refs { list-style: none; margin: 2px 0 8px; padding-left: 0; font-size: 11.5px; line-height: 1.3; }
+.ref-grid ol.refs li { margin: 0 0 2px; padding-left: 34px; text-indent: -34px; }
+.ref-grid .rn { display: inline-block; width: 34px; text-indent: 0; font-weight: 700; color: var(--ink2, inherit); }
+.ref-grid .kicker { margin-top: 2px; }
+.ref-grid ol.refs li::before, .ref-grid ol.refs li::marker { content: none !important; display: none !important; }
+.ref-grid > div:first-child { grid-row: span 3; }
+</style>
 </head>
 <body>
 
@@ -125,11 +135,11 @@
       <div class="card kpi rise" style="--i:3"><span class="v">3–5%</span><span class="l"><span class="en">platform fee per deal</span><span class="vi">phí trung gian mỗi giao dịch</span></span></div>
     </div>
     <div class="callout warn rise" style="--i:4">
-      <span class="en"><b>Two figures that are easy to confuse.</b> Over VND 400 billion is revenue that passed through the platform. The illicit gain from fees was put at several billion VND, and penalties are measured against that second figure.</span>
-      <span class="vi"><b>Hai con số dễ nhầm.</b> Hơn 400 tỷ đồng là doanh thu đi qua sàn. Khoản thu lợi bất chính từ phí trung gian được cơ quan điều tra nêu là vài tỷ đồng, và hình phạt tính theo con số thứ hai.</span>
+      <span class="en"><b>Two figures that are easy to confuse.</b> Over VND 400 billion is revenue that passed through the platform. What the operators kept is the 3–5% fee, which investigators put at several billion VND. Calling the VND 400 billion “profit” is inaccurate.</span>
+      <span class="vi"><b>Hai con số dễ nhầm.</b> Hơn 400 tỷ đồng là doanh thu đi qua sàn. Phần nhóm điều hành giữ lại là phí trung gian 3–5%, được cơ quan điều tra nêu là nhiều tỷ đồng. Gọi 400 tỷ là “thu lợi” là không chính xác.</span>
     </div>
   </div>
-  <p class="src">CAND, VietNamNet, Dân trí — 9–10/7/2026</p>
+  <p class="src"><span class="en">Sources:</span><span class="vi">Nguồn:</span> [14] Bộ Công an, 14/7/2026 · [15] CAND, 9/7/2026 · [16] VietNamNet, 10/7/2026 · [17] Hà Nội Mới, 10/7/2026</p>
 </section>
 
 <!-- 1.1 how it worked -->
@@ -153,7 +163,7 @@
       <div class="card rise" style="--i:3"><h3><span class="num-badge">3</span><span class="en">Open promotion</span><span class="vi">Quảng bá công khai</span></h3><p class="small ink2">Facebook, Telegram, TikTok, Instagram, Google.</p></div>
     </div>
   </div>
-  <p class="src">VietNamNet, 10/7/2026; CAND, 7/2026</p>
+  <p class="src"><span class="en">Sources:</span><span class="vi">Nguồn:</span> [14] Bộ Công an, 14/7/2026 · [15] CAND, 9/7/2026 · [16] VietNamNet, 10/7/2026</p>
 </section>
 
 <!-- 1.1 timeline -->
@@ -164,6 +174,7 @@
     <div class="callout tl-detail" id="tl-main-detail"></div>
     <p class="xs muted"><span class="en">Click a bar or marker for details. The time axis is drawn to scale.</span><span class="vi">Bấm vào từng thanh hoặc mốc để xem chi tiết. Trục thời gian vẽ đúng tỉ lệ.</span></p>
   </div>
+  <p class="src"><span class="en">Sources:</span><span class="vi">Nguồn:</span> [1] Luật ATTTM 2015 · [3] Luật ANM 2018 · [5] NĐ 13/2023 · [6] Luật BVDLCN 2025 · [11] NĐ 52/2024 · [12] Luật ANM 2025 · [13] Luật TMĐT 2025 · [14] Bộ Công an, 14/7/2026</p>
 </section>
 
 <!-- 1.1 why this case -->
@@ -175,6 +186,7 @@
     <div class="card rise" style="--i:2"><h3><span class="num-badge">3</span><span class="en">Real harm</span><span class="vi">Hậu quả thực tế</span></h3><p class="ink2"><span class="en">Accounts bought on the platform were used for fraud, so the harm is concrete.</span><span class="vi">Tài khoản mua từ sàn đã được dùng để lừa đảo. Rủi ro không chỉ nằm trên lý thuyết.</span></p></div>
     <div class="card rise" style="--i:3"><h3><span class="num-badge">4</span><span class="en">Enough facts</span><span class="vi">Đủ dữ kiện</span></h3><p class="ink2"><span class="en">Investigators published the model, scale, infrastructure and fee structure.</span><span class="vi">Cơ quan điều tra đã công bố mô hình, quy mô, hạ tầng và cách thu phí, đủ để phân tích.</span></p></div>
   </div>
+  <p class="src"><span class="en">Sources:</span><span class="vi">Nguồn:</span> [14] Bộ Công an, 14/7/2026 · [15] CAND, 9/7/2026</p>
 </section>
 
 <!-- 1.2 scope -->
@@ -185,9 +197,9 @@
       <tbody>
         <tr style="--i:0"><td style="width:210px"><span class="en">Subject</span><span class="vi">Đối tượng</span></td><td><span class="en">The platform and its operators, not individual buyers’ fraud.</span><span class="vi">Nền tảng taphoammo.net và nhóm vận hành. Không đi sâu vào từng hành vi lừa đảo của người mua.</span></td></tr>
         <tr style="--i:1"><td><span class="en">Period</span><span class="vi">Thời gian</span></td><td><span class="en">Late 2021 to February 2026 (the raids).</span><span class="vi">Cuối năm 2021 đến tháng 2/2026 (thời điểm khám xét).</span></td></tr>
-        <tr style="--i:2"><td><span class="en">Law</span><span class="vi">Lĩnh vực luật</span></td><td><span class="en">Core: personal data protection and cybersecurity. Supporting: e-commerce, advertising and payments (for V4, V6, V7).</span><span class="vi">Trọng tâm: bảo vệ dữ liệu cá nhân và an ninh mạng. Bổ trợ: thương mại điện tử, quảng cáo, thanh toán (cho V4, V6, V7).</span></td></tr>
+        <tr style="--i:2"><td><span class="en">Law</span><span class="vi">Lĩnh vực luật</span></td><td><span class="en">Core: personal data protection and cybersecurity. Supporting: e-commerce, advertising and payments, used only for how the platform ran, advertised and handled money.</span><span class="vi">Trọng tâm: bảo vệ dữ liệu cá nhân và an ninh mạng. Bổ trợ: thương mại điện tử, quảng cáo, thanh toán, chỉ dùng để phân tích cách sàn vận hành, quảng bá và thu tiền.</span></td></tr>
         <tr style="--i:3"><td><span class="en">Method</span><span class="vi">Cách tiếp cận</span></td><td><span class="en">Case study from published information, cross-checked across sources, each act matched to specific provisions.</span><span class="vi">Nghiên cứu tình huống dựa trên thông tin đã công bố, kiểm chứng chéo nhiều nguồn, đối chiếu từng hành vi với điều khoản.</span></td></tr>
-        <tr style="--i:4"><td><span class="en">Limits</span><span class="vi">Giới hạn</span></td><td><span class="en">No verdict yet. We separate what investigators established from our own analysis.</span><span class="vi">Vụ án chưa có bản án. Bài tách rõ nội dung cơ quan điều tra đã xác định với nhận định của nhóm.</span></td></tr>
+        <tr style="--i:4"><td><span class="en">Limits</span><span class="vi">Giới hạn</span></td><td><span class="en">No verdict yet; the suspects are presumed innocent. We separate what investigators established from our own analysis.</span><span class="vi">Vụ án chưa có bản án; các bị can được suy đoán vô tội. Bài tách rõ nội dung cơ quan điều tra đã xác định với nhận định của nhóm.</span></td></tr>
       </tbody>
     </table>
   </div>
@@ -217,12 +229,13 @@
     <table class="tbl stagger">
       <thead><tr><th style="width:90px">#</th><th><span class="en">Research question</span><span class="vi">Câu hỏi nghiên cứu</span></th><th style="width:170px"><span class="en">Answered in</span><span class="vi">Trả lời ở</span></th></tr></thead>
       <tbody>
-        <tr style="--i:0"><td class="mono">RQ1</td><td><span class="en">Which provisions did the platform violate?</span><span class="vi">Hoạt động của sàn vi phạm những quy định nào?</span></td><td><span class="en">Chapter 3</span><span class="vi">Chương 3</span></td></tr>
-        <tr style="--i:1"><td class="mono">RQ2</td><td><span class="en">What kept the law from stopping it earlier?</span><span class="vi">Điều gì khiến việc áp dụng luật chưa ngăn chặn được sớm?</span></td><td><span class="en">Chapter 4</span><span class="vi">Chương 4</span></td></tr>
-        <tr style="--i:2"><td class="mono">RQ3</td><td><span class="en">What measures can detect and stop it?</span><span class="vi">Cần biện pháp gì để phát hiện và ngăn chặn?</span></td><td><span class="en">Chapters 5, 6</span><span class="vi">Chương 5, 6</span></td></tr>
+        <tr style="--i:0"><td class="mono">1</td><td><span class="en">Which provisions did the platform violate?</span><span class="vi">Hoạt động của sàn vi phạm những quy định nào?</span></td><td><span class="en">Chapter 3</span><span class="vi">Chương 3</span></td></tr>
+        <tr style="--i:1"><td class="mono">2</td><td><span class="en">What kept the law from stopping it earlier?</span><span class="vi">Điều gì khiến việc áp dụng luật chưa ngăn chặn được sớm?</span></td><td><span class="en">Chapter 4</span><span class="vi">Chương 4</span></td></tr>
+        <tr style="--i:2"><td class="mono">3</td><td><span class="en">What measures can detect and stop it?</span><span class="vi">Cần biện pháp gì để phát hiện và ngăn chặn?</span></td><td><span class="en">Chapters 5, 6</span><span class="vi">Chương 5, 6</span></td></tr>
       </tbody>
     </table>
   </div>
+  <p class="src"><span class="en">Sources:</span><span class="vi">Nguồn:</span> [1] Luật ATTTM 2015 · [5] NĐ 13/2023 · [14] Bộ Công an, 14/7/2026</p>
 </section>
 
 <section class="slide" data-ch="2" data-sec="2.2" data-who="1">
@@ -233,16 +246,16 @@
       <tbody>
         <tr style="--i:0"><td><span class="en">Network Information Security Law 2015</span><span class="vi">Luật An toàn thông tin mạng 2015</span></td><td><span class="cite">Đ7 k5</span></td><td><span class="en">Bans unlawful trading of personal information</span><span class="vi">Cấm kinh doanh trái pháp luật thông tin cá nhân</span></td><td><span class="en">Whole period; repealed 1 Jul 2026</span><span class="vi">Cả giai đoạn; hết hiệu lực 1/7/2026</span></td></tr>
         <tr style="--i:1"><td><span class="en">Decree 13/2023/ND-CP</span><span class="vi">Nghị định 13/2023/NĐ-CP</span></td><td><span class="cite">Đ3 k4</span> <span class="cite">Đ2 k3 đ.k</span></td><td><span class="en">Personal data may not be bought or sold in any form; digital account data is basic personal data</span><span class="vi">Dữ liệu cá nhân không được mua, bán dưới mọi hình thức; thông tin tài khoản số là dữ liệu cá nhân cơ bản</span></td><td><span class="en">From 1 Jul 2023</span><span class="vi">Từ 1/7/2023</span></td></tr>
-        <tr style="--i:2"><td><span class="en">Penal Code</span><span class="vi">Bộ luật Hình sự</span></td><td><span class="cite">Đ288</span></td><td><span class="en">Illegal provision or use of network information (the charge)</span><span class="vi">Tội đưa hoặc sử dụng trái phép thông tin mạng máy tính, mạng viễn thông (tội danh đã khởi tố)</span></td><td><span class="en">Whole period</span><span class="vi">Cả giai đoạn</span></td></tr>
-        <tr style="--i:3"><td><span class="en">Cybersecurity Law 2018 · Decree 53/2022</span><span class="vi">Luật An ninh mạng 2018 · NĐ 53/2022</span></td><td><span class="cite">Đ26 k3</span></td><td><span class="en">Domestic firms store user data in Vietnam</span><span class="vi">Doanh nghiệp trong nước lưu trữ dữ liệu người dùng tại Việt Nam</span></td><td><span class="en">Until 1 Jul 2026</span><span class="vi">Đến 1/7/2026</span></td></tr>
-        <tr style="--i:4"><td><span class="en">Decree 52/2013 as amended by 85/2021</span><span class="vi">NĐ 52/2013, sửa đổi bởi NĐ 85/2021</span></td><td><span class="cite">Đ36</span></td><td><span class="en">Duties of e-commerce platform operators</span><span class="vi">Nghĩa vụ của thương nhân cung cấp sàn thương mại điện tử</span></td><td><span class="en">Whole period</span><span class="vi">Cả giai đoạn</span></td></tr>
+        <tr style="--i:2"><td><span class="en">Penal Code</span><span class="vi">Bộ luật Hình sự</span></td><td><span class="cite">Đ288 k1, k2</span></td><td><span class="en">Illegal provision or use of network information (the charge)</span><span class="vi">Tội đưa hoặc sử dụng trái phép thông tin mạng máy tính, mạng viễn thông (tội danh đã khởi tố)</span></td><td><span class="en">Whole period</span><span class="vi">Cả giai đoạn</span></td></tr>
+        <tr style="--i:3"><td><span class="en">Cybersecurity Law 2018 · Decree 53/2022</span><span class="vi">Luật An ninh mạng 2018 · NĐ 53/2022</span></td><td><span class="cite">Luật: Đ26 k3</span> <span class="cite">NĐ: Đ26, 27</span></td><td><span class="en">Domestic firms store user data in Vietnam</span><span class="vi">Doanh nghiệp trong nước lưu trữ dữ liệu người dùng tại Việt Nam</span></td><td><span class="en">Until 1 Jul 2026</span><span class="vi">Đến 1/7/2026</span></td></tr>
+        <tr style="--i:4"><td><span class="en">Decree 52/2013 as amended by 85/2021</span><span class="vi">NĐ 52/2013, sửa đổi bởi NĐ 85/2021</span></td><td><span class="cite">Đ36 k8, 9, 11</span> <span class="cite">Đ4 k1 đ.a</span></td><td><span class="en">Duties of e-commerce platform operators: remove banned goods, assist the authorities</span><span class="vi">Nghĩa vụ của thương nhân cung cấp sàn TMĐT: loại bỏ hàng hóa cấm, hỗ trợ cơ quan nhà nước</span></td><td><span class="en">Amended text 1 Jan 2022 – 30 Jun 2026</span><span class="vi">Bản sửa đổi 1/1/2022 – 30/6/2026</span></td></tr>
         <tr style="--i:5"><td><span class="en">Advertising Law 2012</span><span class="vi">Luật Quảng cáo 2012</span></td><td><span class="cite">Đ7 k1</span> <span class="cite">Đ8 k1</span></td><td><span class="en">Bans advertising goods and services banned from trade</span><span class="vi">Cấm quảng cáo hàng hóa, dịch vụ cấm kinh doanh</span></td><td><span class="en">Whole period</span><span class="vi">Cả giai đoạn</span></td></tr>
-        <tr style="--i:6"><td><span class="en">Decree 101/2012 → 52/2024</span><span class="vi">NĐ 101/2012 → NĐ 52/2024</span></td><td><span class="cite">Đ8 k7, k8</span></td><td><span class="en">Bans unlicensed payment intermediation and payment services for unlawful business</span><span class="vi">Cấm trung gian thanh toán không phép, cấm dùng dịch vụ thanh toán để kinh doanh trái pháp luật</span></td><td><span class="en">52/2024 from 1 Jul 2024</span><span class="vi">NĐ 52/2024 từ 1/7/2024</span></td></tr>
-        <tr class="hl" style="--i:7"><td><span class="en">PDP Law 2025 (91/2025/QH15)</span><span class="vi">Luật BVDLCN 2025 (91/2025/QH15)</span></td><td><span class="cite">Đ7 k6</span></td><td><span class="en">Bans trading personal data; fines up to 10× proceeds. Used for solutions.</span><span class="vi">Cấm mua bán dữ liệu cá nhân; phạt tới 10 lần khoản thu. Dùng cho phần giải pháp.</span></td><td><span class="en">From 1 Jan 2026</span><span class="vi">Từ 1/1/2026</span></td></tr>
+        <tr style="--i:6"><td><span class="en">Decree 101/2012 → 52/2024</span><span class="vi">NĐ 101/2012 → NĐ 52/2024</span></td><td><span class="cite">NĐ 101: Đ6 k5, 6</span> <span class="cite">NĐ 52: Đ8 k7, 8, 12</span></td><td><span class="en">Bans unlicensed payment intermediation, payment services for unlawful business, and operating outside the licence</span><span class="vi">Cấm trung gian thanh toán không phép, dùng dịch vụ thanh toán để kinh doanh trái pháp luật, hoạt động sai giấy phép</span></td><td><span class="en">52/2024 from 1 Jul 2024</span><span class="vi">NĐ 52/2024 từ 1/7/2024</span></td></tr>
+        <tr class="hl" style="--i:7"><td><span class="en">PDP Law 2025 (91/2025/QH15)</span><span class="vi">Luật BVDLCN 2025 (91/2025/QH15)</span></td><td><span class="cite">Đ7 k6</span> <span class="cite">Đ8</span></td><td><span class="en">Bans trading personal data; fines up to 10× proceeds. Used for solutions.</span><span class="vi">Cấm mua bán dữ liệu cá nhân; phạt tới 10 lần khoản thu. Dùng cho phần giải pháp.</span></td><td><span class="en">From 1 Jan 2026</span><span class="vi">Từ 1/1/2026</span></td></tr>
       </tbody>
     </table>
   </div>
-  <p class="src"><span class="en">The 2025 Cybersecurity Law (116/2025/QH15) and E-commerce Law (122/2025/QH15) took effect on 1 Jul 2026 and inform the solutions.</span><span class="vi">Luật An ninh mạng 2025 (116/2025/QH15) và Luật TMĐT 2025 (122/2025/QH15) có hiệu lực từ 1/7/2026, dùng cho phần giải pháp.</span></p>
+  <p class="src"><span class="en">The 2025 Cybersecurity and E-commerce Laws took effect on 1 Jul 2026 and inform the solutions.</span><span class="vi">Luật An ninh mạng 2025 và Luật TMĐT 2025 có hiệu lực từ 1/7/2026, dùng cho phần giải pháp.</span> · <span class="en">Sources:</span><span class="vi">Nguồn:</span> [1]–[6], [8], [9], [11]–[13]</p>
 </section>
 
 <!-- =====================================================
@@ -250,7 +263,7 @@
      ===================================================== -->
 <section class="slide divider" data-ch="3" id="ch3" data-toc-en="Chapter 3 — Violations" data-toc-vi="Chương 3 — Phân tích vi phạm">
   <div class="big">03</div>
-  <div class="d-kicker"><span class="en">Chapter 3 · RQ1</span><span class="vi">Chương 3 · RQ1</span></div>
+  <div class="d-kicker"><span class="en">Chapter 3 · Question 1</span><span class="vi">Chương 3 · Câu hỏi 1</span></div>
   <h2><span class="en">Violations</span><span class="vi">Phân tích vi phạm</span></h2>
   <div class="d-meta"><span class="chip ch" data-who-chip="2"></span></div>
   <ol>
@@ -261,45 +274,46 @@
 </section>
 
 <section class="slide" data-ch="3" data-sec="3.0" data-who="2">
-  <h2><span class="en">Seven violations</span><span class="vi">Bảy điểm vi phạm sẽ được phân tích</span></h2>
+  <h2><span class="en">Seven violations</span><span class="vi">Bảy hành vi vi phạm sẽ được phân tích</span></h2>
   <div class="s-body stack">
     <div class="g4">
-      <div class="card vcard charged rise" style="--i:0"><span class="vcode">V1</span><span><span class="en">Trading personal data</span><span class="vi">Mua bán dữ liệu cá nhân</span></span></div>
-      <div class="card vcard charged rise" style="--i:1"><span class="vcode">V2</span><span><span class="en">Trading social media and email accounts</span><span class="vi">Mua bán tài khoản MXH, email</span></span></div>
-      <div class="card vcard charged rise" style="--i:2"><span class="vcode">V3</span><span><span class="en">Account verification for hire</span><span class="vi">Dịch vụ xác thực tài khoản hộ</span></span></div>
+      <div class="card vcard charged rise" style="--i:0"><span class="vcode sm">3.1.1</span><span><span class="en">Trading personal data</span><span class="vi">Mua bán dữ liệu cá nhân</span></span></div>
+      <div class="card vcard charged rise" style="--i:1"><span class="vcode sm">3.1.2</span><span><span class="en">Trading social media and email accounts</span><span class="vi">Mua bán tài khoản mạng xã hội, thư điện tử</span></span></div>
+      <div class="card vcard charged rise" style="--i:2"><span class="vcode sm">3.1.3</span><span><span class="en">Account verification for hire</span><span class="vi">Dịch vụ xác thực tài khoản hộ</span></span></div>
       <div class="card flat legend-card rise" style="--i:3">
         <div class="small"><span class="sw solid"></span><b><span class="en">Within the charge</span><span class="vi">Thuộc nội dung khởi tố</span></b></div>
         <div class="xs ink2"><span class="en">Penal Code Art. 288</span><span class="vi">Điều 288 BLHS</span></div>
         <div class="small"><span class="sw dash"></span><b><span class="en">Our analysis</span><span class="vi">Nhóm phân tích</span></b></div>
         <div class="xs ink2"><span class="en">Facts published; the breach conclusion is ours</span><span class="vi">Dữ kiện đã công bố; kết luận vi phạm là của nhóm</span></div>
       </div>
-      <div class="card vcard ours rise" style="--i:4"><span class="vcode">V4</span><span><span class="en">Vetted sellers yet allowed banned goods</span><span class="vi">Kiểm duyệt người bán nhưng vẫn cho phép hàng vi phạm</span></span></div>
-      <div class="card vcard ours rise" style="--i:5"><span class="vcode">V5</span><span><span class="en">Servers abroad</span><span class="vi">Máy chủ đặt ở nước ngoài</span></span></div>
-      <div class="card vcard ours rise" style="--i:6"><span class="vcode">V6</span><span><span class="en">Advertising a banned service</span><span class="vi">Quảng cáo dịch vụ bị cấm</span></span></div>
-      <div class="card vcard ours rise" style="--i:7"><span class="vcode">V7</span><span><span class="en">Payment intermediary for banned trades</span><span class="vi">Trung gian thanh toán cho giao dịch hàng cấm</span></span></div>
+      <div class="card vcard ours rise" style="--i:4"><span class="vcode sm">3.2.1</span><span><span class="en">Vetted sellers yet let banned goods circulate</span><span class="vi">Kiểm duyệt người bán nhưng vẫn để hàng vi phạm lưu hành</span></span></div>
+      <div class="card vcard ours rise" style="--i:5"><span class="vcode sm">3.2.2</span><span><span class="en">Servers abroad; user data not stored in Vietnam</span><span class="vi">Máy chủ ở nước ngoài, không lưu dữ liệu người dùng trong nước</span></span></div>
+      <div class="card vcard ours rise" style="--i:6"><span class="vcode sm">3.2.3</span><span><span class="en">Advertising a banned service</span><span class="vi">Quảng cáo dịch vụ bị cấm</span></span></div>
+      <div class="card vcard ours rise" style="--i:7"><span class="vcode sm">3.2.4</span><span><span class="en">Payment intermediary for banned trades</span><span class="vi">Trung gian thanh toán cho giao dịch hàng cấm</span></span></div>
     </div>
   </div>
+  <p class="src"><span class="en">Sources:</span><span class="vi">Nguồn:</span> [2] BLHS 2015 · [14] Bộ Công an, 14/7/2026</p>
 </section>
 
 <section class="slide" data-ch="3" data-sec="3.1" data-who="2">
-  <h2><span class="en">V1–V3: what was being sold</span><span class="vi">V1–V3: những gì bị đem ra mua bán</span></h2>
+  <h2><span class="en">Three acts within the charge</span><span class="vi">Ba hành vi thuộc nội dung khởi tố</span></h2>
   <div class="s-body stack">
     <div class="g3">
       <div class="card vcard charged rise" style="--i:0">
-        <div style="display:flex;justify-content:space-between;align-items:center"><span class="vcode">V1</span><span class="chip bad"><span class="en">Charged</span><span class="vi">Khởi tố</span></span></div>
+        <div style="display:flex;justify-content:space-between;align-items:center"><span class="vcode sm">3.1.1</span><span class="chip bad"><span class="en">Charged</span><span class="vi">Khởi tố</span></span></div>
         <h3><span class="en">Trading personal data</span><span class="vi">Mua bán dữ liệu cá nhân</span></h3>
         <div><span class="cite">NĐ 13/2023 · Đ3 k4</span> <span class="xs muted"><span class="en">from 1 Jul 2023</span><span class="vi">từ 1/7/2023</span></span></div>
-        <div><span class="cite">Luật ATTTM 2015 · Đ7 k5</span> <span class="xs muted"><span class="en">whole period</span><span class="vi">cả giai đoạn</span></span></div>
+        <div><span class="cite">BLHS · Đ288 k1 đ.b</span> <span class="cite">Luật ATTTM 2015 · Đ7 k5</span> <span class="xs muted"><span class="en">whole period</span><span class="vi">cả giai đoạn</span></span></div>
         <p class="small ink2"><span class="en">The clearest breach: personal data may not be bought or sold in any form.</span><span class="vi">Vi phạm rõ nhất: dữ liệu cá nhân không được mua, bán dưới mọi hình thức.</span></p>
       </div>
       <div class="card vcard charged rise" style="--i:1">
-        <div style="display:flex;justify-content:space-between;align-items:center"><span class="vcode">V2</span><span class="chip bad"><span class="en">Charged</span><span class="vi">Khởi tố</span></span></div>
+        <div style="display:flex;justify-content:space-between;align-items:center"><span class="vcode sm">3.1.2</span><span class="chip bad"><span class="en">Charged</span><span class="vi">Khởi tố</span></span></div>
         <h3><span class="en">Trading accounts</span><span class="vi">Mua bán tài khoản MXH, email</span></h3>
-        <div><span class="cite">BLHS · Đ288 k1</span> <span class="cite">NĐ 13/2023 · Đ3 k4</span></div>
+        <div><span class="cite">BLHS · Đ288 k1 đ.b, c</span> <span class="cite">NĐ 13/2023 · Đ3 k4</span></div>
         <p class="small ink2"><span class="en">Digital account information is basic personal data under Decree 13 Art. 2(3)(k), so selling accounts is selling personal data.</span><span class="vi">Thông tin tài khoản số là dữ liệu cá nhân cơ bản theo NĐ 13 Đ2 k3 điểm k, nên bán tài khoản cũng là bán dữ liệu cá nhân.</span></p>
       </div>
       <div class="card vcard charged rise" style="--i:2">
-        <div style="display:flex;justify-content:space-between;align-items:center"><span class="vcode">V3</span><span class="chip bad"><span class="en">Charged</span><span class="vi">Khởi tố</span></span></div>
+        <div style="display:flex;justify-content:space-between;align-items:center"><span class="vcode sm">3.1.3</span><span class="chip bad"><span class="en">Charged</span><span class="vi">Khởi tố</span></span></div>
         <h3><span class="en">Verification for hire</span><span class="vi">Dịch vụ xác thực tài khoản hộ</span></h3>
         <div><span class="cite">BLHS · Đ288</span></div>
         <p class="small ink2"><span class="en">Art. 288 only. The press does not describe this service in detail, so we add no other provisions.</span><span class="vi">Chỉ áp Điều 288. Báo chí không mô tả cụ thể dịch vụ này, nên nhóm không suy diễn thêm điều khoản khác.</span></p>
@@ -307,6 +321,7 @@
     </div>
     <div class="callout rise" style="--i:3"><span class="en">Investigators only published the overall charge under Art. 288. Mapping each act to other provisions is our analysis.</span><span class="vi">Cơ quan điều tra chỉ công bố tội danh chung theo Điều 288. Việc gắn từng hành vi với điều khoản khác là phân tích của nhóm.</span></div>
   </div>
+  <p class="src"><span class="en">Sources:</span><span class="vi">Nguồn:</span> [1] Luật ATTTM 2015 · [2] BLHS 2015 · [5] NĐ 13/2023 · [14] Bộ Công an, 14/7/2026</p>
 </section>
 
 <section class="slide" data-ch="3" data-sec="3.1" data-who="2">
@@ -316,7 +331,7 @@
       <div class="kicker"><span class="en">Why clause 2</span><span class="vi">Vì sao là khoản 2</span></div>
       <ul class="b">
         <li><span class="en"><b>Organised:</b> a multi-team operation across three provinces.</span><span class="vi"><b>Có tổ chức:</b> bộ máy nhiều bộ phận, nhiều người, ở ba tỉnh, thành.</span></li>
-        <li><span class="en"><b>Illicit gain of VND 200 million or more:</b> the fee brought in several billion.</span><span class="vi"><b>Thu lợi bất chính từ 200 triệu đồng trở lên:</b> phí trung gian mang lại vài tỷ đồng.</span></li>
+        <li><span class="en"><b>Illicit gain of VND 200 million or more:</b> the fee brought in several billion.</span><span class="vi"><b>Thu lợi bất chính từ 200 triệu đồng trở lên:</b> phí trung gian mang lại nhiều tỷ đồng.</span></li>
       </ul>
       <div class="callout warn mt"><span class="en"><b>Our assessment,</b> not a finding of the authorities.</span><span class="vi"><b>Đánh giá của nhóm,</b> không phải kết luận của cơ quan tố tụng.</span></div>
     </div>
@@ -325,40 +340,42 @@
       <p class="small ink2 mt"><span class="en">Plus fines and bans from office or practice for 1–5 years.</span><span class="vi">Kèm hình phạt bổ sung: phạt tiền, cấm đảm nhiệm chức vụ hoặc hành nghề 1–5 năm.</span></p>
     </div>
   </div>
+  <p class="src"><span class="en">Sources:</span><span class="vi">Nguồn:</span> [2] BLHS 2015 · [14] Bộ Công an, 14/7/2026</p>
 </section>
 
 <section class="slide" data-ch="3" data-sec="3.2" data-who="2">
-  <h2><span class="en">V4–V5: how the platform operated</span><span class="vi">V4–V5: cách sàn vận hành</span></h2>
+  <h2><span class="en">Seller vetting and offshore servers</span><span class="vi">Kiểm duyệt người bán và máy chủ ở nước ngoài</span></h2>
   <div class="s-body g2">
     <div class="card vcard ours rise" style="--i:0">
-      <div style="display:flex;justify-content:space-between;align-items:center"><span class="vcode">V4</span><span class="chip ch"><span class="en">Our analysis</span><span class="vi">Nhóm phân tích</span></span></div>
+      <div style="display:flex;justify-content:space-between;align-items:center"><span class="vcode sm">3.2.1</span><span class="chip ch"><span class="en">Our analysis</span><span class="vi">Nhóm phân tích</span></span></div>
       <h3><span class="en">Vetted sellers yet allowed banned goods</span><span class="vi">Kiểm duyệt người bán nhưng vẫn cho phép hàng vi phạm</span></h3>
-      <p class="small"><b><span class="en">Fact:</span><span class="vi">Dữ kiện:</span></b> <span class="en">the platform vetted sellers, guaranteed deals and took fees.</span><span class="vi">sàn kiểm duyệt người bán, bảo đảm giao dịch và thu phí.</span></p>
-      <p class="small"><b><span class="en">Reading:</span><span class="vi">Nhận định:</span></b> <span class="en">the operator knew and profited; this was not neglect.</span><span class="vi">chủ sàn biết và hưởng lợi, không phải buông lỏng.</span></p>
-      <div><span class="cite">NĐ 52/2013 · NĐ 85/2021 · Đ36</span></div>
+      <p class="small"><b><span class="en">Fact:</span><span class="vi">Dữ kiện:</span></b> <span class="en">the platform vetted sellers, guaranteed deals, settled disputes and took 3–5% per deal.</span><span class="vi">sàn kiểm duyệt người bán, bảo đảm giao dịch, giải quyết tranh chấp và thu phí 3–5% mỗi giao dịch.</span></p>
+      <p class="small"><b><span class="en">Reading:</span><span class="vi">Nhận định:</span></b> <span class="en">the operator was in a position to know the goods were banned, yet kept them to profit.</span><span class="vi">chủ sàn có điều kiện biết hàng hóa bị cấm nhưng vẫn duy trì để hưởng lợi.</span></p>
+      <div><span class="cite">NĐ 52/2013 · Đ4 k1 đ.a</span> <span class="cite">Đ36 k8, 9, 11</span> <span class="xs muted"><span class="en">as amended by Decree 85/2021</span><span class="vi">sửa đổi bởi NĐ 85/2021</span></span></div>
     </div>
     <div class="card vcard ours rise" style="--i:1">
-      <div style="display:flex;justify-content:space-between;align-items:center"><span class="vcode">V5</span><span class="chip ch"><span class="en">Our analysis</span><span class="vi">Nhóm phân tích</span></span></div>
+      <div style="display:flex;justify-content:space-between;align-items:center"><span class="vcode sm">3.2.2</span><span class="chip ch"><span class="en">Our analysis</span><span class="vi">Nhóm phân tích</span></span></div>
       <h3><span class="en">Servers abroad</span><span class="vi">Máy chủ đặt ở nước ngoài</span></h3>
       <p class="small"><b><span class="en">Fact:</span><span class="vi">Dữ kiện:</span></b> <span class="en">servers abroad, rented domains.</span><span class="vi">máy chủ ở nước ngoài, tên miền đi thuê.</span></p>
-      <p class="small"><b><span class="en">Reading:</span><span class="vi">Nhận định:</span></b> <span class="en">domestic firms collecting user data must store it in Vietnam without waiting for a request. Where user data sat is inferred from the server location.</span><span class="vi">doanh nghiệp trong nước thu thập dữ liệu người dùng phải lưu tại Việt Nam, không cần chờ yêu cầu. Nơi lưu dữ liệu người dùng là suy luận từ vị trí máy chủ.</span></p>
-      <div><span class="cite">Luật ANM 2018 · Đ26 k3</span> <span class="cite">NĐ 53/2022</span></div>
+      <p class="small"><b><span class="en">Reading:</span><span class="vi">Nhận định:</span></b> <span class="en">domestic firms must store user data in Vietnam (at least 24 months) without waiting for a request. Where user data sat is inferred from the server location.</span><span class="vi">doanh nghiệp trong nước phải tự lưu dữ liệu người dùng tại Việt Nam (tối thiểu 24 tháng), không cần chờ yêu cầu. Nơi lưu dữ liệu người dùng là suy luận từ vị trí máy chủ.</span></p>
+      <div><span class="cite">Luật ANM 2018 · Đ26 k3</span> <span class="cite">NĐ 53/2022 · Đ26, 27</span></div>
     </div>
   </div>
+  <p class="src"><span class="en">Sources:</span><span class="vi">Nguồn:</span> [3] Luật ANM 2018 · [4] NĐ 53/2022 · [9] NĐ 52/2013 · [14] Bộ Công an, 14/7/2026</p>
 </section>
 
 <section class="slide" data-ch="3" data-sec="3.2" data-who="2">
-  <h2><span class="en">V6–V7: advertising and money flow</span><span class="vi">V6–V7: quảng cáo và dòng tiền</span></h2>
+  <h2><span class="en">Advertising and money flow</span><span class="vi">Quảng cáo và dòng tiền</span></h2>
   <div class="s-body g2">
     <div class="card vcard ours rise" style="--i:0">
-      <div style="display:flex;justify-content:space-between;align-items:center"><span class="vcode">V6</span><span class="chip ch"><span class="en">Our analysis</span><span class="vi">Nhóm phân tích</span></span></div>
+      <div style="display:flex;justify-content:space-between;align-items:center"><span class="vcode sm">3.2.3</span><span class="chip ch"><span class="en">Our analysis</span><span class="vi">Nhóm phân tích</span></span></div>
       <h3><span class="en">Advertising a banned service</span><span class="vi">Quảng cáo dịch vụ bị cấm</span></h3>
       <p class="small"><b><span class="en">Fact:</span><span class="vi">Dữ kiện:</span></b> <span class="en">promoted on Facebook, Telegram, TikTok, Instagram, Google.</span><span class="vi">quảng bá trên Facebook, Telegram, TikTok, Instagram, Google.</span></p>
-      <p class="small"><b><span class="en">Argument:</span><span class="vi">Lập luận:</span></b> <span class="en">trading personal data is banned by Decree 13, so the service may not be advertised.</span><span class="vi">mua bán dữ liệu cá nhân bị NĐ 13 cấm, nên dịch vụ này thuộc diện cấm quảng cáo.</span></p>
+      <p class="small"><b><span class="en">Argument:</span><span class="vi">Lập luận:</span></b> <span class="en">trading personal data is banned by the 2015 NIS Law and Decree 13, so the service may not be advertised.</span><span class="vi">mua bán dữ liệu cá nhân bị Luật ATTTM 2015 và NĐ 13 cấm, nên dịch vụ này thuộc diện cấm quảng cáo.</span></p>
       <div><span class="cite">Luật Quảng cáo 2012 · Đ7 k1, Đ8 k1</span></div>
     </div>
     <div class="card vcard ours rise" style="--i:1">
-      <div style="display:flex;justify-content:space-between;align-items:center"><span class="vcode">V7</span><span class="chip ch"><span class="en">Our analysis</span><span class="vi">Nhóm phân tích</span></span></div>
+      <div style="display:flex;justify-content:space-between;align-items:center"><span class="vcode sm">3.2.4</span><span class="chip ch"><span class="en">Our analysis</span><span class="vi">Nhóm phân tích</span></span></div>
       <h3><span class="en">Payment intermediary for banned trades</span><span class="vi">Trung gian thanh toán cho giao dịch hàng cấm</span></h3>
       <p class="small"><b><span class="en">Fact:</span><span class="vi">Dữ kiện:</span></b> <span class="en">the platform held funds and took 3–5% per deal.</span><span class="vi">sàn giữ tiền và thu phí 3–5% mỗi giao dịch.</span></p>
       <table class="tbl compact plain" style="font-size:14.5px">
@@ -367,28 +384,30 @@
           <tr><td><span class="en">Licensed</span><span class="vi">Có giấy phép</span></td><td><span class="cite">Đ8 k8</span> <span class="cite">Đ8 k12</span></td></tr>
         </tbody>
       </table>
-      <p class="xs ink2"><span class="en">The licence only decides which clause applies, not whether there is a breach. Before 1 Jul 2024: Decree 101/2012 (amended by 80/2016).</span><span class="vi">Giấy phép chỉ quyết định áp khoản nào, không quyết định có vi phạm hay không. Trước 1/7/2024 áp NĐ 101/2012 (sửa đổi bởi NĐ 80/2016).</span></p>
+      <p class="xs ink2"><span class="en">The licence only decides which clause applies, not whether there is a breach. Before 1 Jul 2024: Decree 101/2012 Art. 6(5), (6) (amended by 80/2016).</span><span class="vi">Giấy phép chỉ quyết định áp khoản nào, không quyết định có vi phạm hay không. Trước 1/7/2024 áp NĐ 101/2012 Đ6 k5, 6 (sửa đổi bởi NĐ 80/2016).</span></p>
     </div>
   </div>
+  <p class="src"><span class="en">Sources:</span><span class="vi">Nguồn:</span> [1] Luật ATTTM 2015 · [5] NĐ 13/2023 · [8] Luật Quảng cáo 2012 · [11] NĐ 52/2024 · [14] Bộ Công an, 14/7/2026</p>
 </section>
 
 <section class="slide" data-ch="3" data-sec="3.3" data-who="2">
-  <h2><span class="en">Acts, provisions and how firmly established</span><span class="vi">Hành vi, quy định và mức độ xác lập</span></h2>
+  <h2><span class="en">Acts, provisions and how firmly established</span><span class="vi">Hành vi, quy định và mức độ chứng thực</span></h2>
   <div class="s-body stack">
     <table class="tbl compact stagger">
-      <thead><tr><th style="width:70px"><span class="en">Code</span><span class="vi">Mã</span></th><th><span class="en">Act</span><span class="vi">Hành vi</span></th><th><span class="en">Provision</span><span class="vi">Quy định</span></th><th style="width:170px"><span class="en">Status</span><span class="vi">Mức độ xác lập</span></th></tr></thead>
+      <thead><tr><th style="width:80px"><span class="en">Section</span><span class="vi">Mục</span></th><th><span class="en">Act</span><span class="vi">Hành vi</span></th><th><span class="en">Provision</span><span class="vi">Quy định</span></th><th style="width:170px"><span class="en">Status</span><span class="vi">Mức độ chứng thực</span></th></tr></thead>
       <tbody>
-        <tr style="--i:0"><td class="mono">V1</td><td><span class="en">Trading personal data</span><span class="vi">Mua bán dữ liệu cá nhân</span></td><td><span class="cite">NĐ13 Đ3 k4</span> <span class="cite">ATTTM Đ7 k5</span></td><td><span class="chip bad"><span class="en">Charged</span><span class="vi">Khởi tố</span></span></td></tr>
-        <tr style="--i:1"><td class="mono">V2</td><td><span class="en">Trading accounts</span><span class="vi">Mua bán tài khoản</span></td><td><span class="cite">BLHS Đ288 k1</span> <span class="cite">NĐ13 Đ3 k4</span></td><td><span class="chip bad"><span class="en">Charged</span><span class="vi">Khởi tố</span></span></td></tr>
-        <tr style="--i:2"><td class="mono">V3</td><td><span class="en">Verification for hire</span><span class="vi">Xác thực tài khoản hộ</span></td><td><span class="cite">BLHS Đ288</span></td><td><span class="chip bad"><span class="en">Charged</span><span class="vi">Khởi tố</span></span></td></tr>
-        <tr style="--i:3"><td class="mono">V4</td><td><span class="en">Vetted yet allowed banned goods</span><span class="vi">Kiểm duyệt nhưng cho phép hàng vi phạm</span></td><td><span class="cite">NĐ52/2013 Đ36</span></td><td><span class="chip ch"><span class="en">Our analysis</span><span class="vi">Nhóm phân tích</span></span></td></tr>
-        <tr style="--i:4"><td class="mono">V5</td><td><span class="en">Servers abroad</span><span class="vi">Máy chủ ở nước ngoài</span></td><td><span class="cite">ANM 2018 Đ26 k3</span></td><td><span class="chip ch"><span class="en">Our analysis</span><span class="vi">Nhóm phân tích</span></span></td></tr>
-        <tr style="--i:5"><td class="mono">V6</td><td><span class="en">Advertising a banned service</span><span class="vi">Quảng cáo dịch vụ bị cấm</span></td><td><span class="cite">LQC Đ7 k1, Đ8 k1</span></td><td><span class="chip ch"><span class="en">Our analysis</span><span class="vi">Nhóm phân tích</span></span></td></tr>
-        <tr style="--i:6"><td class="mono">V7</td><td><span class="en">Payments for banned trades</span><span class="vi">Trung gian thanh toán hàng cấm</span></td><td><span class="cite">NĐ52/2024 Đ8 k7/k8</span></td><td><span class="chip ch"><span class="en">Our analysis</span><span class="vi">Nhóm phân tích</span></span></td></tr>
+        <tr style="--i:0"><td class="mono">3.1.1</td><td><span class="en">Trading personal data</span><span class="vi">Mua bán dữ liệu cá nhân</span></td><td><span class="cite">BLHS Đ288 k1 đ.b, k2</span> <span class="cite">ATTTM Đ7 k5</span> <span class="cite">NĐ13 Đ3 k4</span></td><td><span class="chip bad"><span class="en">Charged</span><span class="vi">Đã khởi tố</span></span></td></tr>
+        <tr style="--i:1"><td class="mono">3.1.2</td><td><span class="en">Trading accounts</span><span class="vi">Mua bán tài khoản</span></td><td><span class="cite">BLHS Đ288 k1 đ.b, c, k2</span> <span class="cite">NĐ13 Đ3 k4, Đ2 k3 đ.k</span></td><td><span class="chip bad"><span class="en">Charged</span><span class="vi">Đã khởi tố</span></span></td></tr>
+        <tr style="--i:2"><td class="mono">3.1.3</td><td><span class="en">Verification for hire</span><span class="vi">Xác thực tài khoản hộ</span></td><td><span class="cite">BLHS Đ288 k1, k2</span></td><td><span class="chip bad"><span class="en">Charged</span><span class="vi">Đã khởi tố</span></span></td></tr>
+        <tr style="--i:3"><td class="mono">3.2.1</td><td><span class="en">Vetted yet let banned goods circulate</span><span class="vi">Kiểm duyệt nhưng để hàng vi phạm lưu hành</span></td><td><span class="cite">NĐ52/2013 Đ4 k1 đ.a</span> <span class="cite">Đ36 k8, 9, 11</span></td><td><span class="chip ch"><span class="en">Our analysis</span><span class="vi">Nhóm phân tích</span></span></td></tr>
+        <tr style="--i:4"><td class="mono">3.2.2</td><td><span class="en">Servers abroad</span><span class="vi">Máy chủ ở nước ngoài</span></td><td><span class="cite">ANM 2018 Đ26 k3</span> <span class="cite">NĐ53 Đ26, 27</span></td><td><span class="chip ch"><span class="en">Our analysis</span><span class="vi">Nhóm phân tích</span></span></td></tr>
+        <tr style="--i:5"><td class="mono">3.2.3</td><td><span class="en">Advertising a banned service</span><span class="vi">Quảng cáo dịch vụ bị cấm</span></td><td><span class="cite">LQC Đ7 k1, Đ8 k1</span></td><td><span class="chip ch"><span class="en">Our analysis</span><span class="vi">Nhóm phân tích</span></span></td></tr>
+        <tr style="--i:6"><td class="mono">3.2.4</td><td><span class="en">Payments for banned trades</span><span class="vi">Trung gian thanh toán hàng cấm</span></td><td><span class="cite">NĐ52/2024 Đ8 k7, 8, 12</span> <span class="cite">NĐ101 Đ6 k5, 6</span></td><td><span class="chip ch"><span class="en">Our analysis</span><span class="vi">Nhóm phân tích</span></span></td></tr>
       </tbody>
     </table>
-    <p class="xs ink2"><b><span class="en">Limits of this analysis</span><span class="vi">Giới hạn của phân tích</span></b> <span class="en">(none changes the seven acts): registration with the Ministry of Industry and Trade; a payment licence; activity after 1 Jan 2026, when the 2025 PDP Law would also apply.</span><span class="vi">(không ảnh hưởng 7 hành vi trên): sàn có đăng ký sàn TMĐT với Bộ Công Thương không; có giấy phép trung gian thanh toán không; có hoạt động sau 1/1/2026 không (nếu có, chịu thêm Luật BVDLCN 2025).</span></p>
+    <p class="xs ink2"><b><span class="en">Limits of this analysis</span><span class="vi">Giới hạn của phân tích</span></b> <span class="en">(none changes the seven acts): registration with the Ministry of Industry and Trade; a payment licence; trades between 1 Jan and Feb 2026, which would also fall under the 2025 PDP Law (fines up to 10× proceeds).</span><span class="vi">(không ảnh hưởng bảy hành vi trên): sàn có đăng ký sàn TMĐT với Bộ Công Thương không; có giấy phép trung gian thanh toán không; có giao dịch từ 1/1/2026 đến 2/2026 không (nếu có, chịu thêm Luật BVDLCN 2025, phạt tới 10 lần khoản thu).</span></p>
   </div>
+  <p class="src"><span class="en">Sources:</span><span class="vi">Nguồn:</span> [1] Luật ATTTM 2015 · [2] BLHS 2015 · [3] Luật ANM 2018 · [4] NĐ 53/2022 · [5] NĐ 13/2023 · [6] Luật BVDLCN 2025 · [8] Luật Quảng cáo 2012 · [9] NĐ 52/2013 · [11] NĐ 52/2024</p>
 </section>
 
 <!-- =====================================================
@@ -396,7 +415,7 @@
      ===================================================== -->
 <section class="slide divider" data-ch="4" id="ch4" data-toc-en="Chapter 4 — Challenges" data-toc-vi="Chương 4 — Thách thức">
   <div class="big">04</div>
-  <div class="d-kicker"><span class="en">Chapter 4 · RQ2</span><span class="vi">Chương 4 · RQ2</span></div>
+  <div class="d-kicker"><span class="en">Chapter 4 · Question 2</span><span class="vi">Chương 4 · Câu hỏi 2</span></div>
   <h2><span class="en">Challenges in applying the law</span><span class="vi">Thách thức khi áp dụng pháp luật</span></h2>
   <div class="d-meta"><span class="chip ch" data-who-chip="3"></span></div>
   <ol>
@@ -407,29 +426,34 @@
 </section>
 
 <section class="slide" data-ch="4" data-sec="4.1" data-who="3">
-  <h2><span class="en">Five technical challenges</span><span class="vi">Năm thách thức kỹ thuật</span></h2>
+  <h2><span class="en">Five technical and security challenges</span><span class="vi">Năm thách thức kỹ thuật và bảo mật</span></h2>
   <div class="s-body">
     <table class="tbl stagger">
-      <thead><tr><th style="width:70px"><span class="en">Code</span><span class="vi">Mã</span></th><th><span class="en">Challenge</span><span class="vi">Thách thức</span></th><th style="width:330px"><span class="en">From which fact</span><span class="vi">Từ dữ kiện nào</span></th></tr></thead>
+      <thead><tr><th style="width:60px">#</th><th style="width:330px"><span class="en">Challenge</span><span class="vi">Thách thức</span></th><th><span class="en">From which fact</span><span class="vi">Từ dữ kiện nào</span></th></tr></thead>
       <tbody>
-        <tr style="--i:0"><td class="mono">K1</td><td><span class="en">Too much volume to monitor by hand</span><span class="vi">Khối lượng quá lớn để giám sát thủ công</span></td><td><span class="en">46,000 storefronts, 53 M transactions</span><span class="vi">46.000 gian hàng, 53 triệu giao dịch</span></td></tr>
-        <tr style="--i:1"><td class="mono">K2</td><td><span class="en">Slang and obfuscated listings evade filters</span><span class="vi">Tin đăng dùng từ lóng, ngụy trang, khó lọc tự động</span></td><td class="mono small">via · clone · d.a.t.a · 0TP</td></tr>
-        <tr style="--i:2"><td class="mono">K3</td><td><span class="en">Sold accounts and verification defeat other platforms’ OTP and identity checks</span><span class="vi">Tài khoản và dịch vụ xác thực bị bán làm vô hiệu OTP, xác minh danh tính của nền tảng khác</span></td><td>V2, V3</td></tr>
-        <tr style="--i:3"><td class="mono">K4</td><td><span class="en">Leak sources untraceable; sold data cannot be recalled</span><span class="vi">Không truy được nguồn rò rỉ; dữ liệu đã bán không thu hồi được</span></td><td>V1</td></tr>
-        <tr class="hl" style="--i:4"><td class="mono">K5</td><td><span class="en">Offshore servers and rented domains hinder tracing</span><span class="vi">Máy chủ ở nước ngoài, tên miền đi thuê, khó truy vết</span></td><td><span class="en">Named by investigators; about 8 months from case opening to raids</span><span class="vi">Cơ quan điều tra nêu; chuyên án mất khoảng 8 tháng đến khi khám xét</span></td></tr>
+        <tr style="--i:0"><td class="mono">1</td><td><b><span class="en">Sheer volume</span><span class="vi">Khối lượng lớn</span></b></td><td><span class="en">46,000+ storefronts, 53 M+ transactions; reading each listing by hand is not feasible</span><span class="vi">Hơn 46.000 gian hàng, trên 53 triệu giao dịch; đọc từng tin bằng tay không khả thi</span></td></tr>
+        <tr style="--i:1"><td class="mono">2</td><td><b><span class="en">Wording that dodges filters</span><span class="vi">Cách viết lách bộ lọc</span></b></td><td><span class="en">“d.a.t.a”, “0tp”: a scenario we assume for the demo</span><span class="vi">“d.a.t.a”, “0tp”: tình huống nhóm giả định khi xây demo</span></td></tr>
+        <tr style="--i:2"><td class="mono">3</td><td><b><span class="en">Accounts change hands</span><span class="vi">Tài khoản đổi chủ</span></b></td><td><span class="en">Verified accounts are sold and used by someone else</span><span class="vi">Tài khoản đã xác thực bị bán, chuyển cho người khác dùng</span></td></tr>
+        <tr style="--i:3"><td class="mono">4</td><td><b><span class="en">Data is easy to copy</span><span class="vi">Dữ liệu dễ sao chép</span></b></td><td><span class="en">Data passes through many hands; leaks are hard to trace and copies cannot be recalled</span><span class="vi">Dữ liệu đi qua nhiều bên, khó truy nguồn rò rỉ, không thu hồi hết bản sao</span></td></tr>
+        <tr class="hl" style="--i:4"><td class="mono">5</td><td><b><span class="en">Offshore infrastructure</span><span class="vi">Hạ tầng ở nước ngoài</span></b></td><td><span class="en">Named by investigators; about 8 months from case opening to raids</span><span class="vi">Cơ quan điều tra nêu gây khó truy vết; khoảng 8 tháng từ lập chuyên án đến khám xét</span></td></tr>
       </tbody>
     </table>
   </div>
+  <p class="src"><span class="en">Sources:</span><span class="vi">Nguồn:</span> [14] Bộ Công an, 14/7/2026 · [15] CAND, 9/7/2026</p>
 </section>
 
 <section class="slide" data-ch="4" data-sec="4.2" data-who="3">
-  <h2><span class="en">The rules existed, but scattered and slow</span><span class="vi">Luật có, nhưng tản mát và chậm</span></h2>
-  <div class="s-body g2">
-    <div class="card rise" style="--i:0"><h3><span class="num-badge">P1</span><span class="en">Scattered rules, no dedicated sanction</span><span class="vi">Quy định tản mát, thiếu chế tài riêng</span></h3><p class="small ink2"><span class="en">The 2015 law and Decree 13 already banned it, but revenue-based fines only arrived with the 2025 PDP Law. The Penal Code has no dedicated data offence, hence Art. 288. A draft Art. 159a is not yet law.</span><span class="vi">Luật ATTTM 2015 và NĐ 13/2023 đã cấm, nhưng phạt theo doanh thu chỉ có từ Luật BVDLCN 2025. BLHS chưa có tội danh riêng về dữ liệu cá nhân nên phải xử lý theo Điều 288. Điều 159a mới ở dạng dự thảo.</span></p></div>
-    <div class="card rise" style="--i:1"><h3><span class="num-badge">P2</span><span class="en">Platform duties loosely defined</span><span class="vi">Trách nhiệm của sàn chưa chặt</span></h3><p class="small ink2"><span class="en">Before the 2025 E-commerce Law, seller ID and blocking duties were loose. Here the operator’s role is clear because it vetted and charged fees; for similar platforms the line is harder to draw.</span><span class="vi">Trước Luật TMĐT 2025, nghĩa vụ định danh người bán và chặn hàng vi phạm còn lỏng. Ở vụ này trách nhiệm chủ sàn rõ vì sàn kiểm duyệt và thu phí; với sàn tương tự thì ranh giới vẫn khó xác định.</span></p></div>
-    <div class="card rise" style="--i:2"><h3><span class="num-badge">Q1</span><span class="en">A lawful corporate shell</span><span class="vi">Vỏ bọc doanh nghiệp hợp pháp</span></h3><p class="small ink2"><span class="en">The platform ran under a registered limited company.</span><span class="vi">Sàn hoạt động dưới danh nghĩa một công ty TNHH có đăng ký.</span></p></div>
-    <div class="card rise" style="--i:3"><h3><span class="num-badge">Q2</span><span class="en">Cross-agency, cross-province</span><span class="vi">Phối hợp liên ngành, liên tỉnh</span></h3><p class="small ink2"><span class="en">Suspects in Hanoi, Phu Tho and Quang Ninh; the case spans cybersecurity, e-commerce and payments.</span><span class="vi">Đối tượng ở Hà Nội, Phú Thọ, Quảng Ninh; vụ việc chạm tới an ninh mạng, thương mại điện tử và thanh toán.</span></p></div>
+  <h2><span class="en">Legal and governance challenges</span><span class="vi">Thách thức pháp lý và quản trị</span></h2>
+  <div class="s-body stack">
+  <div class="g2">
+    <div class="card rise" style="--i:0"><div class="kicker"><span class="en">Legal</span><span class="vi">Pháp lý</span></div><h3><span class="num-badge">6</span><span class="en">Many laws, each in force at different times</span><span class="vi">Nhiều văn bản, hiệu lực khác nhau theo thời gian</span></h3><p class="small ink2"><span class="en">One act touches data protection, cybersecurity, e-commerce and payments. The framework changed twice, giving three periods; a new law cannot reach earlier acts.</span><span class="vi">Một hành vi chạm tới bảo vệ dữ liệu, an ninh mạng, TMĐT và thanh toán. Khung pháp luật đổi hai lần, tạo ba giai đoạn; luật mới không xử lý hành vi trước đó.</span></p></div>
+    <div class="card rise" style="--i:1"><div class="kicker"><span class="en">Legal</span><span class="vi">Pháp lý</span></div><h3><span class="num-badge">7</span><span class="en">Where the seller’s liability ends and the platform’s begins</span><span class="vi">Ranh giới trách nhiệm giữa người bán và sàn</span></h3><p class="small ink2"><span class="en">Depends on control, listing review, fees and complaint handling. The 10× fine is measured on proceeds from the violation, not total revenue.</span><span class="vi">Phụ thuộc vai trò kiểm soát, duyệt tin, thu phí, xử lý phản ánh. Mức phạt tới 10 lần tính trên khoản thu từ hành vi vi phạm, không phải toàn bộ doanh thu.</span></p></div>
+    <div class="card rise" style="--i:2"><div class="kicker"><span class="en">Governance</span><span class="vi">Quản trị</span></div><h3><span class="num-badge">8</span><span class="en">A corporate shell</span><span class="vi">Vỏ bọc doanh nghiệp</span></h3><p class="small ink2"><span class="en">A registered company does not make the goods lawful. Checking who the seller is and checking what is sold are separate steps.</span><span class="vi">Có đăng ký doanh nghiệp không có nghĩa hàng hóa trên sàn hợp pháp. Kiểm tra danh tính người bán và kiểm tra hàng hóa là hai bước riêng.</span></p></div>
+    <div class="card rise" style="--i:3"><div class="kicker"><span class="en">Governance</span><span class="vi">Quản trị</span></div><h3><span class="num-badge">9</span><span class="en">Evidence held by many parties</span><span class="vi">Dữ liệu nằm ở nhiều bên</span></h3><p class="small ink2"><span class="en">Listings, payments and hosting sit with the platform, banks or wallets, hosts and ad platforms. This needs one contact point, preserved evidence and sharing within each agency’s powers.</span><span class="vi">Tin đăng, thanh toán, hạ tầng nằm ở sàn, ngân hàng hoặc ví, nhà cung cấp máy chủ, nền tảng quảng cáo. Cần đầu mối, bảo toàn chứng cứ, chia sẻ đúng thẩm quyền.</span></p></div>
   </div>
+  <p class="xs ink2"><span class="en">Being charged is not a finding of guilt; the suspects are presumed innocent until a final judgment.</span><span class="vi">Quyết định khởi tố chưa phải kết luận có tội; các bị can được suy đoán vô tội cho đến khi có bản án có hiệu lực.</span></p>
+  </div>
+  <p class="src"><span class="en">Sources:</span><span class="vi">Nguồn:</span> [6] Luật BVDLCN 2025 · [10] VBHN TMĐT 2020</p>
 </section>
 
 <!-- =====================================================
@@ -437,12 +461,12 @@
      ===================================================== -->
 <section class="slide divider" data-ch="5" id="ch5" data-toc-en="Chapter 5 — Solutions and demo" data-toc-vi="Chương 5 — Giải pháp và hiện thực">
   <div class="big">05</div>
-  <div class="d-kicker"><span class="en">Chapter 5 · RQ3</span><span class="vi">Chương 5 · RQ3</span></div>
+  <div class="d-kicker"><span class="en">Chapter 5 · Question 3</span><span class="vi">Chương 5 · Câu hỏi 3</span></div>
   <h2><span class="en">Solutions and implementation</span><span class="vi">Giải pháp và hiện thực</span></h2>
   <div class="d-meta"><span class="chip ch" data-who-chip="3,4,5"></span></div>
   <ol>
     <li><b>5.1</b><span class="en">Proposed solutions</span><span class="vi">Đề xuất giải pháp</span></li>
-    <li><b>5.2</b><span class="en">GP1 demo and document PoC</span><span class="vi">Demo GP1 và PoC tài liệu</span></li>
+    <li><b>5.2</b><span class="en">Solution 1 demo and document PoC</span><span class="vi">Demo giải pháp 1 và PoC tài liệu</span></li>
   </ol>
 </section>
 
@@ -450,46 +474,47 @@
   <h2><span class="en">Every challenge maps to a solution</span><span class="vi">Mỗi thách thức có một giải pháp</span></h2>
   <div class="s-body stack">
     <table class="tbl compact stagger">
-      <thead><tr><th><span class="en">Solution</span><span class="vi">Giải pháp</span></th><th style="width:120px"><span class="en">Addresses</span><span class="vi">Xử lý</span></th><th style="width:110px"><span class="en">Built</span><span class="vi">Hiện thực</span></th></tr></thead>
+      <thead><tr><th style="width:150px"><span class="en">Solution</span><span class="vi">Giải pháp</span></th><th><span class="en">What it does</span><span class="vi">Nội dung</span></th><th><span class="en">Challenges addressed</span><span class="vi">Thách thức xử lý</span></th><th style="width:120px"><span class="en">Built</span><span class="vi">Hiện thực</span></th></tr></thead>
       <tbody>
-        <tr class="hl" style="--i:0"><td><b>GP1</b> <span class="en">Automatic detection of listings selling personal data, accounts, verification</span><span class="vi">Phát hiện tự động tin đăng rao bán dữ liệu cá nhân, tài khoản, dịch vụ xác thực</span></td><td class="mono">K1 K2</td><td><span class="chip good">Demo</span></td></tr>
-        <tr style="--i:1"><td><b>GP2</b> <span class="en">Anti-abuse at origin platforms: account-farming detection, OTP monitoring</span><span class="vi">Chống lạm dụng xác thực tại nền tảng gốc: phát hiện nuôi tài khoản hàng loạt, giám sát OTP</span></td><td class="mono">K3</td><td>—</td></tr>
-        <tr style="--i:2"><td><b>GP3</b> <span class="en">Leak tracing and controller duties (breach notice, data watermarking)</span><span class="vi">Truy vết nguồn rò rỉ, nâng trách nhiệm bên kiểm soát dữ liệu (thông báo vi phạm, đánh dấu dữ liệu)</span></td><td class="mono">K4</td><td>—</td></tr>
-        <tr class="hl" style="--i:3"><td><b>GP4</b> <span class="en">Seller ID (E-commerce Law 2025); licensed payment intermediaries only (Decree 52/2024)</span><span class="vi">Định danh người bán (Luật TMĐT 2025); chỉ dùng trung gian thanh toán được cấp phép (NĐ 52/2024)</span></td><td class="mono">Q1</td><td><span class="chip ch">PoC</span></td></tr>
-        <tr style="--i:4"><td><b>GP5</b> <span class="en">Apply the 2025 PDP Law (revenue-based fines) and E-commerce Law; clarify intermediary duties</span><span class="vi">Áp dụng Luật BVDLCN 2025 (phạt theo doanh thu) và Luật TMĐT 2025, làm rõ trách nhiệm nền tảng trung gian</span></td><td class="mono">P1 P2</td><td>—</td></tr>
-        <tr class="hl" style="--i:5"><td><b>GP6</b> <span class="en">Inter-agency coordination, tip intake, domain and hosting takedowns, in-country data storage</span><span class="vi">Phối hợp liên ngành, tiếp nhận tố giác, phối hợp nhà cung cấp tên miền và hosting để chặn truy cập, lưu dữ liệu trong nước</span></td><td class="mono">K5 Q2</td><td><span class="chip ch">PoC</span></td></tr>
+        <tr class="hl" style="--i:0"><td><b><span class="en">Solution 1</span><span class="vi">Giải pháp 1</span></b></td><td><span class="en">Flag listings that look like violations</span><span class="vi">Phát hiện tin có dấu hiệu vi phạm</span></td><td><span class="en">Volume; disguised listings</span><span class="vi">Khối lượng tin đăng; tin ngụy trang</span></td><td><span class="chip good">Demo</span></td></tr>
+        <tr style="--i:1"><td><b><span class="en">Solution 2</span><span class="vi">Giải pháp 2</span></b></td><td><span class="en">Protect accounts on the origin platforms</span><span class="vi">Bảo vệ tài khoản trên nền tảng gốc</span></td><td><span class="en">Accounts change hands</span><span class="vi">Tài khoản đổi chủ</span></td><td><span class="en">Proposal</span><span class="vi">Đề xuất</span></td></tr>
+        <tr style="--i:2"><td><b><span class="en">Solution 3</span><span class="vi">Giải pháp 3</span></b></td><td><span class="en">Trace data leaks</span><span class="vi">Truy nguồn rò rỉ dữ liệu</span></td><td><span class="en">Data is easy to copy</span><span class="vi">Dữ liệu dễ sao chép</span></td><td><span class="en">Proposal</span><span class="vi">Đề xuất</span></td></tr>
+        <tr class="hl" style="--i:3"><td><b><span class="en">Solution 4</span><span class="vi">Giải pháp 4</span></b></td><td><span class="en">Seller controls</span><span class="vi">Kiểm soát người bán</span></td><td><span class="en">Corporate shell</span><span class="vi">Vỏ bọc doanh nghiệp</span></td><td><span class="chip ch">PoC</span></td></tr>
+        <tr style="--i:4"><td><b><span class="en">Solution 5</span><span class="vi">Giải pháp 5</span></b></td><td><span class="en">Legal responsibility matrix</span><span class="vi">Ma trận trách nhiệm pháp lý</span></td><td><span class="en">Laws changing over time; liability boundary</span><span class="vi">Văn bản thay đổi theo thời gian; ranh giới trách nhiệm</span></td><td><span class="en">Proposal</span><span class="vi">Đề xuất</span></td></tr>
+        <tr class="hl" style="--i:5"><td><b><span class="en">Solution 6</span><span class="vi">Giải pháp 6</span></b></td><td><span class="en">Coordinated response</span><span class="vi">Phối hợp xử lý</span></td><td><span class="en">Offshore infrastructure; evidence held by many parties</span><span class="vi">Hạ tầng ở nước ngoài; dữ liệu nằm ở nhiều bên</span></td><td><span class="chip ch">PoC</span></td></tr>
       </tbody>
     </table>
-    <p class="xs ink2"><span class="en">Each solution follows goal → legal basis → process design. GP2, GP3 and GP5 are proposals only.</span><span class="vi">Mỗi giải pháp trình bày theo khung: mục tiêu → căn cứ pháp lý → thiết kế quy trình. GP2, GP3, GP5 chỉ đề xuất, không hiện thực.</span></p>
+    <p class="xs ink2"><span class="en">Each solution sets out its goal, legal basis, method and output. Solutions 2, 3 and 5 remain proposals.</span><span class="vi">Mỗi giải pháp gồm mục tiêu, căn cứ, cách làm và đầu ra. Giải pháp 2, 3 và 5 dừng ở mức đề xuất.</span></p>
   </div>
+  <p class="src"><span class="en">Sources:</span><span class="vi">Nguồn:</span> [6] Luật BVDLCN 2025 · [7] NĐ 356/2025 · [10] VBHN TMĐT 2020 · [11] NĐ 52/2024 · [12] Luật ANM 2025 · [13] Luật TMĐT 2025 · [21] Cục TMĐT, 14/10/2026</p>
 </section>
 
 <section class="slide" data-ch="5" data-sec="5.2" data-who="4">
-  <h2><span class="en">GP1 listing detector: two layers, three decisions</span><span class="vi">Công cụ GP1: hai lớp, ba quyết định</span></h2>
+  <h2><span class="en">Listing detector: two modules, three decisions</span><span class="vi">Công cụ phát hiện tin đăng: hai module, ba quyết định</span></h2>
   <div class="s-body stack">
     <div class="g2">
-      <div class="card rise" style="--i:0"><div class="kicker"><span class="en">Layer 1 · Rules</span><span class="vi">Lớp 1 · Luật</span></div>
+      <div class="card rise" style="--i:0"><div class="kicker"><span class="en">Module 1 · Keywords + regex</span><span class="vi">Module 1 · Quét từ khóa + Regex</span></div>
         <ul class="b tight small">
           <li><span class="en">De-obfuscation: “d.a.t.a” → data, “0TP” → otp, strip diacritics</span><span class="vi">Chuẩn hóa chống ngụy trang: “d.a.t.a” → data, “0TP” → otp, bỏ dấu</span></li>
-          <li><span class="en">Find personal data samples: ID numbers, phones, emails</span><span class="vi">Tìm mẫu dữ liệu cá nhân: CCCD, số điện thoại, email</span></li>
-          <li><span class="en">Weighted keywords per act V1–V3, minus legitimate context</span><span class="vi">Từ khóa có trọng số cho V1–V3, trừ điểm theo ngữ cảnh hợp lệ</span></li>
+          <li><span class="en">Regex finds ID numbers, phone numbers and emails pasted in</span><span class="vi">Regex tìm số CCCD, số điện thoại, email dán trong tin</span></li>
+          <li><span class="en">Weighted keywords for the three charged acts, minus legitimate context</span><span class="vi">Từ khóa có trọng số cho ba hành vi khởi tố, trừ điểm theo ngữ cảnh hợp lệ</span></li>
         </ul></div>
-      <div class="card rise" style="--i:1"><div class="kicker"><span class="en">Layer 2 · Machine learning</span><span class="vi">Lớp 2 · Học máy</span></div>
+      <div class="card rise" style="--i:1"><div class="kicker"><span class="en">Module 2 · Machine learning (TF-IDF + logistic regression)</span><span class="vi">Module 2 · Học máy (TF-IDF + Logistic Regression)</span></div>
         <ul class="b tight small">
           <li><span class="en">Word and character n-gram TF-IDF</span><span class="vi">TF-IDF theo từ và theo cụm ký tự</span></li>
-          <li><span class="en">Logistic regression: fast and explainable</span><span class="vi">Hồi quy logistic: nhanh, giải thích được</span></li>
+          <li><span class="en">Trained on 1,024 synthetic listings (52 templates, 4 labels)</span><span class="vi">Học từ 1.024 tin tự tạo (52 mẫu câu, 4 nhãn)</span></li>
           <li><span class="en">Catches phrasing the keyword list misses</span><span class="vi">Bắt cách diễn đạt mà bộ từ khóa chưa có</span></li>
         </ul></div>
     </div>
     <table class="tbl compact" style="font-size:15px">
       <thead><tr><th><span class="en">Condition</span><span class="vi">Điều kiện</span></th><th style="width:250px"><span class="en">Decision</span><span class="vi">Quyết định</span></th></tr></thead>
       <tbody>
-        <tr><td><span class="en">Personal data sample plus a violation keyword; or risk ≥ 0.70 with concrete rule evidence</span><span class="vi">Có mẫu dữ liệu cá nhân kèm từ khóa vi phạm; hoặc điểm rủi ro ≥ 0,70 và lớp luật có bằng chứng cụ thể</span></td><td><span class="chip bad"><span class="en">BLOCK</span><span class="vi">CHẶN</span></span></td></tr>
-        <tr><td><span class="en">Risk ≥ 0.40 but not enough to block</span><span class="vi">Điểm rủi ro ≥ 0,40 nhưng chưa đủ điều kiện chặn</span></td><td><span class="chip warn"><span class="en">HUMAN REVIEW</span><span class="vi">CHUYỂN NGƯỜI DUYỆT</span></span></td></tr>
-        <tr><td><span class="en">Risk &lt; 0.40</span><span class="vi">Điểm rủi ro &lt; 0,40</span></td><td><span class="chip good"><span class="en">ALLOW</span><span class="vi">CHO PHÉP</span></span></td></tr>
+        <tr><td><span class="en">Personal data sample (an ID number, or 2+ phones/emails) plus a violation keyword; or risk ≥ 0.70 and the keyword module found a signal</span><span class="vi">Có mẫu dữ liệu cá nhân (CCCD, hoặc từ 2 số điện thoại/email) kèm từ khóa vi phạm; hoặc điểm rủi ro ≥ 0,70 và module quét từ khóa có tìm thấy dấu hiệu</span></td><td><span class="chip bad"><span class="en">BLOCK</span><span class="vi">CHẶN</span></span></td></tr>
+        <tr><td><span class="en">Risk ≥ 0.40, or either module alone ≥ 0.40, but not enough to block</span><span class="vi">Điểm rủi ro ≥ 0,40, hoặc riêng một module ≥ 0,40, nhưng chưa đủ điều kiện chặn</span></td><td><span class="chip warn"><span class="en">HUMAN REVIEW</span><span class="vi">CHUYỂN NGƯỜI DUYỆT</span></span></td></tr>
+        <tr><td><span class="en">Everything else</span><span class="vi">Các trường hợp còn lại</span></td><td><span class="chip good"><span class="en">ALLOW</span><span class="vi">CHO PHÉP</span></span></td></tr>
       </tbody>
     </table>
-    <p class="xs ink2"><span class="en">Risk = 0.6 × ML violation probability + 0.4 × rule score. A single contact phone number is not a data sample. All demo data is synthetic.</span><span class="vi">Điểm rủi ro = 0,6 × xác suất vi phạm (học máy) + 0,4 × điểm luật. Một số điện thoại liên hệ đơn lẻ không tính là mẫu dữ liệu. Toàn bộ dữ liệu demo do nhóm tự sinh.</span></p>
+    <p class="xs ink2"><span class="en">Risk = 0.6 × ML violation probability + 0.4 × keyword score. A single contact phone number is not a data sample. All demo data is synthetic.</span><span class="vi">Điểm rủi ro = 0,6 × xác suất vi phạm (học máy) + 0,4 × điểm quét từ khóa. Một số điện thoại liên hệ đơn lẻ không tính là mẫu dữ liệu. Toàn bộ dữ liệu demo do nhóm tự sinh.</span></p>
   </div>
 </section>
 
@@ -500,7 +525,7 @@
       <label for="demo-input" class="kicker" style="display:block"><span class="en">Listing text (all numbers are made up)</span><span class="vi">Nội dung tin đăng (các số đều là số bịa)</span></label>
       <textarea id="demo-input" spellcheck="false"></textarea>
       <div class="ex-chips" id="demo-chips"></div>
-      <p class="xs muted mt"><span class="en">This slide runs the rule layer in the browser; it scores exactly like the notebook. The full two-layer version is in Demo_GP1_phat_hien_tin_dang.ipynb.</span><span class="vi">Slide này chạy lớp luật ngay trong trình duyệt, cho điểm giống hệt notebook. Bản đầy đủ hai lớp nằm trong Demo_GP1_phat_hien_tin_dang.ipynb.</span></p>
+      <p class="xs muted mt"><span class="en">This slide runs module 1 (keywords + regex) in the browser and scores exactly like the notebook. The full two-module version is in Demo_phat_hien_tin_dang.ipynb.</span><span class="vi">Slide này chạy module 1 (quét từ khóa + Regex) ngay trong trình duyệt, cho điểm giống hệt notebook. Bản đầy đủ hai module nằm trong Demo_phat_hien_tin_dang.ipynb.</span></p>
     </div>
     <div class="card demo-out" id="demo-out"></div>
   </div>
@@ -509,24 +534,27 @@
 <section class="slide" data-ch="5" data-sec="5.2" data-who="5">
   <h2><span class="en">Recognising a “data market” and acting on it</span><span class="vi">Nhận diện một “chợ dữ liệu” và xử lý</span></h2>
   <div class="s-body stack">
-    <table class="tbl compact stagger" style="font-size:15px">
-      <thead><tr><th style="width:60px"><span class="en">Code</span><span class="vi">Mã</span></th><th><span class="en">Signal</span><span class="vi">Dấu hiệu nhận diện</span></th><th style="width:170px"><span class="en">Links to</span><span class="vi">Liên quan</span></th></tr></thead>
+    <table class="tbl compact stagger" style="font-size:14.5px">
+      <thead><tr><th style="width:50px">#</th><th style="width:250px"><span class="en">Criterion</span><span class="vi">Tiêu chí</span></th><th><span class="en">What to check</span><span class="vi">Dấu hiệu kiểm tra</span></th></tr></thead>
       <tbody>
-        <tr style="--i:0"><td class="mono">C1</td><td><span class="en">Openly lists personal data, accounts or verification services</span><span class="vi">Công khai đăng bán dữ liệu cá nhân, tài khoản hoặc dịch vụ xác thực</span></td><td class="mono">V1–V3 · GP1</td></tr>
-        <tr style="--i:1"><td class="mono">C2</td><td><span class="en">Takes an intermediary fee on those trades</span><span class="vi">Thu phí trung gian trên chính các giao dịch đó</span></td><td class="mono">V7 · GP4</td></tr>
-        <tr style="--i:2"><td class="mono">C3</td><td><span class="en">Advertises across several social platforms</span><span class="vi">Quảng cáo dịch vụ trên nhiều nền tảng mạng xã hội</span></td><td class="mono">V6</td></tr>
-        <tr style="--i:3"><td class="mono">C4</td><td><span class="en">Offshore servers, rented domains</span><span class="vi">Máy chủ ở nước ngoài, tên miền đi thuê</span></td><td class="mono">V5 · K5 · GP6</td></tr>
-        <tr style="--i:4"><td class="mono">C5</td><td><span class="en">Runs under a legal entity with thousands of storefronts</span><span class="vi">Vận hành dưới danh nghĩa pháp nhân, hàng nghìn gian hàng</span></td><td class="mono">Q1 · GP4</td></tr>
+        <tr class="hl" style="--i:0"><td class="mono">1</td><td><b><span class="en">Goods listed</span><span class="vi">Hàng hóa đăng bán</span></b></td><td><span class="en">Personal data, accounts or verification for hire on sale</span><span class="vi">Đăng bán dữ liệu cá nhân, tài khoản hoặc dịch vụ xác thực hộ</span></td></tr>
+        <tr style="--i:1"><td class="mono">2</td><td><b><span class="en">Intermediary fee</span><span class="vi">Thu phí trung gian</span></b></td><td><span class="en">Platform holds funds, guarantees deals, takes a fee per deal</span><span class="vi">Sàn giữ tiền, bảo đảm giao dịch, thu phí mỗi giao dịch</span></td></tr>
+        <tr style="--i:2"><td class="mono">3</td><td><b><span class="en">Seller vetting</span><span class="vi">Kiểm duyệt người bán</span></b></td><td><span class="en">Storefronts are vetted yet banned goods stay up</span><span class="vi">Có duyệt gian hàng nhưng vẫn để hàng vi phạm tồn tại</span></td></tr>
+        <tr style="--i:3"><td class="mono">4</td><td><b><span class="en">Multi-platform ads</span><span class="vi">Quảng cáo đa nền tảng</span></b></td><td><span class="en">Ads on social networks and search engines</span><span class="vi">Quảng cáo trên mạng xã hội, công cụ tìm kiếm</span></td></tr>
+        <tr style="--i:4"><td class="mono">5</td><td><b><span class="en">Offshore infrastructure</span><span class="vi">Hạ tầng ở nước ngoài</span></b></td><td><span class="en">Servers abroad, rented domains</span><span class="vi">Máy chủ ở nước ngoài, tên miền đi thuê</span></td></tr>
+        <tr style="--i:5"><td class="mono">6</td><td><b><span class="en">Corporate shell</span><span class="vi">Vỏ bọc doanh nghiệp</span></b></td><td><span class="en">Registered, but the business line does not match what is sold</span><span class="vi">Có đăng ký nhưng ngành nghề không khớp hàng hóa thực tế</span></td></tr>
       </tbody>
     </table>
+    <p class="xs ink2"><span class="en">Criterion 1 is required. Criterion 1 plus at least two others: start the response process. Criterion 1 alone: put on a watch list.</span><span class="vi">Tiêu chí 1 là bắt buộc. Thỏa tiêu chí 1 và ít nhất hai tiêu chí khác: chuyển sang quy trình xử lý. Chỉ thỏa tiêu chí 1: đưa vào danh sách theo dõi.</span></p>
     <ol class="steps">
-      <li><span class="en">Detect: scan listings (GP1), take tips</span><span class="vi">Phát hiện: quét tin đăng (GP1), nhận tố giác</span></li>
-      <li><span class="en">Verify: check C1–C5, keep hashed evidence</span><span class="vi">Xác minh: đối chiếu C1–C5, lưu bằng chứng có mã băm</span></li>
-      <li><span class="en">Request takedown, block domain and hosting</span><span class="vi">Yêu cầu gỡ tin, chặn tên miền và hosting</span></li>
-      <li><span class="en">Cut payment flows via intermediaries</span><span class="vi">Chặn dòng tiền qua trung gian thanh toán</span></li>
-      <li><span class="en">Refer the file to the authorities</span><span class="vi">Chuyển hồ sơ cho cơ quan chức năng</span></li>
+      <li><span class="en">Intake: detector alerts, public tips, reports from ad platforms</span><span class="vi">Tiếp nhận: cảnh báo từ công cụ, tố giác, phản ánh từ nền tảng quảng cáo</span></li>
+      <li><span class="en">Screen against the criteria</span><span class="vi">Sàng lọc theo bộ tiêu chí</span></li>
+      <li><span class="en">Preserve evidence: hashed log, screenshots, timestamps</span><span class="vi">Bảo toàn chứng cứ: nhật ký có mã băm, ảnh chụp, thời điểm</span></li>
+      <li><span class="en">Refer to the competent body: police, Ministry of Industry and Trade, State Bank, investigators</span><span class="vi">Chuyển đúng thẩm quyền: Bộ Công an, Bộ Công Thương, NHNN, cơ quan điều tra</span></li>
+      <li><span class="en">Track the case and reply to the reporter</span><span class="vi">Theo dõi và phản hồi người tố giác</span></li>
     </ol>
   </div>
+  <p class="src"><span class="en">Sources:</span><span class="vi">Nguồn:</span> [14] Bộ Công an, 14/7/2026</p>
 </section>
 
 <!-- =====================================================
@@ -549,36 +577,38 @@
     <div class="g2">
       <div class="card rise" id="res-official" style="--i:0"></div>
       <div class="card rise" style="--i:1">
-        <div class="kicker"><span class="en">Scale · K1</span><span class="vi">Quy mô · K1</span></div>
+        <div class="kicker"><span class="en">Speed</span><span class="vi">Tốc độ</span></div>
         <div class="g2">
           <div class="kpi"><span class="v" id="res-scan"></span><span class="l"><span class="en">to scan 46,000 listings</span><span class="vi">quét 46.000 tin</span></span></div>
-          <div class="kpi"><span class="v" id="res-manual"></span><span class="l"><span class="en">by hand at 30 s each</span><span class="vi">nếu duyệt tay 30 giây/tin</span></span></div>
+          <div class="kpi"><span class="v" id="res-manual"></span><span class="l"><span class="en">by hand at 30 s each (≈ 48 working days)</span><span class="vi">nếu đọc tay 30 giây/tin (≈ 48 ngày làm việc)</span></span></div>
         </div>
       </div>
     </div>
     <table class="tbl compact" id="res-table" style="font-size:15px"></table>
-    <p class="xs ink2"><span class="en">Steps 6–7 use templates written by the code’s author, so results are optimistic. De-obfuscation lifts the rule layer from 90.9% to 100% on disguised listings.</span><span class="vi">Bước 6–7 dùng mẫu câu do chính người viết code tạo nên kết quả lạc quan. Bước chuẩn hóa nâng tỉ lệ bắt tin ngụy trang của lớp luật từ 90,9% lên 100%.</span></p>
+    <p class="xs ink2"><span class="en">Test set of 120 listings written separately from the training data: 60 violations, 60 legitimate (20 of them tricky). All 3 false alarms of the combined method went to human review, none were blocked. The data is synthetic, so the figures illustrate the method, not real-world performance.</span><span class="vi">Bộ kiểm tra 120 tin viết riêng, không trùng dữ liệu huấn luyện: 60 tin vi phạm, 60 tin hợp lệ (20 tin dễ nhầm). Cả 3 tin báo nhầm của cách kết hợp chỉ bị chuyển người duyệt, không bị chặn. Dữ liệu tự tạo nên số liệu minh họa phương pháp, không phải hiệu năng trên sàn thật.</span></p>
   </div>
 </section>
 
 <section class="slide" data-ch="6" data-sec="6.1" data-who="5">
-  <h2><span class="en">It could have been flagged about 3.5 years earlier</span><span class="vi">Có thể phát hiện sớm hơn khoảng 3,5 năm</span></h2>
+  <h2><span class="en">The signals were visible from outside from the start</span><span class="vi">Dấu hiệu quan sát được từ bên ngoài ngay từ đầu</span></h2>
   <div class="s-body stack">
     <div class="card flat tbl-wrap" style="padding:6px 6px 4px"><div class="tl" id="tl-gap"></div></div>
-    <div class="g2">
-      <div class="card rise" style="--i:0"><p class="ink2" style="margin:0"><span class="en">Criterion <span class="mono hl">C1</span> (openly listing data and accounts) held from the day the platform launched in late 2021. In principle it could have been flagged in year one.</span><span class="vi">Tiêu chí <span class="mono hl">C1</span> (công khai đăng bán dữ liệu, tài khoản) đã thỏa ngay khi sàn bắt đầu hoạt động cuối năm 2021. Về nguyên tắc, sàn có thể bị gắn cờ từ năm đầu.</span></p></div>
-      <div class="card rise" style="--i:1"><p class="ink2" style="margin:0"><span class="en">The case was only opened in June 2025. The hatched bar is how long the platform ran before investigation.</span><span class="vi">Chuyên án chỉ được lập vào tháng 6/2025. Thanh gạch chéo là khoảng thời gian sàn hoạt động trước khi bị điều tra.</span></p></div>
+    <div class="g3">
+      <div class="card rise" style="--i:0"><p class="ink2 small" style="margin:0"><span class="en"><b>Criterion 1</b> (goods listed) and <b>criterion 4</b> (multi-platform ads) can be seen from outside, without investigative powers. Criterion 1 held from late 2021.</span><span class="vi"><b>Tiêu chí 1</b> (hàng hóa đăng bán) và <b>tiêu chí 4</b> (quảng cáo đa nền tảng) quan sát được từ bên ngoài, không cần quyền điều tra. Tiêu chí 1 đã thỏa từ cuối 2021.</span></p></div>
+      <div class="card rise" style="--i:1"><p class="ink2 small" style="margin:0"><span class="en">The case was opened in June 2025. Applied routinely, the criteria and the detector give these signals a chance to be recorded earlier. This is our inference, not a claim that it would surely have been caught in year one.</span><span class="vi">Chuyên án lập 6/2025. Nếu bộ tiêu chí và công cụ được áp dụng thường xuyên, các dấu hiệu này có cơ hội được ghi nhận sớm hơn. Đây là suy luận của nhóm, không khẳng định chắc chắn phát hiện được từ năm đầu.</span></p></div>
+      <div class="card rise" style="--i:2"><p class="ink2 small" style="margin:0"><span class="en">No false flag on lawful platforms: a store selling licence keys and courses meets criteria 2 and 4 but not criterion 1, so it is not escalated.</span><span class="vi">Không gắn cờ nhầm sàn hợp pháp: một sàn bán key bản quyền, khóa học thỏa tiêu chí 2, 4 nhưng không thỏa tiêu chí 1, nên không bị chuyển xử lý.</span></p></div>
     </div>
   </div>
+  <p class="src"><span class="en">Sources:</span><span class="vi">Nguồn:</span> [14] Bộ Công an, 14/7/2026</p>
 </section>
 
 <section class="slide" data-ch="6" data-sec="6.1" data-who="5">
   <h2><span class="en">What the solutions do not solve</span><span class="vi">Những gì giải pháp chưa giải quyết</span></h2>
   <div class="s-body g2">
-    <div class="card warn rise" style="--i:0"><h3><span class="en">Not built</span><span class="vi">Chưa hiện thực</span></h3><p class="small ink2"><span class="en">GP2, GP3 and GP5 remain proposals.</span><span class="vi">GP2, GP3, GP5 mới dừng ở đề xuất.</span></p></div>
-    <div class="card warn rise" style="--i:1"><h3><span class="en">Needs international cooperation</span><span class="vi">Phụ thuộc hợp tác quốc tế</span></h3><p class="small ink2"><span class="en">K5: offshore servers sit beyond domestic measures.</span><span class="vi">K5: máy chủ ở nước ngoài nằm ngoài tầm với của biện pháp trong nước.</span></p></div>
-    <div class="card warn rise" style="--i:2"><h3><span class="en">Synthetic demo data</span><span class="vi">Dữ liệu demo tự sinh</span></h3><p class="small ink2"><span class="en">Figures illustrate the method, not real-world performance. Keywords need constant updates as sellers adapt.</span><span class="vi">Số liệu minh họa phương pháp, không phải hiệu năng trên sàn thật. Bộ từ khóa phải cập nhật liên tục khi người bán đổi cách viết.</span></p></div>
-    <div class="card warn rise" style="--i:3"><h3><span class="en">Off-platform deals</span><span class="vi">Giao dịch ngoài sàn</span></h3><p class="small ink2"><span class="en">Deals moved to Telegram or Zalo are invisible to a listing scanner.</span><span class="vi">Giao dịch chuyển sang Telegram, Zalo thì công cụ quét tin đăng không thấy.</span></p></div>
+    <div class="card warn rise" style="--i:0"><h3><span class="en">Not built</span><span class="vi">Chưa hiện thực</span></h3><p class="small ink2"><span class="en">Solutions 2, 3 and 5 are proposals. The process and form exist on paper and have not been tried with a real agency or platform.</span><span class="vi">Giải pháp 2, 3 và 5 mới ở mức đề xuất. Quy trình và biểu mẫu mới trên giấy, chưa thử với cơ quan hay nền tảng thật.</span></p></div>
+    <div class="card warn rise" style="--i:1"><h3><span class="en">Needs international cooperation</span><span class="vi">Phụ thuộc hợp tác quốc tế</span></h3><p class="small ink2"><span class="en">Offshore infrastructure is beyond the reach of these solutions.</span><span class="vi">Hạ tầng đặt ở nước ngoài nằm ngoài tầm của các giải pháp trong bài.</span></p></div>
+    <div class="card warn rise" style="--i:2"><h3><span class="en">Demo limits</span><span class="vi">Giới hạn của demo</span></h3><p class="small ink2"><span class="en">Synthetic data; no real grasp of context (a lawful KYC listing still goes to review); must be updated as sellers change wording.</span><span class="vi">Dữ liệu tự tạo; công cụ chưa hiểu ngữ cảnh (tin KYC hợp lệ vẫn bị chuyển duyệt); phải cập nhật khi người bán đổi cách viết.</span></p></div>
+    <div class="card warn rise" style="--i:3"><h3><span class="en">Off-platform deals</span><span class="vi">Giao dịch ngoài sàn</span></h3><p class="small ink2"><span class="en">Deals moved to Telegram or Zalo, or data sent privately after purchase, are out of scope. The tool does not replace reviewers.</span><span class="vi">Giao dịch chuyển sang Telegram, Zalo hoặc dữ liệu gửi riêng sau khi mua nằm ngoài tầm quét. Công cụ không thay người duyệt.</span></p></div>
   </div>
 </section>
 
@@ -586,11 +616,11 @@
   <h2><span class="en">Answers to the three questions</span><span class="vi">Trả lời ba câu hỏi nghiên cứu</span></h2>
   <div class="s-body stack">
     <div class="g3">
-      <div class="card ch rise" style="--i:0"><div class="kicker">RQ1</div><span class="en"><b>Seven acts.</b> Three within the charge (V1–V3) and four likely violations from our analysis (V4–V7).</span><span class="vi"><b>Bảy hành vi.</b> Ba thuộc nội dung khởi tố (V1–V3) và bốn có dấu hiệu vi phạm do nhóm phân tích (V4–V7).</span></div>
-      <div class="card ch rise" style="--i:1"><div class="kicker">RQ2</div><span class="en"><b>Four main reasons.</b> Scattered rules without a dedicated sanction, offshore servers, a corporate shell, and sheer volume.</span><span class="vi"><b>Bốn lý do chính.</b> Quy định tản mát và thiếu chế tài riêng, máy chủ ở nước ngoài, vỏ bọc doanh nghiệp, khối lượng giao dịch lớn.</span></div>
-      <div class="card ch rise" style="--i:2"><div class="kicker">RQ3</div><span class="en"><b>Six solutions.</b> GP1 is tested with a demo; GP4–GP6 have a process and criteria PoC.</span><span class="vi"><b>Sáu giải pháp.</b> GP1 đã được kiểm chứng bằng demo; GP4–GP6 có PoC quy trình và tiêu chí nhận diện.</span></div>
+      <div class="card ch rise" style="--i:0"><div class="kicker"><span class="en">Question 1</span><span class="vi">Câu hỏi 1</span></div><span class="small"><span class="en"><b>Seven acts.</b> Three within the charge (trading personal data, trading accounts, verification for hire) and four likely violations from our analysis. The suspects remain presumed innocent.</span><span class="vi"><b>Bảy hành vi.</b> Ba thuộc nội dung khởi tố (mua bán dữ liệu cá nhân, mua bán tài khoản, dịch vụ xác thực hộ) và bốn có dấu hiệu vi phạm do nhóm phân tích. Các bị can vẫn được suy đoán vô tội.</span></span></div>
+      <div class="card ch rise" style="--i:1"><div class="kicker"><span class="en">Question 2</span><span class="vi">Câu hỏi 2</span></div><span class="small"><span class="en"><b>Nine challenges.</b> Technical: volume, disguised listings, accounts and data that change hands, offshore hosting. Legal: laws changing over time, the liability boundary. Governance: a corporate shell, evidence held by many parties.</span><span class="vi"><b>Chín thách thức.</b> Kỹ thuật: khối lượng lớn, tin ngụy trang, tài khoản và dữ liệu dễ chuyển tay, hạ tầng ở nước ngoài. Pháp lý: nhiều văn bản theo thời gian, ranh giới trách nhiệm. Quản trị: vỏ bọc doanh nghiệp, dữ liệu ở nhiều bên.</span></span></div>
+      <div class="card ch rise" style="--i:2"><div class="kicker"><span class="en">Question 3</span><span class="vi">Câu hỏi 3</span></div><span class="small"><span class="en"><b>Six solutions.</b> Solution 1 has a demo: combining both modules catches 93.3% of violations with 5.0% false alarms and scans 46,000 listings in about 25 s. Solutions 4 and 6 have a document PoC. Solutions 2, 3 and 5 are proposals.</span><span class="vi"><b>Sáu giải pháp.</b> Giải pháp 1 có demo: kết hợp hai module bắt 93,3% tin vi phạm, báo nhầm 5,0%, quét 46.000 tin trong khoảng 25 giây. Giải pháp 4 và 6 có PoC tài liệu. Giải pháp 2, 3, 5 là đề xuất.</span></span></div>
     </div>
-    <div class="callout rise" style="--i:3;font-size:20px"><span class="en"><b>Take-away:</b> the 2025 PDP and E-commerce Laws close most gaps in sanctions and platform duties. What is still missing is early detection and cross-border cooperation.</span><span class="vi"><b>Thông điệp:</b> Luật BVDLCN 2025 và Luật TMĐT 2025 lấp phần lớn khoảng trống về chế tài và trách nhiệm của sàn. Điều còn thiếu là năng lực phát hiện sớm và phối hợp xuyên biên giới.</span></div>
+    <div class="callout rise" style="--i:3;font-size:18px"><span class="en"><b>Next steps:</b> test the detector on real platform data where permitted, add context and negation handling, and pilot the response process with a real agency or platform.</span><span class="vi"><b>Hướng phát triển:</b> thử công cụ trên dữ liệu thật do nền tảng cung cấp trong khuôn khổ được phép, bổ sung khả năng hiểu ngữ cảnh và câu phủ định, thử quy trình phối hợp với một cơ quan hoặc nền tảng cụ thể.</span></div>
   </div>
 </section>
 
@@ -604,8 +634,8 @@
     <p class="lede" style="font-size:20px;max-width:1000px"><span class="en">Ten questions on the case, the law and the detector. Pick an answer, then reveal it.</span><span class="vi">Mười câu hỏi về vụ việc, pháp luật và công cụ phát hiện. Chọn đáp án rồi hiện kết quả.</span></p>
     <div class="g3">
       <div class="card rise" style="--i:0"><div class="kicker"><span class="en">The case</span><span class="vi">Vụ việc</span></div><span class="small ink2"><span class="en">Charge, figures, challenges</span><span class="vi">Tội danh, con số, thách thức</span></span></div>
-      <div class="card rise" style="--i:1"><div class="kicker"><span class="en">Law</span><span class="vi">Pháp luật</span></div><span class="small ink2"><span class="en">Decree 13, V1–V7, which law applies when</span><span class="vi">NĐ 13, V1–V7, luật nào áp dụng khi nào</span></span></div>
-      <div class="card rise" style="--i:2"><div class="kicker"><span class="en">Tool</span><span class="vi">Công cụ</span></div><span class="small ink2"><span class="en">How GP1 decides, how it is tested</span><span class="vi">GP1 quyết định thế nào, kiểm tra ra sao</span></span></div>
+      <div class="card rise" style="--i:1"><div class="kicker"><span class="en">Law</span><span class="vi">Pháp luật</span></div><span class="small ink2"><span class="en">Decree 13, the seven acts, which law applies when</span><span class="vi">NĐ 13, bảy hành vi, luật nào áp dụng khi nào</span></span></div>
+      <div class="card rise" style="--i:2"><div class="kicker"><span class="en">Tool</span><span class="vi">Công cụ</span></div><span class="small ink2"><span class="en">How the detector decides, how it is tested</span><span class="vi">Công cụ quyết định thế nào, kiểm tra ra sao</span></span></div>
     </div>
     <div class="small ink2" style="text-align:right"><kbd>A</kbd>–<kbd>D</kbd> <span class="en">pick</span><span class="vi">chọn</span> · <kbd>→</kbd> <span class="en">reveal</span><span class="vi">hiện đáp án</span> · <kbd>→</kbd> <span class="en">next</span><span class="vi">câu tiếp</span> &nbsp; <button class="btn" data-quiz-reset style="padding:6px 12px;font-size:13px"><span class="en">Reset quiz</span><span class="vi">Làm lại quiz</span></button></div>
   </div>
@@ -626,24 +656,45 @@
 
 <!-- REFERENCES -->
 <section class="slide" data-ch="e" data-sec="ref" id="ref">
-  <h2><span class="en">References</span><span class="vi">Nguồn tham khảo</span></h2>
-  <div class="s-body g2 small">
-    <div class="card flat"><div class="kicker"><span class="en">The case</span><span class="vi">Vụ việc</span></div>
-      <ol class="n">
-        <li><a href="https://cand.vn/mua-ban-du-lieu-duoi-vo-boc-cua-cong-ty-khoi-nghiep-3-doi-tuong-bi-khoi-to-post816257.html" target="_blank" rel="noopener">CAND</a> — <span class="en">3 suspects charged, 7/2026</span><span class="vi">khởi tố 3 đối tượng, 7/2026</span></li>
-        <li><a href="https://vietnamnet.vn/cong-an-tp-ha-noi-khoi-to-3-nguoi-dieu-hanh-san-mua-ban-du-lieu-ca-nhan-2534474.html" target="_blank" rel="noopener">VietNamNet</a> — 10/7/2026</li>
-        <li><a href="https://dantri.com.vn/phap-luat/khoi-to-giam-doc-dieu-hanh-cho-du-lieu-doanh-thu-hon-400-ty-dong-20260710160527699.htm" target="_blank" rel="noopener">Dân trí</a> — 10/7/2026</li>
-        <li><a href="https://tienphong.vn/giam-doc-cong-ty-cong-nghe-dut-tui-doanh-thu-400-ty-dong-nho-lap-cho-mua-ban-du-lieu-ca-nhan-post1858548.tpo" target="_blank" rel="noopener">Tiền Phong</a></li>
-        <li><a href="https://znews.vn/nup-bong-doanh-nghiep-cong-nghe-mua-ban-trai-phep-du-lieu-ca-nhan-post1667880.html" target="_blank" rel="noopener">Znews</a></li>
+  <h2><span class="en">References</span><span class="vi">Tài liệu tham khảo</span></h2>
+  <div class="s-body ref-grid">
+    <div><div class="kicker"><span class="en">Legal texts</span><span class="vi">Văn bản pháp luật</span></div>
+      <ol class="refs">
+        <li><span class="rn">[1]</span> <a href="https://hethongphapluat.com/luat-an-toan-thong-tin-mang-2015/dieu-7" target="_blank" rel="noopener">Quốc hội (2015). Luật An toàn thông tin mạng, số 86/2015/QH13. Điều 7.</a></li>
+        <li><span class="rn">[2]</span> <a href="https://hethongphapluat.com/bo-luat-hinh-su-2015/dieu-288" target="_blank" rel="noopener">Quốc hội (2015, sửa đổi 2017). Bộ luật Hình sự, số 100/2015/QH13. Điều 288.</a></li>
+        <li><span class="rn">[3]</span> <a href="https://hethongphapluat.com/luat-an-ninh-mang-2018/dieu-26" target="_blank" rel="noopener">Quốc hội (2018). Luật An ninh mạng, số 24/2018/QH14. Điều 26.</a></li>
+        <li><span class="rn">[4]</span> <a href="https://lsvn.vn/tu-01102022-du-lieu-nguoi-dung-internet-tai-viet-nam-se-duoc-luu-tru1661052929-a122807.html" target="_blank" rel="noopener">Chính phủ (2022). Nghị định 53/2022/NĐ-CP quy định chi tiết một số điều của Luật An ninh mạng. Tóm tắt tại LSVN.</a></li>
+        <li><span class="rn">[5]</span> <a href="https://hethongphapluat.com/nghi-dinh-13-2023-nd-cp-ve-bao-ve-du-lieu-ca-nhan/khoan-3-dieu-2" target="_blank" rel="noopener">Chính phủ (2023). Nghị định 13/2023/NĐ-CP về bảo vệ dữ liệu cá nhân. Điều 2 khoản 3, Điều 3.</a></li>
+        <li><span class="rn">[6]</span> <a href="https://vanban.chinhphu.vn/?docid=214590&amp;pageid=27160" target="_blank" rel="noopener">Quốc hội (2025). Luật Bảo vệ dữ liệu cá nhân, số 91/2025/QH15. Hồ sơ chính thức; bản Công báo, Điều 7, 8, 23; mức phạt tại LSVN.</a></li>
+        <li><span class="rn">[7]</span> <a href="https://congbao.cdnchinhphu.vn/180507251028987904/2026/1/17/356signed-1768638052103952849513.pdf" target="_blank" rel="noopener">Chính phủ (2025). Nghị định 356/2025/NĐ-CP quy định chi tiết Luật Bảo vệ dữ liệu cá nhân. Bản Công báo; tóm tắt tại Luật Việt An.</a></li>
+        <li><span class="rn">[8]</span> <a href="https://hethongphapluat.com/luat-quang-cao-2012/dieu-8" target="_blank" rel="noopener">Quốc hội (2012). Luật Quảng cáo, số 16/2012/QH13. Điều 8; Luật sửa đổi số 75/2025/QH15.</a></li>
+        <li><span class="rn">[9]</span> <a href="https://lsvn.vn/bao-dam-quyen-loi-cua-nguoi-tieu-dung-khi-mua-hang-tren-san-giao-dich-thuong-mai-dien-tu-1707211306-a140810.html" target="_blank" rel="noopener">Chính phủ (2013, sửa đổi 2021). Nghị định 52/2013/NĐ-CP về thương mại điện tử, sửa đổi bởi Nghị định 85/2021/NĐ-CP. Phân tích tại LSVN.</a></li>
+        <li><span class="rn">[10]</span> <a href="https://congbao.chinhphu.vn/tai-ve-van-ban-so-20-vbhn-bct-30960-30438?format=pdf" target="_blank" rel="noopener">Bộ Công Thương (2020). Văn bản hợp nhất quy định về thương mại điện tử, Công báo 2020, Điều 4.</a></li>
+        <li><span class="rn">[11]</span> <a href="https://vbpl.vn/nganhangnhanuoc/Pages/vbpq-toanvan.aspx?ItemID=167087" target="_blank" rel="noopener">Chính phủ (2024). Nghị định 52/2024/NĐ-CP về thanh toán không dùng tiền mặt. Toàn văn; Điều 8.</a></li>
+        <li><span class="rn">[12]</span> <a href="https://vanban.chinhphu.vn/?classid=1&amp;docid=216499&amp;pageid=27160&amp;typegroupid=3" target="_blank" rel="noopener">Quốc hội (2025). Luật An ninh mạng, số 116/2025/QH15. Hồ sơ chính thức; Apolat Legal; Điều 44.</a></li>
+        <li><span class="rn">[13]</span> <a href="https://luatvietnam.vn/tin-van-ban-moi/da-co-luat-thuong-mai-dien-tu-2025-so-122-2025-qh15-186-106402-article.html" target="_blank" rel="noopener">Quốc hội (2025). Luật Thương mại điện tử, số 122/2025/QH15. LuatVietnam.</a></li>
       </ol></div>
-    <div class="card flat"><div class="kicker"><span class="en">Legal texts and commentary</span><span class="vi">Văn bản và phân tích pháp lý</span></div>
-      <ol class="n" start="6">
-        <li><a href="https://hethongphapluat.com/nghi-dinh-13-2023-nd-cp-ve-bao-ve-du-lieu-ca-nhan/dieu-3" target="_blank" rel="noopener">Nghị định 13/2023, Điều 3</a></li>
-        <li><a href="https://hethongphapluat.com/luat-bao-ve-du-lieu-ca-nhan-2025/dieu-7" target="_blank" rel="noopener">Luật BVDLCN 2025, Điều 7</a></li>
-        <li><a href="https://lsvn.vn/mua-ban-du-lieu-ca-nhan-trai-phep-co-the-bi-phat-toi-10-lan-doanh-thu-a160473.html" target="_blank" rel="noopener">LSVN</a> — <span class="en">fines for trading personal data</span><span class="vi">mức phạt mua bán dữ liệu cá nhân</span></li>
-        <li><a href="https://vi.lawlinkvn.com/post/nghia-vu-luu-tru-du-lieu-tai-viet-nam-theo-nghi-dinh-53-2022" target="_blank" rel="noopener">Lawlink</a> — <span class="en">data storage under Decree 53/2022</span><span class="vi">lưu trữ dữ liệu theo NĐ 53/2022</span></li>
-        <li><a href="https://apolatlegal.com/vi/laws/luat-an-ninh-mang-2025-so-116-2025-qh15/" target="_blank" rel="noopener">Apolat Legal</a> — <span class="en">Cybersecurity Law 2025</span><span class="vi">Luật An ninh mạng 2025</span></li>
-        <li><a href="https://pbgdpl.cantho.gov.vn/mot-so-hanh-vi-bi-cam-trong-thanh-toan-khong-dung-tien-mat-tu-ngay-0172024" target="_blank" rel="noopener">Cổng PBGDPL Cần Thơ</a> — <span class="en">Decree 52/2024 prohibited acts</span><span class="vi">hành vi bị cấm theo NĐ 52/2024</span></li>
+    <div><div class="kicker"><span class="en">Official releases and press</span><span class="vi">Thông tin chính thức và báo chí</span></div>
+      <ol class="refs">
+        <li><span class="rn">[14]</span> <a href="https://www.bocongan.gov.vn/bai-viet/triet-pha-nhom-doi-tuong-van-hanh-website-mua-ban-du-lieu-ca-nhan-tai-khoan-mang-xa-hoi-rac-1784022194" target="_blank" rel="noopener">Bộ Công an (14/7/2026). Triệt phá nhóm đối tượng vận hành website mua bán dữ liệu cá nhân, tài khoản mạng xã hội.</a></li>
+        <li><span class="rn">[15]</span> <a href="https://cand.vn/mua-ban-du-lieu-duoi-vo-boc-cua-cong-ty-khoi-nghiep-3-doi-tuong-bi-khoi-to-post816257.html" target="_blank" rel="noopener">Báo Công an Nhân dân (9/7/2026). Mua bán dữ liệu dưới vỏ bọc của công ty khởi nghiệp, 3 đối tượng bị khởi tố.</a></li>
+        <li><span class="rn">[16]</span> <a href="https://vietnamnet.vn/cong-an-tp-ha-noi-khoi-to-3-nguoi-dieu-hanh-san-mua-ban-du-lieu-ca-nhan-2534474.html" target="_blank" rel="noopener">VietNamNet (10/7/2026). Công an TP Hà Nội khởi tố 3 người điều hành sàn mua bán dữ liệu cá nhân.</a></li>
+        <li><span class="rn">[17]</span> <a href="https://hanoimoi.vn/khoi-to-cac-doi-tuong-mua-ban-du-lieu-ca-nhan-thu-loi-tren-400-ty-dong-1211456.html" target="_blank" rel="noopener">Hà Nội Mới (10/7/2026). Khởi tố các đối tượng mua bán dữ liệu cá nhân thu lời trên 400 tỷ đồng.</a></li>
+        <li><span class="rn">[18]</span> <a href="https://kenh14.vn/hang-tram-canh-sat-ap-vao-kham-xet-tai-3-tinh-thanh-khoi-to-giam-doc-dao-quang-huy-sn-1992-215260710160532629.chn" target="_blank" rel="noopener">Kenh14 (11/7/2026, tổng hợp từ Đời sống &amp; Pháp luật). Hàng trăm cảnh sát ập vào khám xét tại 3 tỉnh thành, khởi tố Giám đốc Đào Quang Huy.</a></li>
+        <li><span class="rn">[19]</span> <a href="https://baophapluat.vn/triet-pha-website-taphoammo-net-ban-trai-phep-du-lieu-ca-nhan-thu-loi-tu-he-thong-1-35-trieu-tai-khoan.html" target="_blank" rel="noopener">Báo Pháp luật Việt Nam (14/7/2026). Triệt phá website taphoammo.net bán trái phép dữ liệu cá nhân.</a></li>
+        <li><span class="rn">[20]</span> <a href="https://dientuungdung.vn/vu-tap-hoa-mmo-he-lo-mang-toi-mua-ban-du-lieu-ca-nhan-16575.html" target="_blank" rel="noopener">Tạp chí Điện tử và Ứng dụng (14/7/2026). Vụ Tạp Hóa MMO hé lộ mảng tối mua bán dữ liệu cá nhân.</a></li>
+      </ol></div>
+    <div><div class="kicker"><span class="en">Agency guidance</span><span class="vi">Hướng dẫn của cơ quan nhà nước</span></div>
+      <ol class="refs">
+        <li><span class="rn">[21]</span> <a href="https://www.idea.gov.vn/default.aspx?category_id=6e3f3b28-3917-4816-83c5-a331259dd181&amp;do=detail&amp;id=184e0d3f-daab-42a5-a33e-782c78e579c0&amp;page=news" target="_blank" rel="noopener">Cục Thương mại điện tử (14/10/2026). Thông báo về Luật Thương mại điện tử 122/2025/QH15, Nghị định 248/2026 và mốc xác thực danh tính.</a></li>
+        <li><span class="rn">[22]</span> <a href="https://bocongan.gov.vn/chinh-sach-phap-luat/bai-viet/canh-bao-nguy-co-vi-pham-phap-luat-ve-an-ninh-mang-doi-voi-doanh-nghiep-ho-kinh-doanh-trong-qua-trinh-chuyen-doi-so-1785806444" target="_blank" rel="noopener">Bộ Công an (2026). Cảnh báo nguy cơ vi phạm pháp luật về an ninh mạng đối với doanh nghiệp, hộ kinh doanh trong quá trình chuyển đổi số.</a></li>
+      </ol></div>
+    <div><div class="kicker"><span class="en">Background</span><span class="vi">Bối cảnh chung</span></div>
+      <ol class="refs">
+        <li><span class="rn">[23]</span> <a href="https://www.sggp.org.vn/triet-pha-duong-day-mua-ban-trai-phep-gan-1300gb-du-lieu-post594468.html" target="_blank" rel="noopener">Sài Gòn Giải Phóng (17/5/2021). Triệt phá đường dây mua bán trái phép gần 1.300GB dữ liệu.</a></li>
+        <li><span class="rn">[24]</span> <a href="https://vneconomy.vn/phat-hien-hang-nghin-gb-du-lieu-ca-nhan-bi-thu-thap-mua-ban-trai-phep-trong-do-co-nhieu-du-lieu-nhay-cam.htm" target="_blank" rel="noopener">VnEconomy (17/7/2024). Phát hiện hàng nghìn GB dữ liệu cá nhân bị thu thập, mua bán trái phép.</a></li>
+        <li><span class="rn">[25]</span> <a href="https://www.sggp.org.vn/nam-2025-thiet-hai-do-lua-dao-truc-tuyen-o-viet-nam-uoc-tinh-tren-6000-ty-dong-post832336.html" target="_blank" rel="noopener">Sài Gòn Giải Phóng (7/1/2026). Năm 2025, thiệt hại do lừa đảo trực tuyến ở Việt Nam ước tính trên 6.000 tỷ đồng.</a></li>
+        <li><span class="rn">[26]</span> <a href="https://www.sggp.org.vn/bat-2-doi-tuong-mua-ban-trai-phep-hon-50-trieu-du-lieu-ca-nhan-post861086.html" target="_blank" rel="noopener">Sài Gòn Giải Phóng (7/7/2026). Bắt 2 đối tượng mua bán trái phép hơn 50 triệu dữ liệu cá nhân.</a></li>
       </ol></div>
   </div>
 </section>

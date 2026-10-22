@@ -5,19 +5,17 @@
 
 /* ================== EDIT HERE ================== */
 // Team members, in presenting order (Người 1 … Người 5 in the outline).
-window.TEAM = ['Người 1', 'Người 2', 'Người 3', 'Người 4', 'Người 5'];
+window.TEAM = ['Nguyễn Thái Thành Đạt', 'Nguyễn Hoàng Kiên', 'Ngô Nhất Toàn', 'Lê Công Tú', 'Bùi Hoàng Minh'];
 
-// Figures from the notebook. Fill OFFICIAL with the Step 6B result
-// once a member who never saw the code has written ~40 test listings.
+// Figures from the notebook (report section 5.2.1, table "Kết quả trên bộ kiểm tra 120 tin").
 window.RESULTS = {
-  official: null, // e.g. { detect: 87.5, falseAlarm: 5.0, n: 40 }
-  step6: [
-    { vi: 'Chỉ luật', en: 'Rules only', detect: 100.0, falseAlarm: 0.0, disguised: 100.0 },
-    { vi: 'Chỉ học máy', en: 'ML only', detect: 77.3, falseAlarm: 9.9, disguised: 68.2 },
-    { vi: 'Kết hợp 2 lớp', en: 'Both layers', detect: 100.0, falseAlarm: 0.0, disguised: 100.0, best: true }
+  n: 120,
+  rows: [
+    { vi: 'Quét từ khóa + Regex', en: 'Keywords + regex', recall: 66.7, precision: 97.6, falseAlarm: 1.7, counts: '40 / 20 / 1 / 59' },
+    { vi: 'Học máy (Logistic Regression)', en: 'Machine learning (logistic regression)', recall: 83.3, precision: 96.2, falseAlarm: 3.3, counts: '50 / 10 / 2 / 58' },
+    { vi: 'Kết hợp hai module', en: 'Both modules combined', recall: 93.3, precision: 94.9, falseAlarm: 5.0, counts: '56 / 4 / 3 / 57', best: true }
   ],
-  rulesNoNormalize: 90.9,
-  scanSeconds: 15,
+  scanSeconds: 25,
   manualHours: 383
 };
 /* =============================================== */
@@ -87,6 +85,7 @@ window.RESULTS = {
     { label: t('Điều tra', 'Investigation'), sub: t('các mốc', 'milestones'),
       items: [
         { type: 'dot', at: [2025, 6], when: t('6/2025', 'Jun 2025'), text: t('Công an TP Hà Nội lập chuyên án.', 'Hanoi police open the case.') },
+        { type: 'dot', at: [2025, 12, 25], when: t('25/12/2025', '25 Dec 2025'), text: t('Cơ quan Cảnh sát điều tra Công an TP Hà Nội ra quyết định khởi tố vụ án hình sự.', 'Hanoi police investigators decide to open criminal proceedings.') },
         { type: 'dot', at: [2026, 2], when: t('2/2026', 'Feb 2026'), text: t('6 tổ công tác khám xét, triệu tập đối tượng ở 3 tỉnh, thành.', 'Six teams raid and summon suspects in three provinces.') },
         { type: 'dot', at: [2026, 7, 10], when: t('9–10/7/2026', '9–10 Jul 2026'), text: t('Công bố khởi tố 3 bị can theo Điều 288 BLHS. Vụ án tiếp tục được điều tra mở rộng.', 'Three suspects charged under Penal Code Art. 288; the investigation continues.') }
       ] },
@@ -131,42 +130,35 @@ window.RESULTS = {
     show(0);
   }
   timeline($('#tl-main'), $('#tl-main-detail'), ROWS);
-  timeline($('#tl-gap'), null, ROWS.slice(0, 2), { from: [2021, 11], to: [2025, 6], label: t('Chưa bị điều tra', 'Not yet investigated'), sub: t('≈ 3,5 năm', '≈ 3.5 years') });
+  timeline($('#tl-gap'), null, ROWS.slice(0, 2), { from: [2021, 11], to: [2025, 6], label: t('Trước khi lập chuyên án', 'Before the case opened'), sub: t('≈ 3,5 năm', '≈ 3.5 years') });
 
   /* ---------- demo results ---------- */
   const R = window.RESULTS;
   const off = $('#res-official');
   if (off) {
-    if (R.official) {
-      off.innerHTML = `<div class="kicker">${t('Số chính thức · Bước 6B', 'Official · Step 6B')}</div>
-        <div class="g2"><div class="kpi"><span class="v">${num(R.official.detect)}%</span><span class="l">${t('phát hiện đúng', 'detected')}</span></div>
-        <div class="kpi"><span class="v">${num(R.official.falseAlarm)}%</span><span class="l">${t('báo nhầm', 'false alarms')}</span></div></div>
-        <p class="small ink2 mt-s">${t(`Trên ${R.official.n} tin do thành viên không đọc code tự viết.`, `On ${R.official.n} listings written by a member who never saw the code.`)}</p>`;
-    } else {
-      off.classList.add('vcard', 'ours');
-      off.innerHTML = `<div class="kicker">${t('Số chính thức · Bước 6B', 'Official · Step 6B')}</div>
-        <p class="small">${t('Điền sau khi nhóm chạy khoảng 40 tin do thành viên không đọc code tự viết.', 'To be filled in after the team runs about 40 listings written by a member who never saw the code.')}</p>`;
-    }
+    const B = R.rows.find((r) => r.best);
+    off.innerHTML = `<div class="kicker">${t('Kết hợp hai module · bộ kiểm tra ' + R.n + ' tin', 'Both modules · ' + R.n + '-listing test set')}</div>
+      <div class="g2"><div class="kpi"><span class="v">${num(B.recall)}%</span><span class="l">${t('tin vi phạm bị gắn cờ (recall)', 'violations flagged (recall)')}</span></div>
+      <div class="kpi"><span class="v">${num(B.falseAlarm)}%</span><span class="l">${t('tin hợp lệ bị báo nhầm', 'legitimate listings flagged')}</span></div></div>`;
     $('#res-scan').textContent = `≈ ${R.scanSeconds} s`;
     $('#res-manual').innerHTML = `${R.manualHours} ${t('giờ', 'h')}`;
     $('#res-table').innerHTML =
-      `<thead><tr><th>${t('Bước 6–7 · dữ liệu tự sinh', 'Steps 6–7 · synthetic data')}</th><th class="r">${t('Phát hiện đúng', 'Detected')}</th><th class="r">${t('Báo nhầm', 'False alarms')}</th><th class="r">${t('Tin ngụy trang', 'Obfuscated')}</th></tr></thead><tbody>` +
-      R.step6.map((r) => `<tr${r.best ? ' class="hl"' : ''}><td>${t(r.vi, r.en)}</td><td class="r">${num(r.detect)}%</td><td class="r">${num(r.falseAlarm)}%</td><td class="r">${num(r.disguised)}%</td></tr>`).join('') +
-      `<tr><td>${t('Luật, không chuẩn hóa chống ngụy trang', 'Rules without de-obfuscation')}</td><td class="r">—</td><td class="r">—</td><td class="r">${num(R.rulesNoNormalize)}%</td></tr></tbody>`;
+      `<thead><tr><th>${t('Cách', 'Method')}</th><th class="r">Recall</th><th class="r">Precision</th><th class="r">${t('Báo nhầm', 'False alarms')}</th><th class="r">${t('Bắt đúng / Bỏ sót / Báo nhầm / Cho phép đúng', 'Caught / Missed / False alarm / Correctly allowed')}</th></tr></thead><tbody>` +
+      R.rows.map((r) => `<tr${r.best ? ' class="hl"' : ''}><td>${t(r.vi, r.en)}</td><td class="r">${num(r.recall)}%</td><td class="r">${num(r.precision)}%</td><td class="r">${num(r.falseAlarm)}%</td><td class="r mono">${r.counts}</td></tr>`).join('') + '</tbody>';
   }
 
   /* ---------- live demo (rule layer) ---------- */
   const EXAMPLES = [
-    { vi: 'Bán data', en: 'Data sale', text: 'Cần bán gấp 30k data khách hàng spa, đủ tên + sđt, mẫu 0938123456 / 0977654321' },
-    { vi: 'Thuê OTP', en: 'OTP rental', text: 'Thuê số nhận 0TP tiktok, trả code 20 giây, giá 3k' },
+    { vi: 'Bán data ngụy trang', en: 'Disguised data sale', text: 'Pass d.a.t.a khách mua bảo hiểm 5k số, mẫu 0912345678, 0987654321' },
+    { vi: 'Thuê sim nhận OTP', en: 'OTP SIM rental', text: 'Cho thuê sim nhận 0tp theo lượt, giao mã trong 30 giây. LH 0912345678' },
+    { vi: 'Khóa học (dễ nhầm)', en: 'Course (tricky)', text: 'Khóa học nhận diện tin nhắn OTP giả mạo, phòng tránh lừa đảo. LH 0901222333' },
     { vi: 'Bán via ngụy trang', en: 'Disguised account', text: 'Bán v.i.a ngoại có 2fa, kèm c o o k i e, bh 24h' },
-    { vi: 'Khóa học (dễ nhầm)', en: 'Course (tricky)', text: 'Khóa học an toàn thông tin: cách nhận diện lừa đảo chiếm đoạt OTP. LH 0905111222' },
     { vi: 'Key bản quyền', en: 'Licence key', text: 'Bán key Windows 11 Pro chính hãng, có hóa đơn đỏ' }
   ];
   const LOAI = {
-    BAN_DLCN: t('Mua bán dữ liệu cá nhân (V1)', 'Personal data sale (V1)'),
-    BAN_TAI_KHOAN: t('Mua bán tài khoản (V2)', 'Account sale (V2)'),
-    DICH_VU_XAC_THUC: t('Dịch vụ xác thực hộ (V3)', 'Verification for hire (V3)'),
+    BAN_DLCN: t('Mua bán dữ liệu cá nhân', 'Personal data sale'),
+    BAN_TAI_KHOAN: t('Mua bán tài khoản', 'Account sale'),
+    DICH_VU_XAC_THUC: t('Dịch vụ xác thực hộ', 'Verification for hire'),
     HOP_LE: t('Không thấy dấu hiệu', 'No signal')
   };
   const VERDICT = { block: t('CHẶN', 'BLOCK'), review: t('CHUYỂN NGƯỜI DUYỆT', 'HUMAN REVIEW'), allow: t('CHO PHÉP', 'ALLOW') };
@@ -181,11 +173,11 @@ window.RESULTS = {
     if (r.coMau) why.push(t(`chứa mẫu dữ liệu cá nhân: ${r.dlcn.length} giá trị`, `personal data sample: ${r.dlcn.length} values`));
     else if (r.dlcn.length) why.push(t('một số liên hệ đơn lẻ, không tính là mẫu dữ liệu', 'a single contact number, not a data sample'));
     if (r.tru) why.push(t(`ngữ cảnh hợp lệ: ${r.nguCanh.map(esc).join(', ')} (trừ điểm)`, `legitimate context: ${r.nguCanh.map(esc).join(', ')} (deducted)`));
-    if (r.luatCung) why.push(t('luật cứng: mẫu dữ liệu + từ khóa vi phạm → chặn ngay', 'hard rule: data sample + violation keyword → block'));
+    if (r.luatCung) why.push(t('bằng chứng rõ: mẫu dữ liệu + từ khóa vi phạm → chặn ngay', 'clear evidence: data sample + violation keyword → block'));
     const pct = Math.round(r.diemLuat * 100);
     out.innerHTML = `
-      <div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap"><span class="verdict ${r.quyetDinh}">${VERDICT[r.quyetDinh]}</span><b>${LOAI[r.loai]}</b></div>
-      <div><div class="small ink2">${t('Điểm luật', 'Rule score')}: <b class="mono">${r.diemLuat.toFixed(2)}</b></div>
+      <div style="display:flex;gap:14px;align-items:center;flex-wrap:wrap"><span class="verdict ${r.quyetDinh}">${VERDICT[r.quyetDinh]}</span><b>${LOAI[r.quyetDinh === 'allow' ? 'HOP_LE' : r.loai]}</b></div>
+      <div><div class="small ink2">${t('Điểm quét từ khóa', 'Keyword score')}: <b class="mono">${r.diemLuat.toFixed(2)}</b></div>
         <div class="meter" role="img" aria-label="${pct}%"><i style="width:${pct}%"></i></div>
         <div class="meter-scale"><span style="left:0;transform:none">0</span><span style="left:40%">0,40</span><span style="left:70%">0,70</span><span style="left:100%;transform:translateX(-100%)">1</span></div></div>
       <div><div class="kicker">${t('Lý do', 'Reasons')}</div>${why.length ? `<ul class="reasons">${why.map((x) => `<li>${x}</li>`).join('')}</ul>` : '<p class="small muted">—</p>'}</div>

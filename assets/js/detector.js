@@ -1,5 +1,5 @@
-/* GP1 rule layer, ported from the notebook Demo_GP1_phat_hien_tin_dang.ipynb (Steps 2–3).
-   Verified to give the same score as the Python version on 1,028 listings. */
+/* Module 1 (keyword + regex scan) of the listing detector, ported from the notebook
+   Demo_phat_hien_tin_dang.ipynb (Part B). Gives the same scan score as the Python version. */
 const Detector = (() => {
   function boDau(s) {
     return s.replace(/đ/g, "d").replace(/Đ/g, "D").normalize("NFD").replace(/\p{Mn}/gu, "");
@@ -42,8 +42,16 @@ const Detector = (() => {
       "xac minh ho": 2.5, "kyc ho": 2.5, "ekyc": 1.5, "checkpoint": 1.5, "mo khoa": 1.0, "khang": 1.0,
       "bypass": 2.0, "vuot": 1.0, "lach": 1.5, "khong chinh chu": 2.5, "ma xac thuc": 1.5 },
   };
+  // Mở rộng từ vựng (giống notebook)
+  Object.assign(TU_KHOA.BAN_DLCN, { "danh sach": 1.0, "list": 1.0, "file khach": 2.0, "thong tin ca nhan": 2.0,
+    "thong tin lien he": 1.5, "tra cuu": 1.5 });
+  Object.assign(TU_KHOA.BAN_TAI_KHOAN, { "acc": 2.0, "nick": 1.5, "pass acc": 2.5, "thanh ly": 0.5,
+    "tai khoan mxh": 2.5, "tai khoan mang xa hoi": 2.5, "mxh": 1.0, "account": 1.5, "tao san": 1.5, "page": 1.0 });
+  Object.assign(TU_KHOA.DICH_VU_XAC_THUC, { "xac thuc ho": 3.0, "danh tinh ho": 3.0, "kyc ho": 3.0, "kyc": 1.0,
+    "khuon mat": 1.5, "vuot": 1.5, "nhan ma": 2.0, "sim nhan": 2.0, "thue sim": 2.0, "mo checkpoint": 2.5 });
   const NGU_CANH = { "chinh hang": 1.5, "hoa don": 1.0, "ban quyen": 1.5, "giay phep": 1.0, "khoa hoc": 1.5,
-    "huong dan": 1.0, "tu van": 1.0, "tuan thu": 1.5, "bao mat": 1.0, "doanh nghiep": 0.5 };
+    "huong dan": 1.0, "tu van": 1.0, "tuan thu": 1.5, "bao mat": 1.0, "doanh nghiep": 0.5,
+    "noi bo": 1.5, "thu nghiem": 1.5, "an danh": 2.0, "chinh chu": 1.5, "theo quy dinh": 1.5, "nghien cuu": 1.0, "hop le": 1.0 };
   const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   const rx = tk => new RegExp("\\b" + esc(tk) + "\\b");
   const RX = {};

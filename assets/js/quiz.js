@@ -35,28 +35,28 @@
       title: { en: 'Two figures', vi: 'Hai con số' },
       q: { en: 'What is the “over VND 400 billion” figure?', vi: 'Con số “hơn 400 tỷ đồng” là gì?' },
       opts: [{ en: 'The suspects’ illicit gain', vi: 'Khoản thu lợi bất chính của bị can' }, { en: 'Revenue that passed through the platform', vi: 'Doanh thu đi qua sàn' }, { en: 'The expected fine', vi: 'Mức phạt dự kiến' }, { en: 'Victims’ losses', vi: 'Thiệt hại của nạn nhân' }],
-      why: { en: 'Illicit gain from the 3–5% fee was put at several billion VND. Penalties are measured against that figure.', vi: 'Thu lợi bất chính từ phí 3–5% chỉ khoảng vài tỷ đồng. Hình phạt tính theo con số này.' }
+      why: { en: 'What the operators kept is the 3–5% fee, which investigators put at several billion VND. Calling VND 400 billion “profit” is inaccurate.', vi: 'Phần nhóm điều hành giữ lại là phí 3–5%, được cơ quan điều tra nêu là nhiều tỷ đồng. Gọi 400 tỷ là “thu lợi” là không chính xác.' }
     },
     {
       kind: 'law', ch: '3', ans: 1,
-      title: { en: 'Solid and dashed', vi: 'Viền liền và viền đứt' },
-      q: { en: 'How do V1–V3 differ from V4–V7?', vi: 'V1–V3 khác V4–V7 ở điểm nào?' },
-      opts: [{ en: 'V1–V3 are more serious', vi: 'V1–V3 nặng hơn' }, { en: 'V1–V3 are within the charge; V4–V7 are our analysis of published facts', vi: 'V1–V3 thuộc nội dung khởi tố; V4–V7 là nhóm phân tích từ dữ kiện đã công bố' }, { en: 'V4–V7 have no facts behind them', vi: 'V4–V7 chưa có dữ kiện' }, { en: 'No difference', vi: 'Không khác nhau' }],
-      why: { en: 'The facts behind V4–V7 were published by investigators; only the conclusion “this breaches provision X” is ours.', vi: 'Dữ kiện của V4–V7 do cơ quan điều tra công bố; chỉ kết luận “vi phạm quy định X” là của nhóm.' }
+      title: { en: 'Charged or our analysis', vi: 'Khởi tố hay nhóm phân tích' },
+      q: { en: 'How do the three acts in 3.1 differ from the four in 3.2?', vi: 'Ba hành vi ở mục 3.1 khác bốn hành vi ở mục 3.2 ở điểm nào?' },
+      opts: [{ en: 'The 3.1 acts are more serious', vi: 'Hành vi ở 3.1 nặng hơn' }, { en: 'The 3.1 acts are within the charge; the 3.2 acts are our analysis of published facts', vi: 'Hành vi ở 3.1 thuộc nội dung khởi tố; hành vi ở 3.2 là nhóm phân tích từ dữ kiện đã công bố' }, { en: 'The 3.2 acts have no facts behind them', vi: 'Hành vi ở 3.2 chưa có dữ kiện' }, { en: 'No difference', vi: 'Không khác nhau' }],
+      why: { en: 'The facts behind the four acts in 3.2 were published by investigators; only the conclusion “this breaches provision X” is ours.', vi: 'Dữ kiện của bốn hành vi ở 3.2 do cơ quan điều tra công bố; chỉ kết luận “vi phạm quy định X” là của nhóm.' }
     },
     {
       kind: 'law', ch: '3.2', ans: 1,
       title: { en: 'If the platform had a licence', vi: 'Nếu sàn có giấy phép' },
-      q: { en: 'If the platform held a payment-intermediary licence, does V7 still stand?', vi: 'Nếu sàn có giấy phép trung gian thanh toán, V7 còn đứng không?' },
-      opts: [{ en: 'No, V7 is dropped', vi: 'Không, phải bỏ V7' }, { en: 'Yes, under Decree 52/2024 Art. 8(8)', vi: 'Có, theo NĐ 52/2024 Điều 8 khoản 8' }, { en: 'Only after a verdict', vi: 'Chỉ khi có bản án' }, { en: 'Up to the Ministry of Industry and Trade', vi: 'Tùy Bộ Công Thương' }],
-      why: { en: 'Using payment services for unlawful business is banned either way. The licence only decides clause 7 or clause 8.', vi: 'Dùng dịch vụ thanh toán để kinh doanh trái pháp luật vẫn bị cấm. Giấy phép chỉ quyết định áp khoản 7 hay khoản 8.' }
+      q: { en: 'If the platform held a payment-intermediary licence, would its payment role still be a violation?', vi: 'Nếu sàn có giấy phép trung gian thanh toán, việc làm trung gian thanh toán còn là vi phạm không?' },
+      opts: [{ en: 'No, it would be lawful', vi: 'Không, khi đó là hợp pháp' }, { en: 'Yes, under Decree 52/2024 Art. 8(8)', vi: 'Có, theo NĐ 52/2024 Điều 8 khoản 8' }, { en: 'Only after a verdict', vi: 'Chỉ khi có bản án' }, { en: 'Up to the Ministry of Industry and Trade', vi: 'Tùy Bộ Công Thương' }],
+      why: { en: 'Using payment services for unlawful business is banned either way. The licence only decides clause 7, or clauses 8 and 12.', vi: 'Dùng dịch vụ thanh toán để kinh doanh trái pháp luật vẫn bị cấm. Giấy phép chỉ quyết định áp khoản 7, hay khoản 8 và 12.' }
     },
     {
       kind: 'law', ch: '3.1', ans: 1,
       title: { en: 'Accounts are personal data', vi: 'Tài khoản là dữ liệu cá nhân' },
       q: { en: 'Why is selling social media accounts also selling personal data?', vi: 'Vì sao bán tài khoản mạng xã hội cũng là bán dữ liệu cá nhân?' },
       opts: [{ en: 'Accounts have passwords', vi: 'Vì tài khoản có mật khẩu' }, { en: 'Digital account information is basic personal data (Decree 13, Art. 2(3)(k))', vi: 'Thông tin tài khoản số là dữ liệu cá nhân cơ bản (NĐ 13, Đ2 k3 điểm k)' }, { en: 'Because the press says so', vi: 'Vì báo chí nói vậy' }, { en: 'It is not', vi: 'Không phải' }],
-      why: { en: 'This is why Decree 13 applies to V2 alongside Art. 288.', vi: 'Đây là căn cứ để áp NĐ 13 cho V2, bên cạnh Điều 288.' }
+      why: { en: 'This is why Decree 13 applies to account trading alongside Art. 288.', vi: 'Đây là căn cứ để áp NĐ 13 cho hành vi mua bán tài khoản, bên cạnh Điều 288.' }
     },
     {
       kind: 'law', ch: '2.2', ans: 1,
@@ -67,24 +67,24 @@
     },
     {
       kind: 'fact', ch: '4.1', ans: 1,
-      title: { en: 'Challenge K5', vi: 'Thách thức K5' },
+      title: { en: 'What investigators named', vi: 'Điều cơ quan điều tra nêu' },
       q: { en: 'Which challenge did investigators themselves name as making tracing hard?', vi: 'Thách thức nào được chính cơ quan điều tra nêu là gây khó truy vết?' },
       opts: [{ en: 'Slang in listings', vi: 'Tin đăng dùng từ lóng' }, { en: 'Offshore servers and rented domains', vi: 'Máy chủ ở nước ngoài, tên miền đi thuê' }, { en: 'The corporate shell', vi: 'Vỏ bọc doanh nghiệp' }, { en: 'Transaction volume', vi: 'Khối lượng giao dịch lớn' }],
-      why: { en: 'K5. The case took about 8 months from opening (June 2025) to the raids (February 2026).', vi: 'K5. Chuyên án mất khoảng 8 tháng từ khi lập (6/2025) đến khi khám xét (2/2026).' }
+      why: { en: 'The case took about 8 months from opening (June 2025) to the raids (February 2026).', vi: 'Chuyên án mất khoảng 8 tháng từ khi lập (6/2025) đến khi khám xét (2/2026).' }
     },
     {
       kind: 'tool', ch: '5.2', ans: 1,
       title: { en: 'A contact number', vi: 'Một số điện thoại liên hệ' },
-      q: { en: 'A legitimate listing includes one contact phone number. How does the GP1 detector treat it?', vi: 'Một tin hợp lệ có ghi một số điện thoại liên hệ. Công cụ GP1 xử lý thế nào?' },
+      q: { en: 'A legitimate listing includes one contact phone number. How does the listing detector treat it?', vi: 'Một tin hợp lệ có ghi một số điện thoại liên hệ. Công cụ phát hiện tin đăng xử lý thế nào?' },
       opts: [{ en: 'Block it', vi: 'Chặn ngay' }, { en: 'Not a data sample: it needs an ID number or two or more values', vi: 'Không tính là mẫu dữ liệu: cần số CCCD hoặc từ 2 giá trị trở lên' }, { en: 'Send it to human review', vi: 'Chuyển người duyệt' }, { en: 'Delete the number', vi: 'Xóa số điện thoại' }],
       why: { en: 'Every seller leaves a contact number, so this rule keeps false alarms down.', vi: 'Người bán nào cũng để số liên hệ, nên quy tắc này giảm báo nhầm.' }
     },
     {
       kind: 'tool', ch: '6.1', ans: 1,
-      title: { en: 'Official demo figures', vi: 'Số liệu demo chính thức' },
-      q: { en: 'Why do the official demo figures come from Step 6B of the notebook?', vi: 'Vì sao số liệu demo chính thức lấy ở Bước 6B của notebook?' },
-      opts: [{ en: 'It runs faster', vi: 'Vì chạy nhanh hơn' }, { en: 'Its listings were written by a member who never saw the code', vi: 'Vì bộ tin do thành viên không đọc code tự viết' }, { en: 'Step 6 is broken', vi: 'Vì Bước 6 bị lỗi' }, { en: 'The lecturer asked for it', vi: 'Vì thầy yêu cầu' }],
-      why: { en: 'In Step 6 the same person wrote both the test and the filter, so its results are optimistic.', vi: 'Ở Bước 6, người viết đề cũng là người viết bộ lọc nên kết quả lạc quan.' }
+      title: { en: 'Two modules together', vi: 'Kết hợp hai module' },
+      q: { en: 'On the 120-listing test set, what did combining both modules change?', vi: 'Trên bộ kiểm tra 120 tin, kết hợp hai module thay đổi kết quả thế nào?' },
+      opts: [{ en: 'Recall and false alarms both fell', vi: 'Recall và báo nhầm cùng giảm' }, { en: 'Recall rose to 93.3%; false alarms rose to 5.0%', vi: 'Recall tăng lên 93,3%; báo nhầm tăng lên 5,0%' }, { en: 'Recall stayed the same', vi: 'Recall không đổi' }, { en: 'False alarms fell to 0%', vi: 'Báo nhầm về 0%' }],
+      why: { en: 'The two modules miss different listings, so together they catch more. All 3 false alarms only went to human review; none were blocked.', vi: 'Hai module bỏ sót những tin khác nhau nên kết hợp bắt được nhiều hơn. Cả 3 tin báo nhầm chỉ bị chuyển người duyệt, không bị chặn.' }
     }
   ];
 
