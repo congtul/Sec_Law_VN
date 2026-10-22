@@ -1,0 +1,144 @@
+% ============================================================
+% Báo cáo bài tập lớn CO5159 — Vụ sàn taphoammo.net
+% Biên dịch: pdfLaTeX (giống template, dùng vntex) hoặc XeLaTeX.
+% Nội dung từng chương nằm trong chuongN.tex; trang bìa trong trang_bia.tex;
+% danh mục tham khảo trong tai_lieu_tham_khao.tex (trích dẫn bằng \cite{khóa}).
+% ============================================================
+\documentclass[a4paper,12pt]{article}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T5]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{vntex}
+  \usepackage{mathptmx}
+\else
+  \usepackage{fontspec}
+  \setmainfont{TeX Gyre Termes}
+  \setmonofont{DejaVu Sans Mono}[Scale=0.85]
+\fi
+\usepackage{newunicodechar}
+\newunicodechar{→}{\ensuremath{\rightarrow}}
+\newunicodechar{↔}{\ensuremath{\leftrightarrow}}
+\newunicodechar{≥}{\ensuremath{\geq}}
+\newunicodechar{≤}{\ensuremath{\leq}}
+\newunicodechar{×}{\ensuremath{\times}}
+\newunicodechar{•}{\textbullet}
+\newunicodechar{…}{\ldots}
+
+\usepackage{amssymb,latexsym,amsmath}
+\usepackage{array,multirow,booktabs,tabularx,xltabular}
+\usepackage{caption}
+\usepackage{fancyhdr,lastpage}
+\usepackage{titlesec}
+\usepackage{graphicx,float}
+\usepackage[top=2.5cm, bottom=2.5cm, left=3cm, right=2cm]{geometry}
+\usepackage{setspace}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning, shapes.geometric, backgrounds}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{indentfirst}
+\usepackage[nottoc,notlot,notlof]{tocbibind}
+\usepackage{xurl}
+\usepackage{hyperref}
+\hypersetup{urlcolor=blue, linkcolor=black, citecolor=black, colorlinks=true}
+
+\AtBeginDocument{%
+  \renewcommand*\contentsname{Mục lục}%
+  \renewcommand*\refname{Tài liệu tham khảo}%
+  \renewcommand*\figurename{Hình}%
+  \renewcommand*\tablename{Bảng}%
+  \renewcommand*\listfigurename{Danh mục hình ảnh}%
+  \renewcommand*\listtablename{Danh mục bảng}%
+  \renewcommand*\lstlistingname{Đoạn mã}%
+  \renewcommand*\lstlistlistingname{Danh mục đoạn mã}}
+
+% ---------------- đầu trang, chân trang (theo template) ----------------
+\setlength{\headheight}{40pt}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyhead[L]{%
+  \begin{tabular}{rl}
+    \begin{picture}(25,15)(0,0)
+      \put(0,-8){\includegraphics[width=8mm, height=8mm]{hcmut.png}}
+    \end{picture} &
+    \begin{tabular}{l}
+      \textbf{Trường Đại học Bách Khoa -- ĐHQG TP.HCM}\\
+      \textbf{Khoa Khoa Học Và Kỹ Thuật Máy Tính}
+    \end{tabular}
+  \end{tabular}}
+\fancyfoot{}
+\fancyfoot[L]{\scriptsize Vụ taphoammo.net -- Bảo vệ dữ liệu cá nhân và an ninh mạng}
+\fancyfoot[R]{\scriptsize Trang {\thepage}/\pageref{LastPage}}
+\renewcommand{\headrulewidth}{0.3pt}
+\renewcommand{\footrulewidth}{0.3pt}
+
+% ---------------- đánh số: Chương N, mục N.M, N.M.K; Hình N.x, Bảng N.x ----------------
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+\renewcommand{\thesection}{\arabic{section}}
+\numberwithin{figure}{section}
+\numberwithin{table}{section}
+
+\setstretch{1.3}
+\setlength{\parindent}{1.27cm}
+\setlength{\parskip}{6pt}
+
+\titleformat{\section}[block]{\normalfont\large\bfseries\centering}{Chương \thesection.}{0.5em}{}
+\titleformat{\subsection}{\normalfont\normalsize\bfseries}{\thesubsection.}{0.5em}{}
+\titleformat{\subsubsection}{\normalfont\normalsize\bfseries\itshape}{\thesubsubsection.}{0.5em}{}
+\titleformat{\paragraph}[hang]{\normalfont\normalsize\bfseries}{}{0pt}{}
+\titlespacing*{\section}{0pt}{18pt}{9pt}
+\titlespacing*{\subsection}{0pt}{12pt}{6pt}
+\titlespacing*{\subsubsection}{0pt}{9pt}{4pt}
+\titlespacing*{\paragraph}{0pt}{8pt}{2pt}
+
+% mỗi chương bắt đầu trang mới
+\let\stdsection\section
+\renewcommand{\section}{\clearpage\stdsection}
+
+% ---------------- mã nguồn ----------------
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstdefinestyle{myStyle}{
+  backgroundcolor=\color{backcolour}, commentstyle=\color{codegreen},
+  keywordstyle=\color{magenta}, numberstyle=\tiny\color{codegray},
+  stringstyle=\color{codepurple}, basicstyle=\ttfamily\footnotesize,
+  breakatwhitespace=false, breaklines=true, keepspaces=true,
+  numbers=left, numbersep=5pt, showspaces=false, showstringspaces=false,
+  showtabs=false, tabsize=2, extendedchars=false}
+\lstset{style=myStyle}
+
+% tiêu đề nhóm trong danh mục tài liệu tham khảo
+\newcommand{\bibgroup}[1]{\item[]\hspace{-\labelsep}\textbf{#1}}
+
+\setlist{itemsep=2pt, topsep=4pt}
+
+% ============================================================
+\begin{document}
+% ============================================================
+\input{trang_bia}
+
+\pagenumbering{roman}
+\tableofcontents
+\clearpage
+\listoffigures
+\clearpage
+\listoftables
+\clearpage
+\pagenumbering{arabic}
+
+\input{chuong1}
+\input{chuong2}
+\input{chuong3}
+\input{chuong4}
+\input{chuong5}
+\input{chuong6}
+
+\clearpage
+\input{tai_lieu_tham_khao}
+
+\end{document}

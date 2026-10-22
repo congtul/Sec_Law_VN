@@ -1,0 +1,20 @@
+% Luồng xử lý của công cụ GP1
+\setstretch{1}
+\begin{tikzpicture}[font=\footnotesize,
+  box/.style={draw, rounded corners=2pt, align=center, minimum height=1.1cm, text width=2.3cm, fill=#1},
+  box/.default=white, arr/.style={-{Stealth[length=2mm]}, thick}]
+  \node[box=gray!12]   (in)   at (0,0)     {Tin đăng\\(nội dung chữ)};
+  \node[box=gray!12]   (norm) at (3.1,0)   {Chuẩn hóa chữ,\\chống ngụy trang};
+  \node[box=blue!10]   (kw)   at (6.2,0.9) {Quét từ khóa\\+ Regex};
+  \node[box=green!12]  (ml)   at (6.2,-0.9){Học máy\\TF-IDF + LR};
+  \node[box=orange!15] (mix)  at (9.3,0)   {Kết hợp,\\tính điểm rủi ro};
+  \node[box=red!10, text width=3.3cm]  (dec) at (9.3,-2.6) {CHẶN / CHUYỂN NGƯỜI DUYỆT / CHO PHÉP, kèm lý do};
+  \node[box=gray!12, text width=3.3cm] (log) at (4.6,-2.6) {Nhật ký bằng chứng\\(che dữ liệu, SHA-256)};
+  \draw[arr] (in) -- (norm);
+  \draw[arr] (norm.east) -- ++(0.25,0) |- (kw.west);
+  \draw[arr] (norm.east) -- ++(0.25,0) |- (ml.west);
+  \draw[arr] (kw.east) -- ++(0.25,0) |- (mix.west);
+  \draw[arr] (ml.east) -- ++(0.25,0) |- (mix.west);
+  \draw[arr] (mix) -- (dec);
+  \draw[arr] (dec) -- (log);
+\end{tikzpicture}

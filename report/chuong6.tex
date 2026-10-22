@@ -1,0 +1,71 @@
+% chuong6.tex — sửa nội dung chương ở đây
+\section{Đánh giá và kết luận}\label{sec:6}
+
+\subsection{Đánh giá}\label{sec:6.1}
+
+\subsubsection{Đánh giá công cụ phát hiện tin đăng}\label{sec:6.1.1}
+
+\textbf{Mỗi module có đóng góp riêng.} Module quét từ khóa + Regex chính xác (precision 97,6\%, báo nhầm 1,7\%) nhưng chỉ bắt được 66,7\% tin vi phạm: tin viết bằng từ ngữ ngoài bộ từ khóa sẽ lọt qua, ví dụ “Kho Telegram account” hay “Có Gmail tạo sẵn, nhận giao theo lô”. Module học máy bắt rộng hơn (recall 83,3\%) nhờ nhận ra cách viết chưa có trong bộ từ khóa, nhưng bỏ sót một số tin dùng từ lóng như “pass tài khoản mạng xã hội” hay “thuê SIM nhận mã”.
+
+\textbf{Kết hợp hai module cải thiện rõ rệt.} Recall tăng lên 93,3\%, vì hai module bỏ sót những tin khác nhau. Đổi lại, báo nhầm tăng lên 5,0\% (3 trên 60 tin hợp lệ), và cả 3 tin này chỉ bị chuyển người duyệt, không bị chặn thẳng. Với mục tiêu sàng lọc, đánh đổi này chấp nhận được: bỏ sót một tin vi phạm gây hại nhiều hơn việc một nhân viên phải xem lại một tin hợp lệ.
+
+\textbf{Liên hệ với thách thức.} Với thách thức về khối lượng tin đăng, công cụ quét 46.000 tin trong khoảng 25 giây thay cho khoảng 48 ngày làm việc nếu đọc tay; người kiểm tra chỉ cần xem các tin bị gắn cờ. Với thách thức về tin ngụy trang, bộ kiểm tra có nhiều tin ngụy trang (“d.a.t.a”, “0tp”, “v1a”) và công cụ vẫn nhận ra nhờ bước chuẩn hóa chữ.
+
+\textbf{Hạn chế của demo:}
+
+\begin{itemize}
+\item Dữ liệu huấn luyện và kiểm tra đều do nhóm tự tạo, nên số liệu minh họa phương pháp, không phải hiệu năng trên một sàn thật.
+\item Công cụ chưa hiểu ngữ cảnh: tin hợp lệ như “Nhận tư vấn xác minh danh tính khách hàng đúng quy trình KYC” hay “Dịch vụ nhập dữ liệu khách hàng đã được doanh nghiệp cho phép xử lý” vẫn bị chuyển người duyệt.
+\item Người bán sẽ đổi cách viết khi biết bị lọc, nên bộ từ khóa và mô hình phải được cập nhật thường xuyên.
+\item Công cụ chỉ đọc nội dung tin đăng; giao dịch chuyển sang Telegram, Zalo hoặc dữ liệu gửi riêng sau khi mua nằm ngoài tầm quét.
+\item Công cụ không thay người duyệt và không tự kết luận vi phạm.
+\end{itemize}
+\subsubsection{Đánh giá bộ tiêu chí và quy trình xử lý}\label{sec:6.1.2}
+
+Áp bộ tiêu chí ở~\ref{sec:5.2.2} lên dòng thời gian vụ việc \cite{bca-2026}:
+
+{\small\setstretch{1.1}
+\begin{xltabular}{\textwidth}{>{\raggedright\arraybackslash}l>{\hsize=0.591\hsize\raggedright\arraybackslash}X>{\hsize=1.409\hsize\raggedright\arraybackslash}X}
+\caption{Áp bộ tiêu chí lên dòng thời gian vụ việc}\label{tab:6.13}\\
+\toprule
+\textbf{Mốc} & \textbf{Sự kiện} & \textbf{Ý nghĩa với bộ tiêu chí} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Mốc} & \textbf{Sự kiện} & \textbf{Ý nghĩa với bộ tiêu chí} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+Cuối 2021 & Sàn bắt đầu hoạt động & Hàng hóa vi phạm được đăng bán công khai trên trang (tiêu chí 1). Mô hình giữ tiền, thu phí 3–5\% (tiêu chí 2) là cách sàn vận hành theo mô tả của cơ quan điều tra \\
+6/2025 & Lập chuyên án sau khi phát hiện qua nắm tình hình trên không gian mạng & Cho thấy dấu hiệu của sàn nhận ra được từ bên ngoài, qua nội dung đăng bán (tiêu chí 1) và quảng cáo (tiêu chí 4) \\
+25/12/2025 & Quyết định khởi tố vụ án hình sự & Không thêm tiêu chí mới \\
+2/2026 & Khám xét, thu giữ máy tính và dữ liệu điện tử & Các đặc điểm vận hành bên trong như kiểm duyệt người bán (tiêu chí 3) và vỏ bọc doanh nghiệp (tiêu chí 6) được làm rõ qua điều tra \\
+7/2026 & Công bố vụ việc & Cả sáu đặc điểm được công bố chính thức, kể cả máy chủ ở nước ngoài (tiêu chí 5) \\
+\end{xltabular}}
+
+Hai tiêu chí quan trọng nhất, tiêu chí 1 và 4, đều quan sát được từ bên ngoài mà không cần quyền điều tra: chỉ cần xem nội dung đăng bán và quảng cáo của sàn. Nếu bộ tiêu chí và công cụ phát hiện tin đăng được áp dụng thường xuyên, các dấu hiệu này có cơ hội được ghi nhận sớm hơn mốc lập chuyên án. Đây là suy luận của nhóm; dữ kiện công bố không cho biết cơ quan chức năng đã biết gì và từ khi nào, nên bài không khẳng định vụ việc chắc chắn bị phát hiện từ năm đầu.
+
+Bộ tiêu chí cũng cần không gắn cờ nhầm các sàn hợp pháp. Thử áp với một sàn sản phẩm số hợp pháp giả định, bán key phần mềm bản quyền và khóa học, có thu phí trung gian và quảng cáo trên mạng xã hội: sàn này thỏa tiêu chí 2, 4 và có thể cả tiêu chí 3, nhưng không thỏa tiêu chí 1 nên không bị chuyển sang quy trình xử lý. Việc đặt tiêu chí 1 làm điều kiện bắt buộc giúp bộ tiêu chí không gắn cờ những sàn chỉ giống taphoammo ở mô hình kinh doanh.
+
+Biểu mẫu tố giác có đủ thông tin tối thiểu (đối tượng, loại hành vi, thời điểm, bằng chứng) để cơ quan tiếp nhận sàng lọc theo bộ tiêu chí và chuyển hồ sơ. Quy trình và biểu mẫu mới được xây dựng trên giấy, chưa được thử với một cơ quan hay nền tảng thật.
+
+\subsubsection{Giới hạn chung của giải pháp}\label{sec:6.1.3}
+
+\begin{itemize}
+\item Giải pháp 2, 3 và 5 mới ở mức đề xuất, chưa được hiện thực hay thử nghiệm.
+\item Thách thức về hạ tầng đặt ở nước ngoài phụ thuộc hợp tác quốc tế và nhà cung cấp hạ tầng, ngoài tầm của các giải pháp trong bài.
+\item Các giải pháp hỗ trợ phát hiện và xử lý; trách nhiệm pháp lý cụ thể vẫn do cơ quan có thẩm quyền xác định.
+\end{itemize}
+\subsection{Kết luận}\label{sec:6.2}
+
+Phần kết luận trả lời lần lượt ba câu hỏi nghiên cứu ở mục~\ref{sec:2.1}.
+
+\textbf{Câu hỏi 1: Hoạt động của sàn taphoammo.net vi phạm những quy định nào?} Chương 3 xác định bảy hành vi. Ba hành vi thuộc nội dung khởi tố là mua bán dữ liệu cá nhân, mua bán tài khoản mạng xã hội và thư điện tử, và cung cấp dịch vụ xác thực tài khoản hộ, đối chiếu với khoản 5 Điều 7 Luật An toàn thông tin mạng 2015, Nghị định 13/2023/NĐ-CP và Điều 288 Bộ luật Hình sự. Bốn hành vi còn lại là kết luận của nhóm từ dữ kiện đã công bố: kiểm duyệt người bán nhưng vẫn để hàng hóa vi phạm tồn tại, đặt máy chủ ở nước ngoài, quảng cáo dịch vụ bị cấm, và làm trung gian thanh toán cho giao dịch bị cấm. Vụ án chưa có bản án, nên các bị can vẫn được suy đoán vô tội.
+
+\textbf{Câu hỏi 2: Điều gì khiến việc áp dụng luật chưa ngăn chặn được sớm?} Các hành vi này đã bị cấm từ trước khi sàn hoạt động, nhưng việc áp dụng gặp chín thách thức nêu ở chương 4. Về kỹ thuật, khối lượng tin đăng lớn và cách viết ngụy trang khiến đọc thủ công không theo kịp; tài khoản và dữ liệu dễ chuyển tay, khó truy nguồn; hạ tầng đặt ở nước ngoài. Về pháp lý, một hành vi liên quan nhiều văn bản có hiệu lực khác nhau theo thời gian, và trách nhiệm của sàn với người bán chưa được tách bạch. Về quản trị, đăng ký doanh nghiệp tạo vỏ bọc hợp pháp và dữ liệu điều tra nằm ở nhiều bên.
+
+\textbf{Câu hỏi 3: Cần biện pháp gì để phát hiện và ngăn chặn các sàn tương tự?} Nhóm đề xuất sáu giải pháp gắn với từng thách thức. Giải pháp 1 đã được kiểm chứng bằng demo: kết hợp quét từ khóa + Regex với học máy phát hiện 93,3\% tin vi phạm trên bộ kiểm tra với tỉ lệ báo nhầm 5,0\%, và quét 46.000 tin trong khoảng 25 giây. Giải pháp 4 và 6 có PoC tài liệu gồm bộ tiêu chí nhận diện “chợ dữ liệu”, quy trình xử lý và biểu mẫu tố giác. Giải pháp 2, 3 và 5 dừng ở mức đề xuất.
+
+\textbf{Hướng phát triển.} Thử công cụ phát hiện tin đăng trên dữ liệu thật do nền tảng cung cấp trong khuôn khổ được phép, bổ sung khả năng hiểu ngữ cảnh và câu phủ định, và thử nghiệm quy trình phối hợp xử lý với một cơ quan hoặc nền tảng cụ thể.
+

@@ -1,0 +1,12 @@
+% Quy trình xử lý khi một sàn bị nhận diện (bản sơ bộ, Người 5 có thể thay)
+\setstretch{1}
+\begin{tikzpicture}[font=\small, node distance=0.4cm,
+  box/.style={draw, rounded corners=2pt, align=center, minimum height=1.3cm, text width=2.3cm, fill=blue!7},
+  arr/.style={-{Stealth[length=2mm]}, thick}]
+  \node[box] (a) {Tiếp nhận};
+  \node[box, right=of a] (b) {Sàng lọc theo\\bộ tiêu chí};
+  \node[box, right=of b] (c) {Bảo toàn\\chứng cứ};
+  \node[box, right=of c] (d) {Chuyển đúng\\thẩm quyền};
+  \node[box, right=of d] (e) {Theo dõi và\\phản hồi};
+  \foreach \u/\v in {a/b, b/c, c/d, d/e} \draw[arr] (\u) -- (\v);
+\end{tikzpicture}
