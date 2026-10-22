@@ -34,6 +34,49 @@
 .ref-grid .kicker { margin-top: 2px; }
 .ref-grid ol.refs li::before, .ref-grid ol.refs li::marker { content: none !important; display: none !important; }
 .ref-grid > div:first-child { grid-row: span 3; }
+
+/* ---- phóng to các slide ít nội dung ---- */
+.icards { display: grid; gap: 22px; height: 100%; }
+.icards.c3 { grid-template-columns: repeat(6, 1fr); grid-auto-rows: 1fr; }
+.icards.c3 > :nth-child(-n+3) { grid-column: span 2; }
+.icards.c3 > :nth-child(n+4) { grid-column: span 3; }
+.icards.c23 { grid-template-columns: repeat(6, 1fr); grid-auto-rows: 1fr; }
+.icards.c23 > :nth-child(-n+2) { grid-column: span 3; }
+.icards.c23 > :nth-child(n+3) { grid-column: span 2; }
+.icard { display: flex; flex-direction: column; gap: 10px; padding: 22px 24px; }
+.icard .ih { display: flex; align-items: center; gap: 14px; }
+.icard .ih h3 { margin: 0; font-size: 23px; }
+.icard .ic { flex: none; width: 46px; height: 46px; padding: 10px; border-radius: 12px; background: color-mix(in srgb, var(--ch) 13%, transparent); fill: none; stroke: var(--ch); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.icard p { margin: 0; font-size: 19.5px; line-height: 1.5; color: var(--ink-2); }
+.icard.hl { border-color: var(--ch); box-shadow: inset 0 0 0 1.5px var(--ch), var(--shadow); }
+.roomy.r-kpi .g4 { gap: 22px; }
+.roomy.r-kpi .kpi.card { padding: 30px 26px; }
+.roomy.r-kpi .kpi .v { font-size: 56px; white-space: nowrap; }
+.roomy.r-kpi .kpi .l { font-size: 18px; margin-top: 6px; }
+.roomy.r-kpi .lede { font-size: 23px !important; margin-bottom: 18px; }
+.roomy.r-kpi .callout { font-size: 23px; padding: 20px 24px; margin-top: 26px; }
+.roomy.r-chain .chain { min-height: 190px; }
+.roomy.r-chain .chain .node { font-size: 18px; padding: 22px 18px; }
+.roomy.r-chain .chain .node b { font-size: 21px; margin-bottom: 8px; }
+.roomy.r-chain .g3 { margin-top: 26px; }
+.roomy.r-chain .g3 .card { padding: 26px; min-height: 190px; }
+.roomy.r-chain .g3 h3 { font-size: 23px; }
+.roomy.r-chain .g3 p, .roomy.r-chain .g3 .small { font-size: 20px; line-height: 1.5; }
+.roomy.r-tbl .tbl { font-size: 19px !important; }
+.roomy.r-tbl .tbl td { padding-top: 16px; padding-bottom: 16px; }
+.roomy.r-tbl .tbl th { font-size: 14px; }
+.roomy.r-tbl .card { font-size: 21px; padding: 22px 24px; }
+.roomy.r-tbl .s-body > p.xs { font-size: 16px; margin-top: 12px; }
+.roomy.r-vcard .vcard { padding: 26px 28px; display: flex; flex-direction: column; gap: 6px; }
+.roomy.r-vcard .vcard h3 { font-size: 26px; margin-bottom: 6px; }
+.roomy.r-vcard .vcard p.small { font-size: 21px; line-height: 1.55; margin-bottom: 8px; }
+.roomy.r-vcard .vcard p.xs { font-size: 17.5px; line-height: 1.5; }
+.roomy.r-vcard .vcard .tbl { font-size: 19px !important; margin: 6px 0 10px; }
+.roomy.r-vcard .cite { font-size: 16.5px; }
+.roomy.r-vcard .vcard .vcode.sm { font-size: 28px; }
+.roomy.r-ans .card { padding: 24px; }
+.roomy.r-ans .card .small { font-size: 21px; line-height: 1.55; }
+.roomy.r-ans .callout { font-size: 20px !important; padding: 18px 22px; margin-top: 22px; }
 </style>
 </head>
 <body>
@@ -124,7 +167,7 @@
 </section>
 
 <!-- 1.1 the case -->
-<section class="slide" data-ch="1" data-sec="1.1" data-who="1">
+<section class="slide roomy r-kpi" data-ch="1" data-sec="1.1" data-who="1">
   <h2><span class="en">An e-commerce platform that sold personal data</span><span class="vi">Một sàn thương mại điện tử bán dữ liệu cá nhân</span></h2>
   <div class="s-body stack">
     <p class="lede" style="max-width:1080px;font-size:20px"><span class="en">From late 2021, taphoammo.net ran behind HCT Digital Technology Development Co., Ltd. Users opened storefronts to sell personal data, social media and email accounts, and account verification services.</span><span class="vi">Từ cuối năm 2021, taphoammo.net hoạt động dưới vỏ bọc Công ty TNHH Phát triển Công nghệ số HCT. Người dùng mở gian hàng để bán dữ liệu cá nhân, tài khoản mạng xã hội, email và dịch vụ xác thực tài khoản.</span></p>
@@ -140,7 +183,7 @@
 </section>
 
 <!-- 1.1 how it worked -->
-<section class="slide" data-ch="1" data-sec="1.1" data-who="1">
+<section class="slide roomy r-chain" data-ch="1" data-sec="1.1" data-who="1">
   <h2><span class="en">The platform sat in the middle of a chain from leaked data to fraud</span><span class="vi">Sàn nằm giữa chuỗi từ dữ liệu rò rỉ đến lừa đảo</span></h2>
   <div class="s-body stack">
     <div class="chain rise" style="--i:0">
@@ -187,18 +230,16 @@
 </section>
 
 <!-- 1.2 scope -->
-<section class="slide" data-ch="1" data-sec="1.2" data-who="1">
+<section class="slide roomy" data-ch="1" data-sec="1.2" data-who="1">
   <h2><span class="en">What we analyse, and how far</span><span class="vi">Đề tài phân tích gì, đến đâu</span></h2>
   <div class="s-body">
-    <table class="tbl stagger">
-      <tbody>
-        <tr style="--i:0"><td style="width:210px"><span class="en">Subject</span><span class="vi">Đối tượng</span></td><td><span class="en">The platform and its operators, not individual buyers’ fraud.</span><span class="vi">Nền tảng taphoammo.net và nhóm vận hành. Không đi sâu vào từng hành vi lừa đảo của người mua.</span></td></tr>
-        <tr style="--i:1"><td><span class="en">Period</span><span class="vi">Thời gian</span></td><td><span class="en">Late 2021 to February 2026 (the raids).</span><span class="vi">Cuối năm 2021 đến tháng 2/2026 (thời điểm khám xét).</span></td></tr>
-        <tr style="--i:2"><td><span class="en">Law</span><span class="vi">Lĩnh vực luật</span></td><td><span class="en">Core: personal data protection and cybersecurity. Supporting: e-commerce, advertising and payments, used only for how the platform ran, advertised and handled money.</span><span class="vi">Trọng tâm: bảo vệ dữ liệu cá nhân và an ninh mạng. Bổ trợ: thương mại điện tử, quảng cáo, thanh toán, chỉ dùng để phân tích cách sàn vận hành, quảng bá và thu tiền.</span></td></tr>
-        <tr style="--i:3"><td><span class="en">Method</span><span class="vi">Cách tiếp cận</span></td><td><span class="en">Case study from published information, cross-checked across sources, each act matched to specific provisions.</span><span class="vi">Nghiên cứu tình huống dựa trên thông tin đã công bố, kiểm chứng chéo nhiều nguồn, đối chiếu từng hành vi với điều khoản.</span></td></tr>
-        <tr style="--i:4"><td><span class="en">Limits</span><span class="vi">Giới hạn</span></td><td><span class="en">No verdict yet; the suspects are presumed innocent. We separate what investigators established from our own analysis.</span><span class="vi">Vụ án chưa có bản án; các bị can được suy đoán vô tội. Bài tách rõ nội dung cơ quan điều tra đã xác định với nhận định của nhóm.</span></td></tr>
-      </tbody>
-    </table>
+    <div class="icards c3">
+      <div class="card icard rise" style="--i:0"><div class="ih"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="0.8"/></svg><h3><span class="en">Subject</span><span class="vi">Đối tượng</span></h3></div><p><span class="en">The platform and its operators, not individual buyers’ fraud.</span><span class="vi">Nền tảng taphoammo.net và nhóm vận hành. Không đi sâu vào từng hành vi lừa đảo của người mua.</span></p></div>
+      <div class="card icard rise" style="--i:1"><div class="ih"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2"/><path d="M4 10h16M9 3v4M15 3v4"/></svg><h3><span class="en">Period</span><span class="vi">Thời gian</span></h3></div><p><span class="en">Late 2021 to February 2026 (the raids).</span><span class="vi">Cuối năm 2021 đến tháng 2/2026 (thời điểm khám xét).</span></p></div>
+      <div class="card icard rise" style="--i:2"><div class="ih"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M7 20h10M5 8h14"/><path d="M5 8l-3 6a3 3 0 0 0 6 0zM19 8l-3 6a3 3 0 0 0 6 0z"/></svg><h3><span class="en">Law</span><span class="vi">Lĩnh vực luật</span></h3></div><p><span class="en">Core: personal data protection and cybersecurity. Supporting: e-commerce, advertising and payments, used only for how the platform ran, advertised and handled money.</span><span class="vi">Trọng tâm: bảo vệ dữ liệu cá nhân và an ninh mạng. Bổ trợ: thương mại điện tử, quảng cáo, thanh toán, chỉ dùng để phân tích cách sàn vận hành, quảng bá và thu tiền.</span></p></div>
+      <div class="card icard rise" style="--i:3"><div class="ih"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg><h3><span class="en">Method</span><span class="vi">Cách tiếp cận</span></h3></div><p><span class="en">Case study from published information, cross-checked across sources, each act matched to specific provisions.</span><span class="vi">Nghiên cứu tình huống dựa trên thông tin đã công bố, kiểm chứng chéo nhiều nguồn, đối chiếu từng hành vi với điều khoản.</span></p></div>
+      <div class="card icard rise" style="--i:4"><div class="ih"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 16H3z"/><path d="M12 10v4M12 17v.5"/></svg><h3><span class="en">Limits</span><span class="vi">Giới hạn</span></h3></div><p><span class="en">No verdict yet; the suspects are presumed innocent. We separate what investigators established from our own analysis.</span><span class="vi">Vụ án chưa có bản án; các bị can được suy đoán vô tội. Bài tách rõ nội dung cơ quan điều tra đã xác định với nhận định của nhóm.</span></p></div>
+    </div>
   </div>
 </section>
 
@@ -216,7 +257,7 @@
   </ol>
 </section>
 
-<section class="slide" data-ch="2" data-sec="2.1" data-who="1">
+<section class="slide roomy r-tbl" data-ch="2" data-sec="2.1" data-who="1">
   <h2><span class="en">The gap between the rules and reality</span><span class="vi">Khoảng cách giữa quy định và thực tế</span></h2>
   <div class="s-body stack">
     <div class="g2">
@@ -340,7 +381,7 @@
   <p class="src"><span class="en">Sources:</span><span class="vi">Nguồn:</span> [2] BLHS 2015 · [14] Bộ Công an, 14/7/2026</p>
 </section>
 
-<section class="slide" data-ch="3" data-sec="3.2" data-who="2">
+<section class="slide roomy r-vcard" data-ch="3" data-sec="3.2" data-who="2">
   <h2><span class="en">Seller vetting and offshore servers</span><span class="vi">Kiểm duyệt người bán và máy chủ ở nước ngoài</span></h2>
   <div class="s-body g2">
     <div class="card vcard ours rise" style="--i:0">
@@ -361,7 +402,7 @@
   <p class="src"><span class="en">Sources:</span><span class="vi">Nguồn:</span> [3] Luật ANM 2018 · [4] NĐ 53/2022 · [9] NĐ 52/2013 · [14] Bộ Công an, 14/7/2026</p>
 </section>
 
-<section class="slide" data-ch="3" data-sec="3.2" data-who="2">
+<section class="slide roomy r-vcard" data-ch="3" data-sec="3.2" data-who="2">
   <h2><span class="en">Advertising and money flow</span><span class="vi">Quảng cáo và dòng tiền</span></h2>
   <div class="s-body g2">
     <div class="card vcard ours rise" style="--i:0">
@@ -422,19 +463,16 @@
   </ol>
 </section>
 
-<section class="slide" data-ch="4" data-sec="4.1" data-who="3">
+<section class="slide roomy" data-ch="4" data-sec="4.1" data-who="3">
   <h2><span class="en">Five technical and security challenges</span><span class="vi">Năm thách thức kỹ thuật và bảo mật</span></h2>
   <div class="s-body">
-    <table class="tbl stagger">
-      <thead><tr><th style="width:60px">#</th><th style="width:330px"><span class="en">Challenge</span><span class="vi">Thách thức</span></th><th><span class="en">From which fact</span><span class="vi">Từ dữ kiện nào</span></th></tr></thead>
-      <tbody>
-        <tr style="--i:0"><td class="mono">1</td><td><b><span class="en">Sheer volume</span><span class="vi">Khối lượng lớn</span></b></td><td><span class="en">46,000+ storefronts, 53 M+ transactions; reading each listing by hand is not feasible</span><span class="vi">Hơn 46.000 gian hàng, trên 53 triệu giao dịch; đọc từng tin bằng tay không khả thi</span></td></tr>
-        <tr style="--i:1"><td class="mono">2</td><td><b><span class="en">Wording that dodges filters</span><span class="vi">Cách viết lách bộ lọc</span></b></td><td><span class="en">“d.a.t.a”, “0tp”: a scenario we assume for the demo</span><span class="vi">“d.a.t.a”, “0tp”: tình huống nhóm giả định khi xây demo</span></td></tr>
-        <tr style="--i:2"><td class="mono">3</td><td><b><span class="en">Accounts change hands</span><span class="vi">Tài khoản đổi chủ</span></b></td><td><span class="en">Verified accounts are sold and used by someone else</span><span class="vi">Tài khoản đã xác thực bị bán, chuyển cho người khác dùng</span></td></tr>
-        <tr style="--i:3"><td class="mono">4</td><td><b><span class="en">Data is easy to copy</span><span class="vi">Dữ liệu dễ sao chép</span></b></td><td><span class="en">Data passes through many hands; leaks are hard to trace and copies cannot be recalled</span><span class="vi">Dữ liệu đi qua nhiều bên, khó truy nguồn rò rỉ, không thu hồi hết bản sao</span></td></tr>
-        <tr class="hl" style="--i:4"><td class="mono">5</td><td><b><span class="en">Offshore infrastructure</span><span class="vi">Hạ tầng ở nước ngoài</span></b></td><td><span class="en">Named by investigators; about 8 months from case opening to raids</span><span class="vi">Cơ quan điều tra nêu gây khó truy vết; khoảng 8 tháng từ lập chuyên án đến khám xét</span></td></tr>
-      </tbody>
-    </table>
+    <div class="icards c23">
+      <div class="card icard rise" style="--i:0"><div class="ih"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/></svg><h3><span class="num-badge">1</span><span class="en">Sheer volume</span><span class="vi">Khối lượng lớn</span></h3></div><p><span class="en">46,000+ storefronts, 53 M+ transactions; reading each listing by hand is not feasible</span><span class="vi">Hơn 46.000 gian hàng, trên 53 triệu giao dịch; đọc từng tin bằng tay không khả thi</span></p></div>
+      <div class="card icard rise" style="--i:1"><div class="ih"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16l-6 8v5l-4 2v-7z"/></svg><h3><span class="num-badge">2</span><span class="en">Wording that dodges filters</span><span class="vi">Cách viết lách bộ lọc</span></h3></div><p><span class="en">“d.a.t.a”, “0tp”: a scenario we assume for the demo</span><span class="vi">“d.a.t.a”, “0tp”: tình huống nhóm giả định khi xây demo</span></p></div>
+      <div class="card icard rise" style="--i:2"><div class="ih"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="7" r="3"/><path d="M3 19a5 5 0 0 1 10 0"/><path d="M16 9h5M19 6l2 3-2 3M21 16h-5M18 13l-2 3 2 3"/></svg><h3><span class="num-badge">3</span><span class="en">Accounts change hands</span><span class="vi">Tài khoản đổi chủ</span></h3></div><p><span class="en">Verified accounts are sold and used by someone else</span><span class="vi">Tài khoản đã xác thực bị bán, chuyển cho người khác dùng</span></p></div>
+      <div class="card icard rise" style="--i:3"><div class="ih"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"/></svg><h3><span class="num-badge">4</span><span class="en">Data is easy to copy</span><span class="vi">Dữ liệu dễ sao chép</span></h3></div><p><span class="en">Data passes through many hands; leaks are hard to trace and copies cannot be recalled</span><span class="vi">Dữ liệu đi qua nhiều bên, khó truy nguồn rò rỉ, không thu hồi hết bản sao</span></p></div>
+      <div class="card icard hl rise" style="--i:4"><div class="ih"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg><h3><span class="num-badge">5</span><span class="en">Offshore infrastructure</span><span class="vi">Hạ tầng ở nước ngoài</span></h3></div><p><span class="en">Named by investigators; about 8 months from case opening to raids</span><span class="vi">Cơ quan điều tra nêu gây khó truy vết; khoảng 8 tháng từ lập chuyên án đến khám xét</span></p></div>
+    </div>
   </div>
   <p class="src"><span class="en">Sources:</span><span class="vi">Nguồn:</span> [14] Bộ Công an, 14/7/2026 · [15] CAND, 9/7/2026</p>
 </section>
@@ -467,7 +505,7 @@
   </ol>
 </section>
 
-<section class="slide" data-ch="5" data-sec="5.1" data-who="3">
+<section class="slide roomy r-tbl" data-ch="5" data-sec="5.1" data-who="3">
   <h2><span class="en">Every challenge maps to a solution</span><span class="vi">Mỗi thách thức có một giải pháp</span></h2>
   <div class="s-body stack">
     <table class="tbl compact stagger">
@@ -609,7 +647,7 @@
   </div>
 </section>
 
-<section class="slide" data-ch="6" data-sec="6.2" data-who="5">
+<section class="slide roomy r-ans" data-ch="6" data-sec="6.2" data-who="5">
   <h2><span class="en">Answers to the three questions</span><span class="vi">Trả lời ba câu hỏi nghiên cứu</span></h2>
   <div class="s-body stack">
     <div class="g3">
