@@ -6,25 +6,22 @@
 Mỗi giải pháp gắn với một hoặc vài thách thức ở chương 4, theo bảng sau. Các quy trình dưới đây là đề xuất của nhóm, chưa phải kết quả triển khai thực tế. Giải pháp 1 được hiện thực bằng công cụ demo, giải pháp 4 và 6 bằng tài liệu PoC ở mục~\ref{sec:5.2}; giải pháp 2, 3 và 5 dừng ở mức đề xuất.
 
 {\small\setstretch{1.1}
-\begin{xltabular}{\textwidth}{>{\raggedright\arraybackslash}l>{\hsize=1.062\hsize\raggedright\arraybackslash}X>{\hsize=1.286\hsize\raggedright\arraybackslash}X>{\hsize=0.652\hsize\raggedright\arraybackslash}X}
-\caption{Các giải pháp và thách thức tương ứng}\label{tab:5.6}\\
+\begin{table}[H]
+\centering
+\caption{Các giải pháp và thách thức tương ứng}\label{tab:5.6}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}l>{\hsize=1.062\hsize\raggedright\arraybackslash}X>{\hsize=1.286\hsize\raggedright\arraybackslash}X>{\hsize=0.652\hsize\raggedright\arraybackslash}X}
 \toprule
 \textbf{Giải pháp} & \textbf{Nội dung} & \textbf{Thách thức xử lý} & \textbf{Mức hiện thực} \\
 \midrule
-\endfirsthead
-\toprule
-\textbf{Giải pháp} & \textbf{Nội dung} & \textbf{Thách thức xử lý} & \textbf{Mức hiện thực} \\
-\midrule
-\endhead
-\bottomrule
-\endlastfoot
 Giải pháp 1 & Phát hiện tin có dấu hiệu vi phạm & Khối lượng tin đăng; tin ngụy trang & Demo (\ref{sec:5.2.1}) \\
 Giải pháp 2 & Bảo vệ tài khoản trên nền tảng gốc & Tài khoản đổi chủ & Đề xuất \\
 Giải pháp 3 & Truy nguồn rò rỉ dữ liệu & Dữ liệu dễ sao chép & Đề xuất \\
 Giải pháp 4 & Kiểm soát người bán & Vỏ bọc doanh nghiệp & PoC tài liệu (\ref{sec:5.2.2}) \\
 Giải pháp 5 & Ma trận trách nhiệm pháp lý & Văn bản thay đổi theo thời gian; ranh giới trách nhiệm & Đề xuất \\
 Giải pháp 6 & Phối hợp xử lý & Hạ tầng ở nước ngoài; dữ liệu nằm ở nhiều bên & PoC tài liệu (\ref{sec:5.2.2}) \\
-\end{xltabular}}
+\bottomrule
+\end{tabularx}
+\end{table}}
 
 \subsubsection{Giải pháp 1: Phát hiện tin có dấu hiệu vi phạm}\label{sec:5.1.1}
 
@@ -132,22 +129,19 @@ Sau khi huấn luyện, các từ mô hình coi là đặc trưng nhất gồm �
 \textbf{Kết hợp hai module.} Điểm rủi ro = 0,6 × xác suất vi phạm của học máy + 0,4 × điểm quét từ khóa. Quyết định theo bảng sau:
 
 {\small\setstretch{1.1}
-\begin{xltabular}{\textwidth}{>{\hsize=1.506\hsize\raggedright\arraybackslash}X>{\hsize=0.494\hsize\raggedright\arraybackslash}X}
-\caption{Quy tắc ra quyết định của công cụ}\label{tab:5.7}\\
+\begin{table}[H]
+\centering
+\caption{Quy tắc ra quyết định của công cụ}\label{tab:5.7}
+\begin{tabularx}{\textwidth}{>{\hsize=1.506\hsize\raggedright\arraybackslash}X>{\hsize=0.494\hsize\raggedright\arraybackslash}X}
 \toprule
 \textbf{Điều kiện} & \textbf{Quyết định} \\
 \midrule
-\endfirsthead
-\toprule
-\textbf{Điều kiện} & \textbf{Quyết định} \\
-\midrule
-\endhead
-\bottomrule
-\endlastfoot
 Có mẫu dữ liệu cá nhân (CCCD, hoặc từ 2 số điện thoại/email) kèm từ khóa vi phạm; hoặc điểm rủi ro ≥ 0,70 và module quét từ khóa có tìm thấy dấu hiệu & CHẶN \\
 Điểm rủi ro ≥ 0,40, hoặc riêng một module ≥ 0,40, nhưng chưa đủ điều kiện chặn & CHUYỂN NGƯỜI DUYỆT \\
 Các trường hợp còn lại & CHO PHÉP \\
-\end{xltabular}}
+\bottomrule
+\end{tabularx}
+\end{table}}
 
 Muốn chặn thẳng thì phải có dấu hiệu cụ thể để ghi vào lý do, nên chỉ riêng học máy nghi ngờ thì chưa đủ. Chuyển người duyệt là bước an toàn, nên chỉ cần một module nghi ngờ.
 
@@ -156,47 +150,41 @@ Muốn chặn thẳng thì phải có dấu hiệu cụ thể để ghi vào lý
 Bộ kiểm tra gồm 120 tin viết riêng, không trùng tin nào với dữ liệu huấn luyện: 60 tin vi phạm (20 tin cho mỗi loại hành vi) và 60 tin hợp lệ, trong đó 20 tin dễ nhầm. Các tin được viết đa dạng: có dấu và không dấu, viết tắt, cố tình ngụy trang. Mỗi tin có nhãn đúng (vi phạm hoặc hợp lệ) do người viết gán, dùng để chấm kết quả của công cụ. Một số ví dụ:
 
 {\small\setstretch{1.1}
-\begin{xltabular}{\textwidth}{>{\hsize=1.408\hsize\raggedright\arraybackslash}X>{\raggedright\arraybackslash}l>{\hsize=0.592\hsize\raggedright\arraybackslash}X}
-\caption{Ví dụ tin trong bộ kiểm tra}\label{tab:5.8}\\
+\begin{table}[H]
+\centering
+\caption{Ví dụ tin trong bộ kiểm tra}\label{tab:5.8}
+\begin{tabularx}{\textwidth}{>{\hsize=1.408\hsize\raggedright\arraybackslash}X>{\raggedright\arraybackslash}l>{\hsize=0.592\hsize\raggedright\arraybackslash}X}
 \toprule
 \textbf{Tin đăng} & \textbf{Nhãn} & \textbf{Nhóm} \\
 \midrule
-\endfirsthead
-\toprule
-\textbf{Tin đăng} & \textbf{Nhãn} & \textbf{Nhóm} \\
-\midrule
-\endhead
-\bottomrule
-\endlastfoot
 Thanh lý d.a.t.a khách mua hàng, lọc theo độ tuổi và khu vực. & Vi phạm & Mua bán dữ liệu, viết ngụy trang \\
 Nhận tra cứu người đứng sau số điện thoại, phí tùy trường hợp. & Vi phạm & Mua bán dữ liệu \\
 Kho Telegram account, nhận đơn theo số lượng. & Vi phạm & Mua bán tài khoản \\
 Cho thuê sim nhận 0tp, dùng xong trả sim. & Vi phạm & Dịch vụ xác thực hộ, viết ngụy trang \\
 Khóa học Excel từ cơ bản đến nâng cao, có bài tập thực hành. & Hợp lệ & Thông thường \\
 Khóa học nhận diện tin nhắn OTP giả mạo, phòng tránh lừa đảo. & Hợp lệ & Dễ nhầm \\
-\end{xltabular}}
+\bottomrule
+\end{tabularx}
+\end{table}}
 
 \paragraph{Kết quả chạy}
 
 Mỗi tin trong bộ kiểm tra được chạy qua ba cách: chỉ module 1, chỉ module 2 và kết hợp hai module. Tin bị CHẶN hoặc CHUYỂN NGƯỜI DUYỆT được tính là bị gắn cờ, rồi so với nhãn đúng. Recall là tỉ lệ tin vi phạm bị gắn cờ; precision là tỉ lệ tin bị gắn cờ thật sự vi phạm; báo nhầm là tỉ lệ tin hợp lệ bị gắn cờ.
 
 {\small\setstretch{1.1}
-\begin{xltabular}{\textwidth}{>{\hsize=1.150\hsize\raggedright\arraybackslash}X>{\raggedright\arraybackslash}l>{\raggedright\arraybackslash}l>{\raggedright\arraybackslash}l>{\hsize=0.850\hsize\raggedright\arraybackslash}X}
-\caption{Kết quả trên bộ kiểm tra 120 tin}\label{tab:5.9}\\
+\begin{table}[H]
+\centering
+\caption{Kết quả trên bộ kiểm tra 120 tin}\label{tab:5.9}
+\begin{tabularx}{\textwidth}{>{\hsize=1.150\hsize\raggedright\arraybackslash}X>{\raggedright\arraybackslash}l>{\raggedright\arraybackslash}l>{\raggedright\arraybackslash}l>{\hsize=0.850\hsize\raggedright\arraybackslash}X}
 \toprule
 \textbf{Cách} & \textbf{Recall} & \textbf{Precision} & \textbf{Báo nhầm} & \textbf{Bắt đúng / Bỏ sót / Báo nhầm / Cho phép đúng} \\
 \midrule
-\endfirsthead
-\toprule
-\textbf{Cách} & \textbf{Recall} & \textbf{Precision} & \textbf{Báo nhầm} & \textbf{Bắt đúng / Bỏ sót / Báo nhầm / Cho phép đúng} \\
-\midrule
-\endhead
-\bottomrule
-\endlastfoot
 Quét từ khóa + Regex & 66,7\% & 97,6\% & 1,7\% & 40 / 20 / 1 / 59 \\
 Học máy (Logistic Regression) & 83,3\% & 96,2\% & 3,3\% & 50 / 10 / 2 / 58 \\
 Kết hợp hai module & 93,3\% & 94,9\% & 5,0\% & 56 / 4 / 3 / 57 \\
-\end{xltabular}}
+\bottomrule
+\end{tabularx}
+\end{table}}
 
 \begin{figure}[H]
 \centering
@@ -212,22 +200,19 @@ Về tốc độ, công cụ quét 46.000 tin mô phỏng trong khoảng 25 giâ
 Ô thử trực tiếp trong notebook cho phép nhập một tin bất kỳ và xem quyết định ngay. Ba tin dùng khi thuyết trình:
 
 {\small\setstretch{1.1}
-\begin{xltabular}{\textwidth}{>{\hsize=1.099\hsize\raggedright\arraybackslash}X>{\hsize=0.548\hsize\raggedright\arraybackslash}X>{\hsize=1.353\hsize\raggedright\arraybackslash}X}
-\caption{Kết quả demo trực tiếp}\label{tab:5.10}\\
+\begin{table}[H]
+\centering
+\caption{Kết quả demo trực tiếp}\label{tab:5.10}
+\begin{tabularx}{\textwidth}{>{\hsize=1.099\hsize\raggedright\arraybackslash}X>{\hsize=0.548\hsize\raggedright\arraybackslash}X>{\hsize=1.353\hsize\raggedright\arraybackslash}X}
 \toprule
 \textbf{Tin nhập} & \textbf{Quyết định} & \textbf{Lý do công cụ đưa ra} \\
 \midrule
-\endfirsthead
-\toprule
-\textbf{Tin nhập} & \textbf{Quyết định} & \textbf{Lý do công cụ đưa ra} \\
-\midrule
-\endhead
-\bottomrule
-\endlastfoot
 Pass d.a.t.a khách mua bảo hiểm 5k số, mẫu 0912345678, 0987654321 & CHẶN (mua bán dữ liệu, điểm 0,95) & Từ khóa “data”, “data khách”; có mẫu dữ liệu cá nhân gồm 2 số điện thoại \\
 Cho thuê sim nhận 0tp theo lượt, giao mã trong 30 giây. LH 0912345678 & CHẶN (dịch vụ xác thực hộ, điểm 0,81) & Từ khóa “otp”, “sim nhận”, “thuê sim”; “0tp” đã được chuẩn hóa thành “otp” \\
 Khóa học nhận diện tin nhắn OTP giả mạo, phòng tránh lừa đảo. LH 0901222333 & CHO PHÉP (điểm 0,27) & Có từ “OTP” nhưng bị trừ điểm vì ngữ cảnh hợp lệ (“khóa học”); một số điện thoại liên hệ không bị tính là dữ liệu cá nhân \\
-\end{xltabular}}
+\bottomrule
+\end{tabularx}
+\end{table}}
 
 \begin{figure}[H]
 \centering
@@ -247,25 +232,22 @@ PoC này cụ thể hóa giải pháp 4 và 6 thành ba tài liệu: bộ tiêu 
 Bộ tiêu chí giúp người kiểm tra quyết định một sàn có cần được xem xét như một “chợ dữ liệu” hay không. Mỗi tiêu chí xây từ một đặc điểm đã công bố của taphoammo~\cite{bca-2026}.
 
 {\small\setstretch{1.1}
-\begin{xltabular}{\textwidth}{>{\raggedright\arraybackslash}l>{\hsize=0.537\hsize\raggedright\arraybackslash}X>{\hsize=1.371\hsize\raggedright\arraybackslash}X>{\hsize=1.093\hsize\raggedright\arraybackslash}X}
-\caption{Bộ tiêu chí nhận diện “chợ dữ liệu”}\label{tab:5.11}\\
+\begin{table}[H]
+\centering
+\caption{Bộ tiêu chí nhận diện “chợ dữ liệu”}\label{tab:5.11}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}l>{\hsize=0.537\hsize\raggedright\arraybackslash}X>{\hsize=1.371\hsize\raggedright\arraybackslash}X>{\hsize=1.093\hsize\raggedright\arraybackslash}X}
 \toprule
 \textbf{STT} & \textbf{Tiêu chí} & \textbf{Dấu hiệu kiểm tra} & \textbf{Đặc điểm tương ứng ở taphoammo} \\
 \midrule
-\endfirsthead
-\toprule
-\textbf{STT} & \textbf{Tiêu chí} & \textbf{Dấu hiệu kiểm tra} & \textbf{Đặc điểm tương ứng ở taphoammo} \\
-\midrule
-\endhead
-\bottomrule
-\endlastfoot
 1 & Hàng hóa đăng bán & Có gian hàng đăng bán dữ liệu cá nhân, tài khoản hoặc dịch vụ xác thực hộ; có thể dùng công cụ ở~\ref{sec:5.2.1} để sàng lọc & Đăng bán công khai dữ liệu cá nhân, tài khoản mạng xã hội và thư điện tử \\
 2 & Thu phí trung gian & Sàn giữ tiền, bảo đảm giao dịch và thu phí trên mỗi giao dịch & Thu phí 3–5\% mỗi giao dịch \\
 3 & Kiểm duyệt người bán & Sàn có duyệt gian hàng nhưng vẫn để hàng hóa vi phạm tồn tại & Có kiểm duyệt người bán \\
 4 & Quảng cáo đa nền tảng & Quảng cáo sàn hoặc hàng hóa trên mạng xã hội, công cụ tìm kiếm & Quảng cáo trên Facebook, Telegram, TikTok, Instagram, Google \\
 5 & Hạ tầng ở nước ngoài & Máy chủ đặt ở nước ngoài, tên miền đi thuê & Máy chủ ở nước ngoài, thuê tên miền \\
 6 & Vỏ bọc doanh nghiệp & Có đăng ký doanh nghiệp nhưng ngành nghề không khớp hàng hóa thực tế & Đứng tên Công ty TNHH Phát triển Công nghệ số HCT, tự giới thiệu là công ty khởi nghiệp công nghệ \\
-\end{xltabular}}
+\bottomrule
+\end{tabularx}
+\end{table}}
 
 Cách đánh giá: tiêu chí 1 (hàng hóa đăng bán) là điều kiện bắt buộc. Sàn thỏa tiêu chí 1 và ít nhất hai tiêu chí khác thì được chuyển sang quy trình xử lý; sàn chỉ thỏa tiêu chí 1 được đưa vào danh sách theo dõi.
 
@@ -292,18 +274,13 @@ Quy trình nối tiếp kết quả của công cụ ở~\ref{sec:5.2.1} và c�
 Biểu mẫu tiếp nhận tố giác gồm các trường sau:
 
 {\small\setstretch{1.1}
-\begin{xltabular}{\textwidth}{>{\hsize=0.541\hsize\raggedright\arraybackslash}X>{\hsize=1.459\hsize\raggedright\arraybackslash}X>{\raggedright\arraybackslash}l}
-\caption{Các trường của biểu mẫu tiếp nhận tố giác}\label{tab:5.12}\\
+\begin{table}[H]
+\centering
+\caption{Các trường của biểu mẫu tiếp nhận tố giác}\label{tab:5.12}
+\begin{tabularx}{\textwidth}{>{\hsize=0.541\hsize\raggedright\arraybackslash}X>{\hsize=1.459\hsize\raggedright\arraybackslash}X>{\raggedright\arraybackslash}l}
 \toprule
 \textbf{Trường} & \textbf{Nội dung} & \textbf{Bắt buộc} \\
 \midrule
-\endfirsthead
-\toprule
-\textbf{Trường} & \textbf{Nội dung} & \textbf{Bắt buộc} \\
-\midrule
-\endhead
-\bottomrule
-\endlastfoot
 Người tố giác & Họ tên và cách liên hệ; cho phép tố giác ẩn danh & Không \\
 Đối tượng bị tố giác & Địa chỉ sàn, gian hàng hoặc đường dẫn tin đăng & Có \\
 Loại hành vi nghi ngờ & Chọn trong bảy hành vi ở Chương 3, kèm mô tả ngắn & Có \\
@@ -311,5 +288,7 @@ Thời điểm phát hiện & Ngày, giờ phát hiện & Có \\
 Bằng chứng & Ảnh chụp màn hình, đường dẫn; không gửi kèm dữ liệu cá nhân bị rò rỉ & Có \\
 Cam kết & Thông tin cung cấp là trung thực; không gửi dữ liệu cá nhân ngoài phạm vi cần thiết & Có \\
 Phần cơ quan tiếp nhận ghi & Mã hồ sơ, người tiếp nhận, kết quả sàng lọc theo bộ tiêu chí, đơn vị được chuyển hồ sơ & Có \\
-\end{xltabular}}
+\bottomrule
+\end{tabularx}
+\end{table}}
 
