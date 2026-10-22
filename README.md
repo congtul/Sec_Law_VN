@@ -1,4 +1,4 @@
-# Vụ việc sàn taphoammo.net
+# Thực trạng mua bán dữ liệu cá nhân qua vụ việc sàn taphoammo.net và giải pháp pháp lý
 
 Bộ slide web song ngữ Việt–Anh cho bài tập lớn môn *Luật pháp, chính sách và chuẩn trong an ninh mạng*: áp dụng pháp luật bảo vệ dữ liệu cá nhân và an ninh mạng Việt Nam vào vụ việc sàn giao dịch taphoammo.net.
 

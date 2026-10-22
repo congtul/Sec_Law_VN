@@ -63,7 +63,7 @@
     root.lang = l;
     store.set('lang', l);
     $$('.lang button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.lang === l)));
-    document.title = l === 'vi' ? 'Hồ sơ taphoammo.net' : 'The taphoammo.net case';
+    document.title = l === 'vi' ? 'Thực trạng mua bán dữ liệu cá nhân qua vụ việc sàn taphoammo.net và giải pháp pháp lý' : 'Personal data trading in Vietnam: the taphoammo.net case and legal solutions';
     document.dispatchEvent(new CustomEvent('lang:change', { detail: l }));
   }
   const toggleLang = () => setLang(root.lang === 'en' ? 'vi' : 'en');
