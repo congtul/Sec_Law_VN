@@ -32,10 +32,10 @@
     },
     {
       kind: 'fact', ch: '1.1', ans: 1,
-      title: { en: 'Two figures', vi: 'Hai con số' },
-      q: { en: 'What is the “over VND 400 billion” figure?', vi: 'Con số “hơn 400 tỷ đồng” là gì?' },
-      opts: [{ en: 'The suspects’ illicit gain', vi: 'Khoản thu lợi bất chính của bị can' }, { en: 'Revenue that passed through the platform', vi: 'Doanh thu đi qua sàn' }, { en: 'The expected fine', vi: 'Mức phạt dự kiến' }, { en: 'Victims’ losses', vi: 'Thiệt hại của nạn nhân' }],
-      why: { en: 'What the operators kept is the 3–5% fee, which investigators put at several billion VND. Calling VND 400 billion “profit” is inaccurate.', vi: 'Phần nhóm điều hành giữ lại là phí 3–5%, được cơ quan điều tra nêu là nhiều tỷ đồng. Gọi 400 tỷ là “thu lợi” là không chính xác.' }
+      title: { en: 'Platform fee', vi: 'Phí trung gian' },
+      q: { en: 'How much did the platform charge as an intermediary fee on each deal?', vi: 'Sàn thu phí trung gian bao nhiêu trên mỗi giao dịch?' },
+      opts: [{ en: 'Under 1%', vi: 'Dưới 1%' }, { en: '3–5%', vi: '3–5%' }, { en: '10%', vi: '10%' }, { en: '20–30%', vi: '20–30%' }],
+      why: { en: 'Investigators said the platform held funds, guaranteed deals and took 3–5% per deal, over more than 53 million transactions.', vi: 'Theo cơ quan điều tra, sàn giữ tiền, bảo đảm giao dịch và thu phí 3–5% mỗi giao dịch, trên hơn 53 triệu giao dịch.' }
     },
     {
       kind: 'law', ch: '3', ans: 1,
