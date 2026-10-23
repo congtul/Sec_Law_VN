@@ -27,7 +27,7 @@ Giải pháp 6 & Phối hợp xử lý & Hạ tầng ở nước ngoài; dữ li
 
 \begin{itemize}
 \item \textbf{Mục tiêu:} giảm khối lượng đọc thủ công và ưu tiên những tin cần kiểm tra.
-\item \textbf{Căn cứ:} quy định về bảo vệ dữ liệu cá nhân và trách nhiệm kiểm soát nội dung của nền tảng~\cite{luat-bvdlcn-2025,vbhn-tmdt-2020,cuc-tmdt-2026}.
+\item \textbf{Căn cứ:} quy định về bảo vệ dữ liệu cá nhân và trách nhiệm kiểm soát nội dung của nền tảng~\cite{luat-bvdlcn-2025,vbhn-tmdt-2020,cuc-tmdt-2026}; quy định về hệ thống trí tuệ nhân tạo~\cite{luat-ai-2025}.
 \item \textbf{Cách làm:} chuẩn hóa nội dung tin đăng, quét bằng từ khóa và biểu thức chính quy kết hợp với mô hình học máy, rồi đưa ra cảnh báo có lý do để người kiểm tra xem lại.
 \item \textbf{Đầu ra:} danh sách cảnh báo và nhật ký bằng chứng. Công cụ không tự kết luận ai vi phạm. Demo dùng dữ liệu do nhóm tự tạo, không thu thập dữ liệu rò rỉ thật.
 \end{itemize}
@@ -143,7 +143,7 @@ Các trường hợp còn lại & CHO PHÉP \\
 \end{tabularx}
 \end{table}}
 
-Muốn chặn thẳng thì phải có dấu hiệu cụ thể để ghi vào lý do, nên chỉ riêng học máy nghi ngờ thì chưa đủ. Chuyển người duyệt là bước an toàn, nên chỉ cần một module nghi ngờ.
+Muốn chặn thẳng thì phải có dấu hiệu cụ thể để ghi vào lý do, nên chỉ riêng học máy nghi ngờ thì chưa đủ. Chuyển người duyệt là bước an toàn, nên chỉ cần một module nghi ngờ. Khi triển khai thực tế, CHẶN chỉ có nghĩa là tạm ẩn tin và chuyển người duyệt xác nhận; công cụ không tự gỡ tin hay khóa tài khoản (xem phần tuân thủ cuối mục này).
 
 \paragraph{Dữ liệu kiểm tra}
 
@@ -222,6 +222,36 @@ Khóa học nhận diện tin nhắn OTP giả mạo, phòng tránh lừa đảo
 \end{figure}
 
 Mỗi tin bị gắn cờ được ghi vào nhật ký bằng chứng gồm thời điểm, quyết định, loại vi phạm, điểm rủi ro, lý do, nội dung đã che dữ liệu cá nhân (ví dụ “091*****78”) và mã băm SHA-256 của nội dung gốc để chứng minh nội dung không bị sửa sau khi ghi nhận. Nhật ký xuất ra file CSV và là đầu vào cho quy trình xử lý ở~\ref{sec:5.2.2}.
+
+\paragraph{Tuân thủ khi triển khai thực tế}
+
+Demo chỉ dùng dữ liệu tự tạo nên không xử lý dữ liệu cá nhân thật. Khi chạy trên tin đăng thật, công cụ vừa xử lý dữ liệu cá nhân của người bán và của những người có dữ liệu bị rao bán, vừa là một hệ thống trí tuệ nhân tạo. Vì vậy công cụ phải đáp ứng Luật Bảo vệ dữ liệu cá nhân 2025~\cite{luat-bvdlcn-2025}, Nghị định 356/2025/NĐ-CP~\cite{nd356-2025}, Luật Trí tuệ nhân tạo 2025~\cite{luat-ai-2025} và Nghị định 142/2026/NĐ-CP~\cite{nd142-2026}. Bảng dưới đây nêu từng yêu cầu và cách công cụ đáp ứng.
+
+{\small\setstretch{1.1}
+\begin{xltabular}{\textwidth}{>{\hsize=0.62\hsize\raggedright\arraybackslash}X>{\hsize=0.78\hsize\raggedright\arraybackslash}X>{\hsize=1.6\hsize\raggedright\arraybackslash}X}
+\caption{Yêu cầu pháp lý khi triển khai công cụ phát hiện tin đăng}\label{tab:5.tuanthu}\\
+\toprule
+\textbf{Yêu cầu} & \textbf{Căn cứ} & \textbf{Cách đáp ứng} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Yêu cầu} & \textbf{Căn cứ} & \textbf{Cách đáp ứng} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+Có căn cứ và đúng mục đích xử lý & Luật BVDLCN 2025: khoản 1 Điều 19, khoản 1 Điều 30; Nghị định 356/2025: Điều 19 & Chỉ quét tin đăng để phát hiện vi phạm, theo yêu cầu hoặc phối hợp với cơ quan có thẩm quyền; không dùng dữ liệu quét được cho mục đích khác. Lập hồ sơ đánh giá tác động xử lý dữ liệu cá nhân trước khi vận hành. \\
+Dữ liệu huấn luyện hợp pháp & Luật Trí tuệ nhân tạo 2025: khoản 3 Điều 7 & Huấn luyện bằng dữ liệu tự tạo hoặc tin đăng đã khử nhận dạng; không dùng dữ liệu rò rỉ làm dữ liệu huấn luyện. \\
+Mô hình không lưu dữ liệu cá nhân & Luật BVDLCN 2025: khoản 3 Điều 30 & Thay mọi dãy chữ số bằng một ký hiệu chung trước khi huấn luyện, để từ vựng của mô hình không chứa mảnh số điện thoại hay số CCCD. Mã hóa và phân quyền truy cập file mô hình. \\
+Bảo vệ kết quả suy luận & Nghị định 356/2025: khoản 2 Điều 10 & Kết luận “gian hàng X có dấu hiệu bán dữ liệu” gắn với một người cụ thể nên cũng là dữ liệu cá nhân. Nhật ký bằng chứng chỉ lưu nội dung đã che và mã băm, chỉ người duyệt được xem, và có thời hạn lưu. \\
+Con người quyết định cuối cùng & Luật Trí tuệ nhân tạo 2025: khoản 2 Điều 4, khoản 4 Điều 7 & CHẶN chỉ tạm ẩn tin và chuyển người duyệt xác nhận. Công cụ không tự gỡ tin hay khóa tài khoản. \\
+Minh bạch và khiếu nại & Nghị định 356/2025: khoản 3 Điều 10; Luật Trí tuệ nhân tạo 2025: Điều 14 & Thông báo cho người bán rằng tin đăng được quét tự động, gửi kèm lý do bị gắn cờ (danh sách lý do do công cụ xuất ra) và kênh khiếu nại. \\
+Phân loại rủi ro trước khi dùng & Luật BVDLCN 2025: khoản 4 Điều 30; Luật Trí tuệ nhân tạo 2025: Điều 9; Nghị định 142/2026: Điều 5 & Công cụ không tạo nội dung, không tương tác trực tiếp với công chúng, và người duyệt ra quyết định cuối, nên có cơ sở xếp vào mức rủi ro thấp. Trước khi dùng vẫn phải đối chiếu với Danh mục hệ thống trí tuệ nhân tạo rủi ro cao. \\
+\end{xltabular}}
+
+Nhóm đã thử bước thay chữ số trên notebook. Sau khi thay, từ vựng của mô hình không còn đặc trưng nào chứa từ ba chữ số liền nhau trở lên. Recall của riêng module học máy giảm từ 83,3\% xuống 80,0\%, còn kết quả của cách kết hợp hai module không đổi (recall 93,3\%, báo nhầm 5,0\%), vì số điện thoại và số CCCD vẫn do biểu thức chính quy nhận diện.
+
+Quyền không tham gia xử lý tự động theo khoản 3 Điều 10 Nghị định 356/2025 khó áp dụng cho việc kiểm duyệt tin đăng bắt buộc trên sàn. Pháp luật hiện chưa quy định rõ trường hợp này.
 
 \subsubsection{PoC tài liệu cho giải pháp 4 và 6: Quy trình xử lý sàn “chợ dữ liệu”}\label{sec:5.2.2}
 
