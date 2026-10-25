@@ -47,6 +47,53 @@ Bộ tiêu chí cũng cần không gắn cờ nhầm các sàn hợp pháp. Th�
 
 Biểu mẫu tố giác có đủ thông tin tối thiểu (đối tượng, loại hành vi, thời điểm, bằng chứng) để cơ quan tiếp nhận sàng lọc theo bộ tiêu chí và chuyển hồ sơ. Quy trình và biểu mẫu mới được xây dựng trên giấy, chưa được thử với một cơ quan hay nền tảng thật.
 
+\subsubsection{Đánh giá khi áp dụng bộ 3P vào vụ việc}\label{sec:6.1.3p}
+
+Mục này so sánh dữ kiện của vụ taphoammo.net với những gì bộ 3P ở~\ref{sec:5.2.2} yêu cầu, theo ba thách thức mà PoC phụ trách. Cột “thực tế” chỉ dùng dữ kiện đã công bố~\cite{bca-2026,cand-2026}; cột “khi áp dụng” chỉ dùng thời hạn và nghĩa vụ ghi trong văn bản~\cite{luat-anm-2025,nd327-2026,nd333-2026}. Vì các văn bản này có hiệu lực sau thời gian sàn hoạt động, đây là phép so sánh giả định để đánh giá giải pháp, không phải đánh giá trách nhiệm của các bị can.
+
+{\small\setstretch{1.1}
+\begin{xltabular}{\textwidth}{>{\hsize=0.7\hsize\raggedright\arraybackslash}X>{\hsize=1.1\hsize\raggedright\arraybackslash}X>{\hsize=1.2\hsize\raggedright\arraybackslash}X>{\hsize=1.0\hsize\raggedright\arraybackslash}X}
+\caption{Thực tế vụ việc và khi áp dụng bộ 3P}\label{tab:6.3p}\\
+\toprule
+\textbf{Thách thức} & \textbf{Thực tế vụ việc} & \textbf{Khi áp dụng bộ 3P} & \textbf{Phần chưa giải quyết} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Thách thức} & \textbf{Thực tế vụ việc} & \textbf{Khi áp dụng bộ 3P} & \textbf{Phần chưa giải quyết} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+Hạ tầng ở nước ngoài & Máy chủ ở nước ngoài, tên miền đi thuê; cơ quan điều tra nêu việc này gây khó truy vết; khoảng 8 tháng từ lập chuyên án (6/2025) đến khám xét (2/2026) & Lưu trữ: dữ liệu người dùng Việt Nam lưu trong nước ít nhất 24 tháng, nhật ký 12 tháng. Phía cơ quan: tạm ngừng, thu hồi tên miền theo Điều 13 NĐ 333/2026; trường hợp khẩn cấp có văn bản trong 24 giờ & Máy chủ đặt ở nước ngoài vẫn cần hợp tác quốc tế và nhà cung cấp hạ tầng \\
+Vỏ bọc doanh nghiệp & Sàn đứng tên công ty có đăng ký, có kiểm duyệt người bán nhưng hàng hóa vi phạm vẫn được đăng bán & Đăng ký tách khỏi Hàng cấm, Gỡ tin (luồng A): kiểm tra danh tính và kiểm tra hàng hóa là hai bước; tiêu chí 6 đối chiếu ngành nghề với hàng hóa thực tế & Một nhà vận hành cố ý vi phạm sẽ không tự tuân thủ chính sách; khi đó phải dựa vào tiêu chí 1 và 4, quan sát được từ bên ngoài \\
+Dữ liệu nằm ở nhiều bên & Tin đăng, thanh toán, hạ tầng, quảng cáo nằm ở sàn, ngân hàng hoặc ví, nhà cung cấp máy chủ và nền tảng quảng cáo & Phối hợp (luồng B): một đầu mối thường trực 24/24 giờ; cung cấp thông tin trong 24 giờ (khẩn cấp 03 giờ); gỡ bỏ trong 24 giờ (khẩn cấp 06 giờ) & Thủ tục giữa các bộ ngoài Bộ Công an (Bộ Công Thương, Ngân hàng Nhà nước) chưa có thời hạn trong PoC \\
+\end{xltabular}}
+
+Thay đổi rõ nhất là các bước xử lý có thời hạn tính bằng giờ thay vì không có mốc nào. Trong vụ việc, các mốc công bố tính bằng tháng và năm: sàn hoạt động khoảng 3,5 năm trước khi bị lập chuyên án và thêm khoảng 8 tháng đến khi khám xét. Bộ 3P không rút ngắn được phần điều tra hình sự, nhưng đặt thời hạn cho những việc nền tảng và các bên nắm dữ liệu phải làm khi được yêu cầu. Với một nhà vận hành cố ý vi phạm như taphoammo.net, giá trị chính của tầng chính sách là làm thước đo: không lưu dữ liệu trong nước, không ngăn chặn hàng hóa vi phạm đều là vi phạm hành chính có chế tài riêng (chương~\ref{sec:7}), nên có thể xử lý từ sớm mà không phải chờ đủ yếu tố cấu thành tội phạm.
+
+\paragraph{Cân bằng giữa các yếu tố}
+
+Khi đánh đổi an ninh (security trade-offs) có hai góc nhìn: góc kỹ thuật (hiệu năng, chức năng; khả năng sử dụng) và góc quản lý (sự hài lòng của người dùng; quyền truy cập; ngân sách). Bảng dưới đây đánh giá ở mức định tính từng biện pháp theo ba phía đó.
+
+{\small\setstretch{1.1}
+\begin{table}[H]
+\centering
+\caption{Đánh đổi của từng biện pháp}\label{tab:6.tradeoff}
+\begin{tabularx}{\textwidth}{>{\hsize=0.75\hsize\raggedright\arraybackslash}X>{\hsize=1.05\hsize\raggedright\arraybackslash}X>{\hsize=1.1\hsize\raggedright\arraybackslash}X>{\hsize=1.1\hsize\raggedright\arraybackslash}X}
+\toprule
+\textbf{Biện pháp} & \textbf{An ninh (CIA)} & \textbf{Kỹ thuật} & \textbf{Quản lý} \\
+\midrule
+Đăng ký: xác thực người bán & Tăng tính bí mật: khó mở gian hàng ẩn danh & Thêm bước khi đăng ký; tài khoản chưa xác thực chỉ được đọc (NĐ 333/2026 điểm d khoản 2 Điều 16) & Chi phí xác thực; người bán hợp pháp có thể không hài lòng \\
+Lưu trữ: lưu dữ liệu trong nước & Tăng tính sẵn sàng của dữ liệu cho cơ quan có thẩm quyền & Phải có hạ tầng lưu trữ trong nước & Chi phí hạ tầng \\
+Công cụ ở~\ref{sec:5.2.1} & Bắt 93,3\% tin vi phạm trên bộ kiểm tra & Quét 46.000 tin trong khoảng 25 giây; báo nhầm 5,0\% & Cần người duyệt các tin bị gắn cờ \\
+Phối hợp: thời hạn 24 giờ & Thông tin và tin vi phạm được xử lý nhanh & Cần quy trình truy xuất dữ liệu kịp thời & Cần đầu mối trực 24/24 giờ \\
+Bảo toàn chứng cứ & Tăng tính toàn vẹn của chứng cứ & Lưu ảnh chụp, mã băm, nhật ký & Thời gian ghi biên bản; chi phí lưu trữ \\
+\bottomrule
+\end{tabularx}
+\end{table}}
+
+Không biện pháp nào tăng an ninh mà không tốn chi phí ở phía kỹ thuật hoặc quản lý. Vì vậy PoC giữ con người ở bước quyết định (công cụ chỉ gắn cờ), dùng thời hạn do luật định thay vì tự đặt thời hạn ngắn hơn, và để trống những bước luật không quy định thời hạn.
+
 \subsubsection{Giới hạn chung của giải pháp}\label{sec:6.1.3}
 
 \begin{itemize}
@@ -62,7 +109,7 @@ Phần kết luận trả lời lần lượt ba câu hỏi nghiên cứu ở m�
 
 \textbf{Câu hỏi 2: Điều gì khiến việc áp dụng luật chưa ngăn chặn được sớm?} Các hành vi này đã bị cấm từ trước khi sàn hoạt động, nhưng việc áp dụng gặp chín thách thức nêu ở chương 4. Về kỹ thuật, khối lượng tin đăng lớn và cách viết ngụy trang khiến đọc thủ công không theo kịp; tài khoản và dữ liệu dễ chuyển tay, khó truy nguồn; hạ tầng đặt ở nước ngoài. Về pháp lý, một hành vi liên quan nhiều văn bản có hiệu lực khác nhau theo thời gian, và trách nhiệm của sàn với người bán chưa được tách bạch. Về quản trị, đăng ký doanh nghiệp tạo vỏ bọc hợp pháp và dữ liệu điều tra nằm ở nhiều bên.
 
-\textbf{Câu hỏi 3: Cần biện pháp gì để phát hiện và ngăn chặn các sàn tương tự?} Nhóm đề xuất sáu giải pháp gắn với từng thách thức. Giải pháp 1 đã được kiểm chứng bằng demo: kết hợp quét từ khóa + Regex với học máy phát hiện 93,3\% tin vi phạm trên bộ kiểm tra với tỉ lệ báo nhầm 5,0\%, và quét 46.000 tin trong khoảng 25 giây. Giải pháp 4 và 6 có PoC tài liệu gồm bộ tiêu chí nhận diện “chợ dữ liệu”, quy trình xử lý và biểu mẫu tố giác. Giải pháp 2, 3 và 5 dừng ở mức đề xuất.
+\textbf{Câu hỏi 3: Cần biện pháp gì để phát hiện và ngăn chặn các sàn tương tự?} Nhóm đề xuất sáu giải pháp gắn với từng thách thức. Giải pháp 1 đã được kiểm chứng bằng demo: kết hợp quét từ khóa + Regex với học máy phát hiện 93,3\% tin vi phạm trên bộ kiểm tra với tỉ lệ báo nhầm 5,0\%, và quét 46.000 tin trong khoảng 25 giây. Giải pháp 4 và 6 có PoC tài liệu theo cách tiếp cận 3P: sáu chính sách có căn cứ luật, quy trình năm bước kèm bộ tiêu chí nhận diện “chợ dữ liệu”, và thủ tục từng bước với thời hạn lấy từ Luật An ninh mạng 2025, Nghị định 327/2026 và 333/2026, kèm biểu mẫu tố giác. Giải pháp 2, 3 và 5 dừng ở mức đề xuất.
 
-\textbf{Hướng phát triển.} Thử công cụ phát hiện tin đăng trên dữ liệu thật do nền tảng cung cấp trong khuôn khổ được phép, bổ sung khả năng hiểu ngữ cảnh và câu phủ định, và thử nghiệm quy trình phối hợp xử lý với một cơ quan hoặc nền tảng cụ thể.
+\textbf{Hướng phát triển.} Thử công cụ phát hiện tin đăng trên dữ liệu thật do nền tảng cung cấp trong khuôn khổ được phép, bổ sung khả năng hiểu ngữ cảnh và câu phủ định, thử nghiệm quy trình phối hợp xử lý với một cơ quan hoặc nền tảng cụ thể, và xây dựng nội dung cụ thể cho chính sách Giáo dục (tài liệu phổ biến cho người duyệt và đầu mối phối hợp).
 

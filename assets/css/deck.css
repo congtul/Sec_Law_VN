@@ -22,6 +22,7 @@
   --c4: #7e22ce;
   --c5: #4338ca;
   --c6: #be123c;
+  --c7: #0e7490;
   --cq: #b45309;
   --good: #15803d;
   --good-soft: #dcf2e2;
@@ -60,6 +61,7 @@
     --c4: #c084fc;
     --c5: #818cf8;
     --c6: #fb7185;
+    --c7: #22d3ee;
     --cq: #fbbf24;
     --good: #4ade80;
     --good-soft: rgba(74, 222, 128, .13);
@@ -95,6 +97,7 @@
   --c4: #c084fc;
   --c5: #818cf8;
   --c6: #fb7185;
+  --c7: #22d3ee;
   --cq: #fbbf24;
   --good: #4ade80;
   --good-soft: rgba(74, 222, 128, .13);
@@ -171,6 +174,7 @@ a { color: var(--accent); }
 .slide[data-ch="4"] { --ch: var(--c4); }
 .slide[data-ch="5"] { --ch: var(--c5); }
 .slide[data-ch="6"] { --ch: var(--c6); }
+.slide[data-ch="7"] { --ch: var(--c7); }
 .slide[data-ch="q"] { --ch: var(--cq); }
 
 /* slide header (generated) */
@@ -697,6 +701,7 @@ kbd {
 .ag[data-c="4"] { --ch: var(--c4); }
 .ag[data-c="5"] { --ch: var(--c5); }
 .ag[data-c="6"] { --ch: var(--c6); }
+.ag[data-c="7"] { --ch: var(--c7); }
 .ag[data-c="q"] { --ch: var(--cq); }
 .ag[data-c="0"] { --ch: var(--muted); }
 
@@ -1501,3 +1506,31 @@ html.no-anim .slide .rise { opacity: 1 !important; transform: none !important; a
 .slide .hint { margin-top: 22px; }
 .slide-title .title-art { right: -150px; opacity: .9; }
 .tl-detail + p { margin-top: 2px; }
+
+/* nguyên văn điều khoản khi rê chuột vào .cite[data-law] (assets/js/law-tip.js) */
+.cite[data-law] { cursor: help; text-decoration: underline dotted; text-underline-offset: 2px; }
+.cite[data-law]:focus-visible { outline: 2px solid var(--ch); outline-offset: 1px; }
+.law-tip {
+  position: fixed;
+  z-index: 1000;
+  width: min(520px, calc(100vw - 16px));
+  max-height: min(60vh, 440px);
+  overflow-y: auto;
+  padding: 12px 14px;
+  background: var(--surface);
+  color: var(--ink);
+  border: 1px solid var(--line-2);
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  font-size: 13.5px;
+  line-height: 1.5;
+  text-align: left;
+}
+.law-tip[hidden] { display: none; }
+.law-tip .lt-item + .lt-item { margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line); }
+.law-tip .lt-note { font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+.law-tip .lt-ref { font: 700 12px var(--mono); color: var(--ch, var(--ink-2)); }
+.law-tip .lt-art { font-weight: 650; margin: 2px 0 4px; }
+.law-tip .lt-lead { color: var(--ink-2); margin-bottom: 4px; }
+.law-tip .lt-body b { font-weight: 750; background: color-mix(in srgb, var(--warn) 18%, transparent); border-radius: 3px; padding: 0 2px; }
+@media print { .law-tip { display: none !important; } }
