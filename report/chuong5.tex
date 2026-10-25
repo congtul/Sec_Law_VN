@@ -52,7 +52,7 @@ Giải pháp 6 & Phối hợp xử lý & Hạ tầng ở nước ngoài; dữ li
 \item \textbf{Mục tiêu:} ngăn hàng hóa bị cấm xuất hiện trên sàn ngay từ khâu mở gian hàng.
 \item \textbf{Cách làm:} xác minh người bán, kiểm tra hàng hóa và dịch vụ đăng bán, đối soát thanh toán qua đơn vị được cấp phép, và xử lý vi phạm có căn cứ. Xác minh danh tính không làm hàng hóa bị cấm trở nên hợp pháp, nên bước kiểm tra hàng hóa vẫn bắt buộc.
 \item \textbf{Căn cứ:} quy định về bảo vệ dữ liệu, thương mại điện tử và thanh toán~\cite{luat-bvdlcn-2025,nd356-2025,vbhn-tmdt-2020,nd52-2024,luat-tmdt-2025}. Theo Cục Thương mại điện tử, nghĩa vụ xác thực điện tử danh tính người bán áp dụng từ 1/1/2027 và không hồi tố cho hoạt động trước đó~\cite{cuc-tmdt-2026}.
-\item \textbf{Đầu ra:} bộ tiêu chí nhận diện và danh mục kiểm tra người bán, hiện thực ở dạng PoC tài liệu tại~\ref{sec:5.2.2}.
+\item \textbf{Đầu ra:} các chính sách Đăng ký, Hàng cấm, Gỡ tin, Giáo dục, luồng A (nền tảng tự kiểm soát) và bộ tiêu chí nhận diện “chợ dữ liệu”, hiện thực ở dạng PoC tài liệu theo cách tiếp cận 3P tại~\ref{sec:5.2.2}.
 \end{itemize}
 \subsubsection{Giải pháp 5: Ma trận trách nhiệm pháp lý}\label{sec:5.1.5}
 
@@ -67,12 +67,12 @@ Giải pháp 6 & Phối hợp xử lý & Hạ tầng ở nước ngoài; dữ li
 \begin{itemize}
 \item \textbf{Mục tiêu:} biến một tín hiệu nghi vấn thành hồ sơ có đầu mối theo dõi.
 \item \textbf{Cách làm:} tiếp nhận, sàng lọc, bảo toàn chứng cứ, chuyển đúng thẩm quyền, rồi nhận phản hồi và theo dõi. Yêu cầu nhà cung cấp hạ tầng xử lý (ví dụ tạm ngừng tên miền hay máy chủ) phải có căn cứ hợp pháp.
-\item \textbf{Căn cứ:} quy định về an ninh mạng, bảo vệ dữ liệu và nghĩa vụ phối hợp~\cite{luat-bvdlcn-2025,nd356-2025,luat-anm-2025,cuc-tmdt-2026}.
-\item \textbf{Đầu ra:} lưu đồ quy trình và biểu mẫu tiếp nhận tố giác, hiện thực ở dạng PoC tài liệu tại~\ref{sec:5.2.2}.
+\item \textbf{Căn cứ:} quy định về an ninh mạng, bảo vệ dữ liệu và nghĩa vụ phối hợp~\cite{luat-bvdlcn-2025,nd356-2025,luat-anm-2025,cuc-tmdt-2026,nd327-2026,nd333-2026}.
+\item \textbf{Đầu ra:} các chính sách Lưu trữ, Phối hợp, luồng B (nền tảng phối hợp với cơ quan), quy trình phía cơ quan chức năng, bảng thủ tục có thời hạn theo luật và biểu mẫu tiếp nhận tố giác, hiện thực ở dạng PoC tài liệu theo cách tiếp cận 3P tại~\ref{sec:5.2.2}.
 \end{itemize}
 \subsection{Hiện thực giải pháp}\label{sec:5.2}
 
-Mục này hiện thực ba giải pháp: giải pháp 1 bằng một công cụ demo (\ref{sec:5.2.1}), giải pháp 4 và 6 bằng tài liệu PoC (\ref{sec:5.2.2}). Giải pháp 2, 3 và 5 dừng ở mức đề xuất như đã trình bày ở~\ref{sec:5.1}.
+Mục này hiện thực ba giải pháp: giải pháp 1 bằng một công cụ demo (\ref{sec:5.2.1}), giải pháp 4 và 6 bằng tài liệu PoC theo cách tiếp cận 3P gồm chính sách, quy trình và thủ tục (\ref{sec:5.2.2}). Giải pháp 2, 3 và 5 dừng ở mức đề xuất như đã trình bày ở~\ref{sec:5.1}.
 
 \subsubsection{Demo kỹ thuật giải pháp 1: Công cụ phát hiện tin đăng vi phạm}\label{sec:5.2.1}
 
@@ -253,55 +253,204 @@ Nhóm đã thử bước thay chữ số trên notebook. Sau khi thay, từ vự
 
 Quyền không tham gia xử lý tự động theo khoản 3 Điều 10 Nghị định 356/2025 khó áp dụng cho việc kiểm duyệt tin đăng bắt buộc trên sàn. Pháp luật hiện chưa quy định rõ trường hợp này.
 
-\subsubsection{PoC tài liệu cho giải pháp 4 và 6: Quy trình xử lý sàn “chợ dữ liệu”}\label{sec:5.2.2}
+\subsubsection{PoC tài liệu cho giải pháp 4 và 6: Bộ 3P xử lý sàn “chợ dữ liệu”}\label{sec:5.2.2}
 
-PoC này cụ thể hóa giải pháp 4 và 6 thành ba tài liệu: bộ tiêu chí nhận diện sàn “chợ dữ liệu”, quy trình xử lý khi một sàn bị nhận diện và biểu mẫu tiếp nhận tố giác. Cảnh báo và nhật ký bằng chứng từ công cụ ở~\ref{sec:5.2.1} là một nguồn đầu vào của quy trình này.
-
-\paragraph{Bộ tiêu chí nhận diện “chợ dữ liệu”}
-
-Bộ tiêu chí giúp người kiểm tra quyết định một sàn có cần được xem xét như một “chợ dữ liệu” hay không. Mỗi tiêu chí xây từ một đặc điểm đã công bố của taphoammo~\cite{bca-2026}.
+PoC này cụ thể hóa giải pháp 4 và 6 theo cách tiếp cận 3P (Policy -- Process -- Procedure). Theo sơ đồ “Compliance overview”, hệ thống quản lý an ninh thông tin của một tổ chức gồm chính sách, quy trình và thủ tục, và ba tầng này phải đối ứng với luật, quy định, hợp đồng bên ngoài. Ví dụ phân biệt: chính sách nêu điều phải đạt (“thông tin công ty trên máy tính phải được trả lại”), còn thủ tục nêu cách làm cụ thể (“phỏng vấn khi nghỉ việc và cách thu hồi tài liệu nhạy cảm”). PoC dùng ba tầng như sau:
 
 {\small\setstretch{1.1}
 \begin{table}[H]
 \centering
-\caption{Bộ tiêu chí nhận diện “chợ dữ liệu”}\label{tab:5.11}
-\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}l>{\hsize=0.537\hsize\raggedright\arraybackslash}X>{\hsize=1.371\hsize\raggedright\arraybackslash}X>{\hsize=1.093\hsize\raggedright\arraybackslash}X}
+\caption{Ba tầng 3P của PoC}\label{tab:5.3p}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}l>{\hsize=0.8\hsize\raggedright\arraybackslash}X>{\hsize=1.2\hsize\raggedright\arraybackslash}X}
 \toprule
-\textbf{STT} & \textbf{Tiêu chí} & \textbf{Dấu hiệu kiểm tra} & \textbf{Đặc điểm tương ứng ở taphoammo} \\
+\textbf{Tầng} & \textbf{Trả lời câu hỏi} & \textbf{Tài liệu trong PoC} \\
 \midrule
-1 & Hàng hóa đăng bán & Có gian hàng đăng bán dữ liệu cá nhân, tài khoản hoặc dịch vụ xác thực hộ; có thể dùng công cụ ở~\ref{sec:5.2.1} để sàng lọc & Đăng bán công khai dữ liệu cá nhân, tài khoản mạng xã hội và thư điện tử \\
-2 & Thu phí trung gian & Sàn giữ tiền, bảo đảm giao dịch và thu phí trên mỗi giao dịch & Thu phí 3–5\% mỗi giao dịch \\
-3 & Kiểm duyệt người bán & Sàn có duyệt gian hàng nhưng vẫn để hàng hóa vi phạm tồn tại & Có kiểm duyệt người bán \\
-4 & Quảng cáo đa nền tảng & Quảng cáo sàn hoặc hàng hóa trên mạng xã hội, công cụ tìm kiếm & Quảng cáo trên Facebook, Telegram, TikTok, Instagram, Google \\
-5 & Hạ tầng ở nước ngoài & Máy chủ đặt ở nước ngoài, tên miền đi thuê & Máy chủ ở nước ngoài, thuê tên miền \\
-6 & Vỏ bọc doanh nghiệp & Có đăng ký doanh nghiệp nhưng ngành nghề không khớp hàng hóa thực tế & Đứng tên Công ty TNHH Phát triển Công nghệ số HCT, tự giới thiệu là công ty khởi nghiệp công nghệ \\
+Chính sách (Policy) & Phải đạt điều gì, theo căn cứ nào & Sáu cam kết: Đăng ký, Hàng cấm, Gỡ tin, Lưu trữ, Phối hợp theo vòng đời tin đăng; Giáo dục xuyên suốt (bảng~\ref{tab:5.cs}, \ref{tab:5.csdk}) \\
+Quy trình (Process) & Gồm những bước nào, theo thứ tự nào & Luồng A, luồng B của nền tảng; phía cơ quan: bộ tiêu chí (bảng~\ref{tab:5.11}) và năm bước xử lý (hình~\ref{fig:5.4}) \\
+Thủ tục (Procedure) & Ở mỗi bước: ai làm, làm gì, trong bao lâu & Thủ tục luồng A, B kèm ví dụ áp vào taphoammo (bảng~\ref{tab:5.tt}, \ref{tab:5.ttb}) và biểu mẫu tố giác (bảng~\ref{tab:5.12}) \\
 \bottomrule
 \end{tabularx}
 \end{table}}
 
-Cách đánh giá: tiêu chí 1 (hàng hóa đăng bán) là điều kiện bắt buộc. Sàn thỏa tiêu chí 1 và ít nhất hai tiêu chí khác thì được chuyển sang quy trình xử lý; sàn chỉ thỏa tiêu chí 1 được đưa vào danh sách theo dõi.
+PoC nhắm vào ba thách thức ở chương 4 mà giải pháp 4 (Kiểm soát người bán) và giải pháp 6 (Phối hợp xử lý) phụ trách: Hạ tầng ở nước ngoài, Vỏ bọc doanh nghiệp và Dữ liệu nằm ở nhiều bên. Căn cứ là khung pháp luật hiện hành như đã nêu ở mục~\ref{sec:2.2.3}: Luật An ninh mạng 2025~\cite{luat-anm-2025}, Luật Bảo vệ dữ liệu cá nhân 2025~\cite{luat-bvdlcn-2025}, Nghị định 327/2026/NĐ-CP~\cite{nd327-2026} và Nghị định 333/2026/NĐ-CP~\cite{nd333-2026} (hai nghị định có hiệu lực từ 19/8/2026). PoC không áp ngược các văn bản này cho hành vi của taphoammo.net trước đó. Cảnh báo và nhật ký bằng chứng từ công cụ ở~\ref{sec:5.2.1} là một nguồn đầu vào của quy trình.
 
-\paragraph{Quy trình xử lý khi một sàn bị nhận diện}
+\paragraph{Tầng 1 -- Chính sách}
 
-Quy trình nối tiếp kết quả của công cụ ở~\ref{sec:5.2.1} và cụ thể hóa giải pháp 6 ở~\ref{sec:5.1}:
+Sáu cam kết dưới đây là chính sách mà một nền tảng có gian hàng (sàn thương mại điện tử, chợ tài nguyên số) phải công bố và tuân thủ. Mỗi cam kết lấy nguyên ý từ một nghĩa vụ hoặc điều cấm trong luật. Thay vì đánh số, mỗi chính sách được gọi bằng một từ khóa và xếp theo vòng đời của một tin đăng trên sàn: đăng ký tài khoản, đăng tin, lưu trữ dữ liệu, và khi cơ quan chức năng có yêu cầu. Chính sách Giáo dục không gắn với một giai đoạn mà áp dụng xuyên suốt cho người vận hành các bước đó; chính sách này xuất phát từ nghĩa vụ tuyên truyền, phổ biến pháp luật của nhà cung cấp dịch vụ (điểm g khoản 2 Điều 6 Nghị định 327/2026).
+
+{\small\setstretch{1.1}
+\begin{table}[H]
+\centering
+\caption{Chính sách của nền tảng theo vòng đời một tin đăng}\label{tab:5.cs}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}l>{\hsize=1.2\hsize\raggedright\arraybackslash}X>{\raggedright\arraybackslash}l>{\hsize=1.1\hsize\raggedright\arraybackslash}X>{\hsize=0.7\hsize\raggedright\arraybackslash}X}
+\toprule
+\textbf{Chính sách} & \textbf{Nội dung cam kết} & \textbf{Ai} & \textbf{Căn cứ} & \textbf{Thách thức} \\
+\midrule
+\multicolumn{5}{l}{\textit{Giai đoạn đăng ký}} \\
+\textbf{Đăng ký} & Xác thực thông tin khi đăng ký tài khoản; chỉ tài khoản đã xác thực mới được đăng tin & Nền tảng & Luật ANM 2025: điểm a khoản 2 Điều 25; NĐ 333/2026: điểm a, d khoản 2 Điều 16 & Dữ liệu nằm ở nhiều bên (xác định người đứng sau gian hàng) \\
+\multicolumn{5}{l}{\textit{Giai đoạn đăng tin}} \\
+\textbf{Hàng cấm} & Không đăng bán dữ liệu cá nhân, tài khoản số, dịch vụ xác thực tài khoản hộ & Người dùng & Luật BVDLCN 2025: khoản 6 Điều 7; Luật ANM 2025: điểm h khoản 2 Điều 7, điểm g khoản 4 Điều 13 & Vỏ bọc doanh nghiệp (danh tính hợp lệ không làm hàng hóa hợp lệ) \\
+\textbf{Gỡ tin} & Chủ động phát hiện, ngăn chặn và kịp thời gỡ bỏ tin xâm phạm bí mật cá nhân, đời sống riêng tư & Nền tảng & Luật ANM 2025: điểm b khoản 2 Điều 15 & Vỏ bọc doanh nghiệp \\
+\multicolumn{5}{l}{\textit{Giai đoạn lưu trữ}} \\
+\textbf{Lưu trữ} & Lưu dữ liệu người dùng tại Việt Nam (tối thiểu 24 tháng); nhật ký hệ thống truy xuất được ít nhất 12 tháng & Nền tảng & Luật ANM 2025: khoản 3 Điều 25; NĐ 333/2026: khoản 1, 2 Điều 19, khoản 1 Điều 20, điểm c khoản 6 Điều 16 & Hạ tầng ở nước ngoài \\
+\multicolumn{5}{l}{\textit{Khi cơ quan chức năng có yêu cầu}} \\
+\textbf{Phối hợp} & Chỉ định đầu mối phối hợp, tiếp nhận yêu cầu khẩn cấp theo chế độ thường trực 24/24 giờ; cung cấp thông tin, gỡ bỏ trong thời hạn luật định & Nền tảng & NĐ 327/2026: khoản 2 Điều 14; Luật ANM 2025: điểm a, b khoản 2 Điều 25 & Dữ liệu nằm ở nhiều bên \\
+\multicolumn{5}{l}{\textit{Xuyên suốt các giai đoạn}} \\
+\textbf{Giáo dục} & Phổ biến pháp luật và các thủ đoạn vi phạm mới cho người duyệt, đầu mối phối hợp, người vận hành hệ thống & Nền tảng & NĐ 327/2026: điểm g, điểm a khoản 2 Điều 6; NĐ 329/2026: khoản 1, điểm đ khoản 4 Điều 6~\cite{nd329-2026} & Vỏ bọc doanh nghiệp \\
+\bottomrule
+\end{tabularx}
+\end{table}}
+
+\paragraph{Vì sao là sáu chính sách này: PoC giải quyết gì, không giải quyết gì}
+
+Chín thách thức ở chương 4 không cùng một loại, nên không cùng một cách giải. Bảng~\ref{tab:5.pv} xếp chúng theo cách giải, dựa trên bảng~\ref{tab:5.6}. PoC tài liệu chỉ nhận ba thách thức mà lời giải là quy định ai làm gì, trong bao lâu; đó đúng là nội dung của chính sách, quy trình và thủ tục.
+
+{\small\setstretch{1.1}
+\begin{table}[H]
+\centering
+\caption{Thách thức nào PoC tài liệu giải quyết}\label{tab:5.pv}
+\begin{tabularx}{\textwidth}{>{\hsize=1.1\hsize\raggedright\arraybackslash}X>{\hsize=1.0\hsize\raggedright\arraybackslash}X>{\hsize=0.9\hsize\raggedright\arraybackslash}X}
+\toprule
+\textbf{Thách thức (chương 4)} & \textbf{Giải bằng} & \textbf{Giải pháp (mục~\ref{sec:5.1})} \\
+\midrule
+Hạ tầng ở nước ngoài; Vỏ bọc doanh nghiệp; Dữ liệu nằm ở nhiều bên & \textbf{Quy định ai làm gì, trong bao lâu: PoC tài liệu 3P} & 4 -- Kiểm soát người bán; 6 -- Phối hợp xử lý \\
+Khối lượng lớn; Cách viết lách bộ lọc & Công cụ phát hiện & 1 -- Phát hiện tin có dấu hiệu vi phạm (demo) \\
+Nhiều văn bản, hiệu lực khác nhau theo thời gian; Ranh giới trách nhiệm giữa người bán và sàn & Phân tích pháp lý & 5 -- Ma trận trách nhiệm pháp lý (đề xuất) \\
+Tài khoản đổi chủ; Dữ liệu dễ sao chép & Bên khác, không phải sàn: nền tảng gốc của tài khoản, bên kiểm soát dữ liệu & 2 -- Bảo vệ tài khoản trên nền tảng gốc; 3 -- Truy nguồn rò rỉ dữ liệu (đề xuất) \\
+\bottomrule
+\end{tabularx}
+\end{table}}
+
+Với ba thách thức PoC nhận, bảng~\ref{tab:5.csdk} đi từ dữ kiện đã công bố ở chương 3 tới chính sách tương ứng. Cụm từ in đậm trong cột dữ kiện là chỗ thể hiện thách thức.
+
+{\small\setstretch{1.1}
+\begin{table}[H]
+\centering
+\caption{Thách thức, dữ kiện vụ việc và chính sách tương ứng}\label{tab:5.csdk}
+\begin{tabularx}{\textwidth}{>{\hsize=0.7\hsize\raggedright\arraybackslash}X>{\hsize=1.3\hsize\raggedright\arraybackslash}X>{\hsize=1.1\hsize\raggedright\arraybackslash}X>{\hsize=0.9\hsize\raggedright\arraybackslash}X}
+\toprule
+\textbf{Thách thức} & \textbf{Dữ kiện} & \textbf{Chuyện gì đã xảy ra} & \textbf{Chính sách} \\
+\midrule
+Vỏ bọc doanh nghiệp & Công ty có đăng ký, \textbf{có kiểm duyệt người bán}, nhưng vẫn bán dữ liệu cá nhân, tài khoản, dịch vụ xác thực (mục~\ref{sec:3.1}, \ref{sec:3.2.1}) & Người bán được kiểm tra; hàng hóa không được kiểm tra, không bị gỡ & Hàng cấm, Gỡ tin, Giáo dục (riêng Đăng ký là chưa đủ) \\
+Hạ tầng ở nước ngoài & Hơn 1,35 triệu tài khoản; \textbf{máy chủ ở nước ngoài}, tên miền đi thuê (mục~\ref{sec:3.2.2}) & Dữ liệu người dùng không có bản lưu trong nước; cơ quan điều tra nêu việc này gây khó truy vết & Lưu trữ \\
+Dữ liệu nằm ở nhiều bên & Tin đăng, thanh toán, hạ tầng, quảng cáo nằm ở \textbf{sàn, ngân hàng hoặc ví điện tử, nhà cung cấp máy chủ, nền tảng quảng cáo} (mục~\ref{sec:3.2.3}, \ref{sec:3.2.4}, \ref{sec:4.3}) & Thông tin về người đứng sau gian hàng nằm rải rác ở nhiều bên, không có đầu mối, không có thời hạn & Đăng ký, Phối hợp \\
+-- & Việc chạy quảng cáo (mục~\ref{sec:3.2.3}); làm trung gian thanh toán (mục~\ref{sec:3.2.4}) & -- & Ngoài phạm vi PoC; đối chiếu ở chương~\ref{sec:7} và pháp luật thanh toán \\
+\bottomrule
+\end{tabularx}
+\end{table}}
+
+\paragraph{Tầng 2 -- Quy trình: hai luồng của nền tảng}
+
+Chính sách, quy trình và thủ tục là tài liệu của cùng một tổ chức. Quy trình của PoC vì vậy được viết cho nền tảng, gồm hai luồng:
 
 \begin{itemize}
-\item \textbf{Tiếp nhận:} nguồn gồm cảnh báo từ công cụ ở~\ref{sec:5.2.1}, tố giác của người dân và phản ánh từ các nền tảng quảng cáo.
-\item \textbf{Sàng lọc:} đối chiếu với bộ tiêu chí và ghi kết quả từng tiêu chí.
-\item \textbf{Bảo toàn chứng cứ:} lưu nhật ký có mã băm, ảnh chụp trang và thời điểm ghi nhận; che dữ liệu cá nhân khi lưu.
-\item \textbf{Chuyển đúng thẩm quyền:} chuyển hồ sơ theo loại hành vi. Mua bán dữ liệu cá nhân và vi phạm an ninh mạng chuyển tới lực lượng chuyên trách của Bộ Công an (Cục An ninh mạng và phòng, chống tội phạm sử dụng công nghệ cao, hoặc phòng tương ứng của công an cấp tỉnh); vi phạm về thương mại điện tử chuyển tới Bộ Công Thương; hoạt động trung gian thanh toán không phép chuyển tới Ngân hàng Nhà nước; hành vi có dấu hiệu tội phạm chuyển tới cơ quan điều tra.
-\item \textbf{Theo dõi và phản hồi:} ghi trạng thái xử lý và phản hồi cho người tố giác.
+\item \textbf{Luồng A -- nền tảng tự kiểm soát:} Đăng ký $\rightarrow$ Duyệt tin $\rightarrow$ Gỡ tin $\rightarrow$ Lưu trữ. Luồng này thực hiện các chính sách Đăng ký, Hàng cấm, Gỡ tin và Lưu trữ. Cảnh báo từ công cụ ở~\ref{sec:5.2.1} là đầu vào của bước Duyệt tin. Chính sách Giáo dục áp dụng xuyên suốt cả hai luồng cho người thực hiện các bước.
+\item \textbf{Luồng B -- nền tảng phối hợp với cơ quan:} Nhận yêu cầu $\rightarrow$ Xác thực $\rightarrow$ Thực hiện $\rightarrow$ Phản hồi. Luồng này thực hiện chính sách Phối hợp. Khoản 2 Điều 14 Nghị định 327/2026 áp dụng cho chủ quản hệ thống thông tin, nhà cung cấp dịch vụ và cơ quan, tổ chức có liên quan~\cite{nd327-2026}, nên cùng luồng này áp dụng cho các bên khác đang giữ dữ liệu của vụ việc như ngân hàng hoặc ví điện tử, nhà cung cấp máy chủ, nền tảng quảng cáo (thách thức Dữ liệu nằm ở nhiều bên).
 \end{itemize}
+
+\paragraph{Tầng 2 -- Quy trình phía cơ quan chức năng: bộ tiêu chí nhận diện “chợ dữ liệu”}
+
+Khi chính nhà vận hành cố ý vi phạm như taphoammo.net, nền tảng sẽ không tự áp dụng luồng A. Phần việc lúc này thuộc cơ quan chức năng: nhận diện sàn, chuyển đúng thẩm quyền và gửi yêu cầu vào luồng B của sàn và của các bên giữ dữ liệu. Bộ tiêu chí giúp người kiểm tra quyết định một sàn có cần được xem xét như một “chợ dữ liệu” hay không. Mỗi tiêu chí xây từ một đặc điểm đã công bố của taphoammo~\cite{bca-2026}.
+
+{\small\setstretch{1.1}
+\begin{table}[H]
+\centering
+\caption{Bộ tiêu chí nhận diện “chợ dữ liệu”, căn cứ theo luật hiện hành}\label{tab:5.11}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}l>{\hsize=0.6\hsize\raggedright\arraybackslash}X>{\hsize=1.15\hsize\raggedright\arraybackslash}X>{\hsize=1.25\hsize\raggedright\arraybackslash}X>{\hsize=1.0\hsize\raggedright\arraybackslash}X}
+\toprule
+\textbf{STT} & \textbf{Tiêu chí} & \textbf{Dấu hiệu kiểm tra} & \textbf{Căn cứ} & \textbf{Đặc điểm tương ứng ở taphoammo} \\
+\midrule
+1 & Hàng hóa đăng bán & Đăng bán dữ liệu cá nhân, thông tin tài khoản số, dịch vụ xác thực tài khoản hộ; có thể dùng công cụ ở~\ref{sec:5.2.1} để sàng lọc & Luật BVDLCN 2025: khoản 6 Điều 7; Luật ANM 2025: điểm g khoản 4 Điều 13; NĐ 330/2026: điểm c khoản 2 Điều 14 & Đăng bán công khai dữ liệu cá nhân, tài khoản mạng xã hội và thư điện tử \\
+2 & Thu phí trung gian & Sàn nhận, giữ, chuyển tiền thay người mua, người bán và thu phí trên mỗi giao dịch & NĐ 330/2026: điểm b khoản 2 Điều 14; NĐ 340/2025: khoản 6 Điều 31 & Thu phí 3--5\% mỗi giao dịch \\
+3 & Kiểm duyệt người bán & Sàn có duyệt gian hàng nhưng vẫn để hàng hóa vi phạm tồn tại & NĐ 327/2026: khoản 10 Điều 10; NĐ 330/2026: điểm e khoản 2 Điều 15 & Có kiểm duyệt người bán \\
+4 & Quảng cáo đa nền tảng & Sàn được quảng cáo trên mạng xã hội, công cụ tìm kiếm & NĐ 330/2026: điểm d khoản 3 Điều 14; NĐ 327/2026: điểm a khoản 2 Điều 6 (nền tảng quảng cáo phải rà soát) & Quảng cáo trên Facebook, Telegram, TikTok, Instagram, Google \\
+5 & Hạ tầng ở nước ngoài & Doanh nghiệp trong nước đặt máy chủ ở nước ngoài, không có bản lưu dữ liệu người dùng trong nước & Luật ANM 2025: khoản 3 Điều 25; NĐ 333/2026: khoản 2 Điều 19; NĐ 330/2026: điểm c khoản 2 Điều 29, điểm a khoản 1 Điều 33 & Máy chủ ở nước ngoài, thuê tên miền \\
+6 & Vỏ bọc doanh nghiệp & Có đăng ký doanh nghiệp nhưng ngành nghề không khớp hàng hóa thực tế & NĐ 330/2026: điểm đ khoản 1 Điều 53; NĐ 327/2026: khoản 10 Điều 10 & Đứng tên Công ty TNHH Phát triển Công nghệ số HCT \\
+\bottomrule
+\end{tabularx}
+\end{table}}
+
+Mỗi tiêu chí dựa trên một điều cấm, nghĩa vụ hoặc hành vi bị xử phạt trong khung pháp luật hiện hành~\cite{luat-anm-2025,luat-bvdlcn-2025,nd327-2026,nd330-2026,nd333-2026,nd340-2025}. Cách đánh giá là quy tắc do nhóm đề xuất cho PoC: tiêu chí 1 (hàng hóa đăng bán) là điều kiện bắt buộc. Sàn thỏa tiêu chí 1 và ít nhất hai tiêu chí khác thì được chuyển sang quy trình xử lý; sàn chỉ thỏa tiêu chí 1 được đưa vào danh sách theo dõi. Áp vào taphoammo.net, cột cuối của bảng~\ref{tab:5.11} cho thấy sàn thỏa cả sáu tiêu chí bằng dữ kiện đã công bố.
+
+\paragraph{Tầng 2 -- Quy trình phía cơ quan chức năng: năm bước xử lý khi một sàn bị nhận diện}
+
+Quy trình nối tiếp kết quả của công cụ ở~\ref{sec:5.2.1} và cụ thể hóa giải pháp 6 ở~\ref{sec:5.1}. Bộ tiêu chí ở trên được dùng tại bước sàng lọc. Bảng~\ref{tab:5.ttcq} ghi căn cứ của từng bước và sự kiện tương ứng trong vụ việc. Các mốc vụ việc diễn ra trước khi Luật An ninh mạng 2025 và các nghị định hướng dẫn có hiệu lực; cột cuối chỉ cho biết sự kiện thật ứng với từng bước, không có nghĩa các điều khoản này đã được áp dụng.
+
+{\small\setstretch{1.1}
+\begin{xltabular}{\textwidth}{>{\raggedright\arraybackslash}l>{\hsize=1.2\hsize\raggedright\arraybackslash}X>{\hsize=0.95\hsize\raggedright\arraybackslash}X>{\hsize=0.85\hsize\raggedright\arraybackslash}X}
+\caption{Quy trình phía cơ quan chức năng: căn cứ và đối chiếu vụ việc}\label{tab:5.ttcq}\\
+\toprule
+\textbf{Bước} & \textbf{Cơ quan làm gì} & \textbf{Căn cứ} & \textbf{Trong vụ việc} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Bước} & \textbf{Cơ quan làm gì} & \textbf{Căn cứ} & \textbf{Trong vụ việc} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+1. Tiếp nhận & Nhận cảnh báo (kể cả từ công cụ ở~\ref{sec:5.2.1}), tố giác của tổ chức, cá nhân và nhà cung cấp dịch vụ, theo biểu mẫu ở bảng~\ref{tab:5.12} & NĐ 327/2026: khoản 5 Điều 10, khoản 1 Điều 11, khoản 1 Điều 14; NĐ 329/2026: điểm d khoản 2 Điều 5 & 6/2025: lập chuyên án sau khi phát hiện qua nắm tình hình trên không gian mạng \\
+2. Sàng lọc, xác minh & Chấm sáu tiêu chí; xác minh tài khoản số, địa chỉ mạng, đường dẫn & NĐ 327/2026: khoản 2 Điều 9, khoản 3 Điều 11 & Thỏa 6/6 tiêu chí (bảng~\ref{tab:5.11}) \\
+3. Thu thập dữ liệu điện tử & Dữ liệu điện tử không bị can thiệp, thay đổi; quá trình thu thập được ghi biên bản, hình ảnh và có thể lặp lại; che dữ liệu cá nhân khi lưu hồ sơ & NĐ 333/2026: khoản 3 Điều 12 & 2/2026: khám xét, thu giữ máy tính và dữ liệu điện tử \\
+4. Áp dụng biện pháp & Yêu cầu cung cấp thông tin, xóa bỏ thông tin (luồng B của sàn và các bên giữ dữ liệu) và kiểm tra việc chấp hành; yêu cầu phong tỏa tài khoản số, tạm dừng giao dịch; đình chỉ hệ thống thông tin, đề nghị Bộ Khoa học và Công nghệ thu hồi tên miền (trường hợp cấp bách: yêu cầu trực tiếp, văn bản chậm nhất 24 giờ sau đó); doanh nghiệp Việt Nam phối hợp ngăn chặn dịch vụ qua biên giới vi phạm & NĐ 327/2026: khoản 3, 4 Điều 9; NĐ 333/2026: khoản 2 Điều 11, khoản 2, 4 Điều 13, khoản 3 Điều 14 & Áp vào: yêu cầu ngân hàng, ví điện tử phong tỏa tài khoản nhận tiền của sàn; đề nghị thu hồi tên miền taphoammo.net \\
+5. Chuyển thẩm quyền, xử lý & Bộ Công an là đầu mối chủ trì với hoạt động dân sự, kinh tế; hành vi thuộc chuyên ngành khác (ví dụ trung gian thanh toán) áp dụng nghị định chuyên ngành; có dấu hiệu tội phạm thì chuyển hồ sơ truy cứu trách nhiệm hình sự & NĐ 333/2026: điểm a khoản 5 Điều 14; NĐ 329/2026: điểm a khoản 3 Điều 9; NĐ 330/2026: khoản 3 Điều 1, khoản 4 Điều 4; Luật ANM 2025: điểm n khoản 1 Điều 5 & 25/12/2025: khởi tố vụ án; 7/2026: công bố khởi tố 3 bị can về tội theo Điều 288 Bộ luật Hình sự \\
+\end{xltabular}}
+
 \begin{figure}[H]
 \centering
 \input{figures/quy_trinh.tex}
-\caption{Quy trình xử lý khi một sàn bị nhận diện}
+\caption{Quy trình phía cơ quan chức năng khi một sàn bị nhận diện}
 \label{fig:5.4}
 \end{figure}
 
+\paragraph{Tầng 3 -- Thủ tục cho từng bước}
+
+Thủ tục ghi rõ ở mỗi bước ai làm, làm gì và trong thời hạn nào. Các thời hạn trong bảng đều lấy từ văn bản pháp luật; bước nào luật không quy định thời hạn thì ghi “không quy định”. Cột cuối áp thủ tục vào taphoammo.net bằng các dữ kiện đã công bố~\cite{bca-2026}, để thấy mỗi thủ tục trông ra sao trong một vụ việc cụ thể.
+
+{\small\setstretch{1.1}
+\begin{xltabular}{\textwidth}{>{\raggedright\arraybackslash}l>{\hsize=1.25\hsize\raggedright\arraybackslash}X>{\hsize=0.6\hsize\raggedright\arraybackslash}X>{\hsize=0.8\hsize\raggedright\arraybackslash}X>{\hsize=1.05\hsize\raggedright\arraybackslash}X}
+\caption{Thủ tục luồng A -- nền tảng tự kiểm soát}\label{tab:5.tt}\\
+\toprule
+\textbf{Bước} & \textbf{Thủ tục (ai, làm gì)} & \textbf{Thời hạn} & \textbf{Căn cứ} & \textbf{Áp vào taphoammo} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Bước} & \textbf{Thủ tục (ai, làm gì)} & \textbf{Thời hạn} & \textbf{Căn cứ} & \textbf{Áp vào taphoammo} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+Đăng ký & Nền tảng xác thực tài khoản bằng số điện thoại di động tại Việt Nam, hoặc bằng số định danh cá nhân; tài khoản chưa xác thực không được đăng tin & Khi đăng ký tài khoản & NĐ 333/2026: điểm a, b, d khoản 2 Điều 16 & Sàn đã có kiểm duyệt người bán; riêng bước này không ngăn được hàng cấm \\
+Duyệt tin & Công cụ ở~\ref{sec:5.2.1} chấm mỗi tin mới (CHẶN, CHUYỂN NGƯỜI DUYỆT, CHO PHÉP); người duyệt quyết định với tin bị gắn cờ & Không quy định & Luật ANM 2025: điểm b khoản 2 Điều 15; Luật BVDLCN 2025: khoản 6 Điều 7 & Gian hàng bán tài khoản Facebook, TikTok, Telegram, Instagram, thư điện tử thuộc nhóm “mua bán tài khoản” mà công cụ gắn cờ \\
+Gỡ tin & Ghi nhật ký xử lý tin, lưu bằng chứng (ảnh chụp, mã băm) rồi gỡ tin. Tài khoản đăng từ 03 tin vi phạm trở lên trong 30 ngày bị hạn chế hiển thị hoặc khóa tạm thời tối đa 60 ngày; từ 10 tin trở lên trong 90 ngày thì tối đa 180 ngày & “Kịp thời” & Luật ANM 2025: điểm b khoản 2 Điều 15; NĐ 333/2026: điểm d khoản 4, điểm b khoản 6 Điều 16 & Sàn có hơn 46.000 gian hàng; gian hàng đăng lặp lại tin vi phạm bị khóa theo các ngưỡng này \\
+Lưu trữ & Lưu tại Việt Nam: thông tin cá nhân, tên tài khoản, thời gian sử dụng, địa chỉ IP đăng nhập, đăng xuất gần nhất, số điện thoại gắn với tài khoản. Nhật ký gồm tài khoản, thời gian đăng nhập, đăng xuất, địa chỉ IP, cổng nguồn và nhật ký xử lý tin đăng & Dữ liệu tối thiểu 24 tháng; nhật ký ít nhất 12 tháng & NĐ 333/2026: khoản 1, 2 Điều 19, khoản 1 Điều 20, điểm b, c khoản 6 Điều 16 & Hơn 1,35 triệu tài khoản trên máy chủ ở nước ngoài: phải có bản lưu các dữ liệu này trong nước \\
+Giáo dục & Nền tảng (bộ phận thường trực bảo vệ an ninh mạng, nếu có) phổ biến pháp luật và các thủ đoạn vi phạm rà soát được cho người duyệt, đầu mối, người vận hành & Không quy định & NĐ 327/2026: điểm g, điểm a khoản 2 Điều 6; NĐ 329/2026: khoản 1, điểm đ khoản 4 Điều 6 & Nội dung lấy từ vụ việc: dữ liệu cá nhân, tài khoản mạng xã hội, thư điện tử, “dịch vụ xác thực tài khoản”; người bán đã xác thực không làm hàng hóa hợp pháp \\
+\end{xltabular}}
+
+{\small\setstretch{1.1}
+\begin{xltabular}{\textwidth}{>{\raggedright\arraybackslash}l>{\hsize=1.2\hsize\raggedright\arraybackslash}X>{\hsize=0.65\hsize\raggedright\arraybackslash}X>{\hsize=0.8\hsize\raggedright\arraybackslash}X>{\hsize=1.05\hsize\raggedright\arraybackslash}X}
+\caption{Thủ tục luồng B -- nền tảng phối hợp với cơ quan}\label{tab:5.ttb}\\
+\toprule
+\textbf{Bước} & \textbf{Thủ tục (ai, làm gì)} & \textbf{Thời hạn} & \textbf{Căn cứ} & \textbf{Áp vào taphoammo} \\
+\midrule
+\endfirsthead
+\toprule
+\textbf{Bước} & \textbf{Thủ tục (ai, làm gì)} & \textbf{Thời hạn} & \textbf{Căn cứ} & \textbf{Áp vào taphoammo} \\
+\midrule
+\endhead
+\bottomrule
+\endlastfoot
+Nhận yêu cầu & Đầu mối phối hợp của nền tảng nhận yêu cầu bằng văn bản giấy, văn bản điện tử, đường dây nóng; yêu cầu khẩn cấp theo chế độ thường trực & 24/24 giờ & NĐ 327/2026: khoản 1 Điều 12, khoản 2 Điều 14 & Yêu cầu của lực lượng chuyên trách về các gian hàng bán dữ liệu cá nhân đến đầu mối của sàn \\
+Xác thực & Xác thực chủ thể yêu cầu; bảo mật thông tin được cung cấp & Không quy định & NĐ 333/2026: điểm b khoản 3 Điều 16 & Chỉ gửi dữ liệu người dùng khi xác nhận yêu cầu đúng là của lực lượng chuyên trách thuộc Bộ Công an \\
+Thực hiện & Cung cấp thông tin người dùng; ngăn chặn chia sẻ, xóa thông tin, gỡ dịch vụ theo yêu cầu & Cung cấp chậm nhất 24 giờ (khẩn cấp 03 giờ); gỡ bỏ chậm nhất 24 giờ (khẩn cấp 06 giờ) & Luật ANM 2025: điểm a, b khoản 2 Điều 25; NĐ 333/2026: điểm c khoản 3, điểm b khoản 4 Điều 16 & Với mỗi chủ gian hàng: tên tài khoản, thời gian sử dụng dịch vụ, thông tin thanh toán, địa chỉ IP (danh mục ở điểm d khoản 2 Điều 25 Luật ANM 2025) \\
+Phản hồi & Thực hiện và phản hồi kết quả xử lý & Theo thời hạn trong yêu cầu & NĐ 327/2026: khoản 2 Điều 14 & Báo lại tin nào đã gỡ, dữ liệu nào đã cung cấp, vào thời điểm nào \\
+\end{xltabular}}
+
+Luồng A cùng các chính sách Đăng ký, Hàng cấm, Gỡ tin xử lý thách thức Vỏ bọc doanh nghiệp: kiểm tra danh tính người bán và kiểm tra hàng hóa là hai bước riêng. Chính sách Lưu trữ và bước thu hồi tên miền phía cơ quan (Điều 13 Nghị định 333/2026) xử lý thách thức Hạ tầng ở nước ngoài: không với tới được máy chủ ở nước ngoài, nhưng dữ liệu người dùng Việt Nam có bản lưu trong nước và tên miền có thể bị tạm ngừng, thu hồi. Luồng B xử lý thách thức Dữ liệu nằm ở nhiều bên: mỗi bên giữ dữ liệu có một đầu mối, có phương thức phối hợp và có thời hạn.
+
 \paragraph{Biểu mẫu tiếp nhận tố giác}
 
-Biểu mẫu tiếp nhận tố giác gồm các trường sau:
+Biểu mẫu là phần thủ tục của bước tiếp nhận trong quy trình phía cơ quan chức năng, gồm các trường sau:
 
 {\small\setstretch{1.1}
 \begin{table}[H]
@@ -322,3 +471,32 @@ Phần cơ quan tiếp nhận ghi & Mã hồ sơ, người tiếp nhận, kết 
 \end{tabularx}
 \end{table}}
 
+
+\paragraph{Kiểm tra độ phủ theo McCumber Cube}
+
+McCumber Cube (Whitman và Mattord, \textit{Principles of Information Security}, 2017) có ba trục vẽ từ một gốc chung: tính chất cần bảo vệ (Confidentiality, Integrity, Availability), trạng thái của thông tin (Storage, Processing, Transmission) và nhóm biện pháp (Policy, Education, Technology). Các biện pháp được áp dụng đồng thời, bổ trợ nhau, và phải cân nhắc đánh đổi. Nhóm dùng ba trục này để kiểm tra bộ 3P và công cụ ở~\ref{sec:5.2.1} có bỏ trống chiều nào không:
+
+{\small\setstretch{1.1}
+\begin{table}[H]
+\centering
+\caption{Đối chiếu PoC với ba trục của McCumber Cube}\label{tab:5.mc}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}l>{\raggedright\arraybackslash}l>{\hsize=1.3\hsize\raggedright\arraybackslash}X>{\hsize=0.7\hsize\raggedright\arraybackslash}X}
+\toprule
+\textbf{Trục} & \textbf{Thành phần} & \textbf{Phần của PoC đáp ứng} & \textbf{Ghi chú} \\
+\midrule
+\multirow{3}{*}{CIA} & Confidentiality & Hàng cấm, Gỡ tin: chặn việc đăng bán dữ liệu cá nhân, tài khoản & \\
+ & Integrity & Gỡ tin (nhật ký xử lý, mã băm); bước thu thập dữ liệu điện tử phía cơ quan: dữ liệu không bị thay đổi & \\
+ & Availability & Lưu trữ, Phối hợp: dữ liệu lưu trong nước, cung cấp trong 24 giờ & Cho cơ quan có thẩm quyền \\
+\midrule
+\multirow{3}{*}{Trạng thái} & Storage & Lưu trữ: lưu tại Việt Nam, nhật ký 12 tháng & \\
+ & Processing & Đăng ký, Duyệt tin, công cụ ở~\ref{sec:5.2.1}: xác thực, quét tin đăng & \\
+ & Transmission & Luồng B: xác thực chủ thể yêu cầu, bảo mật thông tin được cung cấp & \\
+\midrule
+\multirow{3}{*}{Biện pháp} & Policy & Sáu chính sách ở bảng~\ref{tab:5.cs} & \\
+ & Technology & Công cụ ở~\ref{sec:5.2.1}, mã băm, xác thực tài khoản & \\
+ & Education & Chính sách Giáo dục: phổ biến pháp luật, thủ đoạn vi phạm cho người duyệt, đầu mối, người vận hành & NĐ 327/2026 điểm g khoản 2 Điều 6 \\
+\bottomrule
+\end{tabularx}
+\end{table}}
+
+Trục Education được đáp ứng bằng chính sách Giáo dục. Luật không quy định tần suất phổ biến, nên thủ tục ghi “không quy định”; nội dung lấy từ các thủ đoạn mà nền tảng rà soát được (điểm a khoản 2 Điều 6 Nghị định 327/2026).
