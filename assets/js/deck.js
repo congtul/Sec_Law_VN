@@ -32,6 +32,9 @@
     '5.2': { en: 'Implementation', vi: 'Hiện thực giải pháp' },
     '6.1': { en: 'Evaluation', vi: 'Đánh giá' },
     '6.2': { en: 'Conclusion', vi: 'Kết luận' },
+    '7.1': { en: 'Rules for the comparison', vi: 'Nguyên tắc đối chiếu' },
+    '7.2': { en: 'The platform operator', vi: 'Nhà vận hành sàn' },
+    '7.3': { en: 'Sellers and buyers', vi: 'Người bán và người mua' },
     'ref': { en: 'References', vi: 'Nguồn tham khảo' },
     'agenda': { en: 'Agenda', vi: 'Nội dung' }
   };
@@ -44,10 +47,11 @@
     '4': { en: '4 · Challenges', vi: '4 · Thách thức' },
     '5': { en: '5 · Solutions and demo', vi: '5 · Giải pháp và hiện thực' },
     '6': { en: '6 · Evaluation and conclusion', vi: '6 · Đánh giá và kết luận' },
+    '7': { en: '7 · Extension: 2025 Cybersecurity Law', vi: '7 · Mở rộng: Luật An ninh mạng 2025' },
     'e': { en: 'Wrap-up', vi: 'Kết thúc' },
     'q': { en: 'Quiz', vi: 'Quiz' }
   };
-  const CH_COLOR = { '1': '--c1', '2': '--c2', '3': '--c3', '4': '--c4', '5': '--c5', '6': '--c6', 'q': '--cq' };
+  const CH_COLOR = { '1': '--c1', '2': '--c2', '3': '--c3', '4': '--c4', '5': '--c5', '6': '--c6', '7': '--c7', 'q': '--cq' };
 
   const L = (o) => (typeof o === 'string' ? o : `<span class="en">${o.en}</span><span class="vi">${o.vi}</span>`);
 
